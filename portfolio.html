@@ -1,0 +1,133 @@
+---
+layout: default
+title: Workshops
+section_id: workshops
+works:
+  - image: images/@stock/work-woodwork.jpg
+    title: Einführungskurs Holzwerkstatt
+    link_to: portfolio-item.html
+    klass: wood
+    desc: Design &amp; Development
+  - image: images/@stock/work-3d-print.jpg
+    title: Einführungskurs 3D-Druck
+    link_to: portfolio-item.html
+    klass: electro
+    desc: Design &amp; Development
+  - image: images/@stock/work-laser-cutting.jpg
+    title: Einführungskurs Lasercutter
+    link_to: portfolio-item.html
+    klass: electro
+    desc: Design &amp; Development
+  - image: images/@stock/work-cnc-milling.jpg
+    title: Einführungskurs CNC-Fräze
+    link_to: portfolio-item.html
+    klass: development
+    desc: Design &amp; Development
+  - image: images/@stock/work-4.jpg
+    title: Einführungskurs Wandtattoo Herstellung
+    link_to: portfolio-item.html
+    klass: development
+    desc: Design &amp; Development   
+  - image: images/@stock/work-4.jpg
+    title: Fahrradangänger selber herstellen
+    link_to: portfolio-item.html
+    klass: misc
+    desc: Design &amp; Development   
+  - image: images/@stock/work-microcontroller.jpg
+    title: Einfühung in Microcontroller
+    link_to: portfolio-item.html
+    klass: electro
+    desc: Design &amp; Development    
+  - image: images/@stock/work-wood-couch-table.jpg
+    title: Couchtisch selber herstellen
+    link_to: portfolio-item.html
+    klass: wood
+    desc: Design &amp; Development   
+  - image: images/@stock/work-4.jpg
+    title: Bilder auf Holz übertragen
+    link_to: portfolio-item.html
+    klass: misc
+    desc: Design &amp; Development   
+  - image: images/@stock/work-4.jpg
+    title: LED Lampe aus Holz und Plexiglas herstellen
+    link_to: portfolio-item.html
+    klass: misc
+    desc: Design &amp; Development
+  - image: images/@stock/work-wood-cutting-board.jpg
+    title: Holzschneidebrett selbst herstelleb
+    link_to: portfolio-item.html
+    klass: wood
+    desc: Design &amp; Development
+  - image: images/@stock/work-wood-turning.jpg
+    title: Einführungskurs drechseln
+    link_to: portfolio-item.html
+    klass: wood
+    desc: Design &amp; Development      
+---
+
+
+<div class='full parallax' style='background-image: url(images/@stock/portfolio-header-bg.jpg); color: #fff;'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Workshops" tagline="Blah blah" color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class='four spacing'></div>
+</div>
+
+
+<div class='full'>
+  <div class='row'>    
+    <div class='mod modGallery'>
+    
+    <!--
+      <div class='gallery-nav'>
+        <ul>
+          <li class='current'>
+            <a data-cat='all' href='#'>Alle</a>
+          </li>
+          <li>
+            <a data-cat='wood' href='#'>Holz</a>
+          </li>
+          <li>
+            <a data-cat='electro' href='#'>Elektro</a>
+          </li>
+          <li>
+            <a data-cat='sewing' href='#'>Nähnen</a>
+          </li>
+          <li>
+            <a data-cat='upcycle' href='#'>Upcycling</a>
+          </li>
+          <li>
+            <a data-cat='print' href='#'>Drucken</a>
+          </li>
+          <li>
+            <a data-cat='misc' href='#'>Andere</a>
+          </li>
+        </ul>
+      </div>
+      -->
+
+      <ul class='gallery large-block-grid-3 medium-block-grid-3 small-block-grid-2'>
+
+        {% for work in page.works %}
+          <li class="{{ work.klass }}">
+            <a href='{{ work.link_to }}'>
+              <img alt="" src="{{ work.image }}" />
+              <div class='overlay'>
+                <div class='thumb-info'>
+                  <h3>{{ work.title }}</h3>
+                  <p>{{ work.desc }}</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+
+      </ul>
+
+    </div>
+  </div>
+
+  <div class='four spacing'></div>
+</div>

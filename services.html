@@ -1,0 +1,65 @@
+---
+layout: default
+title: Ausstattung
+section_id: Ausstattung
+services_left:
+  - icon: check
+    title: Holzwerkstatt
+    desc: Tischkreissäge, Kappsäge, Bandsäge, Stichsäge, Oberfräse, Exzenterschleifer, Drechselbank, Bohrmaschine, Akkuschrauber
+  - icon: check
+    title: Elektrowerkstatt
+    desc: 3D-Drucker, CNC-Fräse, Lasercutter, Lötstationen, Messgeräte, Oszilloskop, Mikrocontroller, PCs
+  - icon: check
+    title: Nähverkstatt
+    desc: Nähmaschine für Anfänger, Computergesteuerte-Nähmaschine, Overlock-Nähmaschine, Bügelstation 
+services_right:
+  - icon: check
+    title: Kunststoff-Upcycling
+    desc: Mehr Details in kürze.
+  - icon: check
+    title: Textil- und Druck-Werkstatt
+    desc: Schneideplotter, Transferpresse / Heißpresse, Tassenpresse
+  - icon: check
+    title: Repair-Café
+    desc: Mehr Details in kürze.
+---
+
+<div class='full parallax' style='background-image: url(images/@stock/service-page-header.jpg); color: #fff;'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Ausstattung" tagline="Alles was man zum werkeln braucht" color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class='four spacing'></div>
+</div>
+
+
+<div class='full'>
+  <div class='row'>
+    <div class='medium-6 columns'>
+      {% for service in page.services_left %}
+        <div class='fadein mod modIconText' data-delay='{{ 300 | times:forloop.index0 }}'>
+          <div class='icon-text-simple'>
+            <i class='fa fa-{{service.icon}}'></i>
+            <h3>{{service.title}}</h3>
+            <p>{{service.desc}}</p>
+          </div>
+          <div class='two spacing'></div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class='medium-6 columns'>
+      {% for service in page.services_right %}
+        <div class='fadein mod modIconText' data-delay='{{ 300 | times:forloop.index0 }}'>
+          <div class='icon-text-simple'>
+            <i class='fa fa-{{service.icon}}'></i>
+            <h3>{{service.title}}</h3>
+            <p>{{service.desc}}</p>
+          </div>
+          <div class='two spacing'></div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class='spacing'></div>
+</div>

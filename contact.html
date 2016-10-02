@@ -1,0 +1,52 @@
+---
+layout: default
+title: Kontakt
+section_id: kontakt
+---
+
+<div class='full parallax' style='background-image: url(images/@stock/contact-header-bg.jpg); color: #fff;'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Kontakt" tagline="blah blah" color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class='four spacing'></div>
+</div>
+
+  <div class='full'>
+    <div class='row'>
+      <div class='medium-8 columns'>
+        <div class='form'>
+          <div class='row'>
+            <form id='contact_form' method='POST'>
+              <div class='large-12 columns'>
+                <p id='thanks' style='display: none;'>
+                  Vielen Dank für die Nachricht, wir werden uns in kürze bei Dir melden!
+                </p>
+              </div>
+              <div class='medium-12 columns'>
+                <input class='required' name='name' placeholder='NAME' type='text'>
+                <input class='required email' name='email' placeholder='EMAIL' type='text'>
+                <input class='required' name='subject' placeholder='BETREFF' type='text'>
+                <textarea class='required' name='message' placeholder='NACHRICHT'></textarea>
+                <input class='buttonblog-header-bg.jpgblog-header-bg.jpg white' type='submit'>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class='two spacing'></div>
+      </div>
+      <div class='medium-4 columns'>
+        <div class='contact-details'>
+          <h4>Adresse:</h4>
+          <p>Melania-Simona Moise<br>Kölnische Str. 105<br>34119 Kassel</p>
+          <h4>Telefon:</h4>
+          <p><a href="tel:017634754338">0176 3475 4338</a></p>
+          <h4>Email:</h4>
+          <p><a href="mailto:info@geekpeak.de">info@geekpeak.de</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='four spacing'></div>
+</div>

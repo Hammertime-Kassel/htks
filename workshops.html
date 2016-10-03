@@ -23,46 +23,46 @@ works:
     link_to: portfolio-item.html
     klass: development
     desc: Design &amp; Development
-  - image: images/@stock/work-4.jpg
-    title: Einführungskurs Wandtattoo Herstellung
-    link_to: portfolio-item.html
-    klass: development
-    desc: Design &amp; Development   
-  - image: images/@stock/work-4.jpg
-    title: Fahrradangänger selber herstellen
-    link_to: portfolio-item.html
-    klass: misc
-    desc: Design &amp; Development   
+#  - image: images/@stock/work-4.jpg
+#    title: Einführungskurs Wandtattoo Herstellung
+#    link_to: portfolio-item.html
+#    klass: development
+#    desc: Design &amp; Development
+#  - image: images/@stock/work-4.jpg
+#    title: Fahrradangänger selber herstellen
+#    link_to: portfolio-item.html
+#    klass: misc
+#    desc: Design &amp; Development
   - image: images/@stock/work-microcontroller.jpg
     title: Einfühung in Microcontroller
     link_to: portfolio-item.html
     klass: electro
-    desc: Design &amp; Development    
-  - image: images/@stock/work-wood-couch-table.jpg
-    title: Couchtisch selber herstellen
-    link_to: portfolio-item.html
-    klass: wood
-    desc: Design &amp; Development   
-  - image: images/@stock/work-4.jpg
-    title: Bilder auf Holz übertragen
-    link_to: portfolio-item.html
-    klass: misc
-    desc: Design &amp; Development   
-  - image: images/@stock/work-4.jpg
-    title: LED Lampe aus Holz und Plexiglas herstellen
-    link_to: portfolio-item.html
-    klass: misc
     desc: Design &amp; Development
-  - image: images/@stock/work-wood-cutting-board.jpg
-    title: Holzschneidebrett selbst herstelleb
-    link_to: portfolio-item.html
-    klass: wood
-    desc: Design &amp; Development
+#  - image: images/@stock/work-wood-couch-table.jpg
+#    title: Couchtisch selber herstellen
+#    link_to: portfolio-item.html
+#    klass: wood
+#    desc: Design &amp; Development
+#  - image: images/@stock/work-4.jpg
+#    title: Bilder auf Holz übertragen
+#    link_to: portfolio-item.html
+#    klass: misc
+#    desc: Design &amp; Development
+#  - image: images/@stock/work-4.jpg
+#    title: LED Lampe aus Holz und Plexiglas herstellen
+#    link_to: portfolio-item.html
+#    klass: misc
+#    desc: Design &amp; Development
+#  - image: images/@stock/work-wood-cutting-board.jpg
+#    title: Holzschneidebrett selbst herstelleb
+#    link_to: portfolio-item.html
+#    klass: wood
+#    desc: Design &amp; Development
   - image: images/@stock/work-wood-turning.jpg
     title: Einführungskurs drechseln
     link_to: portfolio-item.html
     klass: wood
-    desc: Design &amp; Development      
+    desc: Design &amp; Development
 ---
 
 
@@ -77,9 +77,9 @@ works:
 
 
 <div class='full'>
-  <div class='row'>    
+  <div class='row'>
     <div class='mod modGallery'>
-    
+
     <!--
       <div class='gallery-nav'>
         <ul>
@@ -112,7 +112,8 @@ works:
 
         {% for work in page.works %}
           <li class="{{ work.klass }}">
-            <a href='{{ work.link_to }}'>
+            <!--<a href='{{ work.link_to }}'>-->
+            <a>
               <img alt="" src="{{ work.image }}" />
               <div class='overlay'>
                 <div class='thumb-info'>

@@ -1,22 +1,21 @@
 - name: Die Werkstatt
-  path: about.html
+  path:
   section_id: about
   children:
       - name: Manifest
         path: manifesto.html
+      - name: Ausstattung
+        path: equipment.html
       - name: Helfen
         path: help.html
-- name: Ausstattung
-  path: services.html
-  section_id: services
 - name: Workshops
-  path: portfolio.html
-  section_id: portfolio
+  path: workshops.html
+  section_id: workshops
 - name: Blog
   path: blog/
   section_id: blog
 - name: Forum
-  path: forum/
+  path: forum.html
   section_id: forum
 - name: Kontakt
   path: contact.html

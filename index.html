@@ -25,22 +25,18 @@ works:
     title: Einführungskurs Holzwerkstatt
     link_to: portfolio-item.html
     klass: wood
-    desc: Design &amp; Development
   - image: images/@stock/work-3d-print.jpg
     title: Einführungskurs 3D-Druck
     link_to: portfolio-item.html
     klass: electro
-    desc: Design &amp; Development
   - image: images/@stock/work-laser-cutting.jpg
     title: Einführungskurs Lasercutter
     link_to: portfolio-item.html
     klass: electro
-    desc: Design &amp; Development
   - image: images/@stock/work-cnc-milling.jpg
     title: Einführungskurs CNC-Fräze
     link_to: portfolio-item.html
-    klass: development
-    desc: Design &amp; Development
+    klass: electro
 
 
 services:
@@ -136,6 +132,12 @@ milestones:
   </div>
 </div>
 
+<div class="three spacing"></div>
+
+<div class="row">
+  <h2 class='centered-text'>In kürze in Kassel!</h2>
+</div>
+
 <div class="four spacing"></div>
 
 <div class="row">
@@ -214,119 +216,33 @@ milestones:
 </div>
 
 
-<div class='full parallax' style='background-image: url(images/@stock/milestone-bg.jpg); color: #fff;'>
+<div class='full parallax' style='background-image: url(images/@stock/help.jpg); color: #fff;'>
   <div class='row'>
-    <div class='large-12 columns'>
-      {% include section-header.html title="Parallax effect" color="#fff" %}
+    <div class='large-12 columns shadow-text'>
+      {% include section-header.html title="Helfen" color="#fff" %}
       <div class='spacing'></div>
-      <p class='centered-text' style='color: #ccc;'>
-        Dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
+      <p class='centered-text'>
+        <b>Hilf uns dabei die Werkstatt zum Wirklichkeit zu machen!</b>
       </p>
-      <div class='two spacing'></div>
-    </div>
-  </div>
-  <div class='row'>
-    {% for milestone in page.milestones %}
-      <div class='medium-3 large-3 columns'>
-        <div class='mod modMilestone'>
-          <i class='fa fa-{{milestone.icon}}'></i>
-          <strong data-from='{{milestone.from}}' data-to='{{milestone.to}}'>&nbsp;</strong>
-          <span>{{milestone.title}}</span>
-          <div class='four spacing'></div>
+      <div class='buttons-wrapper {{ slide.buttons.klass }}'>
+        <div class='row'>
+          <div class='large-12 columns'>
+            <div class='two spacing'></div>
+              <a class='button {{ button.klass }}' href=''>Mehr erfahren</a>
+          </div>
         </div>
       </div>
-    {% endfor %}
+      <div class='two spacing'></div>
+    </div>
   </div>
   <div class='two spacing'></div>
 </div>
 
 <div class='full'>
   <div class='row'>
-    <div class='large-12 columns'>
-      {% include section-header.html title="Newsletter" %}
-      <div class='spacing'></div>
-      <p>
-        Wir geben deine Daten nicht weiter!
-      </p>
-    </div>
-  </div>
-  <div class='row'>
-    <form id='contact_form' method='POST'>
-      <div class='large-12 columns'>
-        <p id='thanks' style='display: none;'>
-          Bitte bestätige jetzt deine Anmeldung in dem du den Link in deiner Email klickst.
-        </p>
-      </div>
-      <div class='medium-12 columns'>
-        <input class='required' name='name' placeholder='NAME' type='text'>
-        <input class='required email' name='email' placeholder='EMAIL' type='text'>
-        <input class='button white' type='submit'>
-      </div>
-    </form>
+
   </div>
   <div class='spacing'></div>
 </div>
 
-<div class='full' style='background: #f5f5f5'>
-  <div class='row'>
-    <div class='large-12 columns'>
-      {% include section-header.html title="Blog" %}
-      <div class='spacing'></div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing.
-      </p>
-      <div class='two spacing'></div>
-    </div>
-  </div>
-
-  <div class='row'>
-    {% for post in site.posts %}
-      {% if forloop.index > 3 %}
-        {% break %}
-      {% endif %}
-
-      <div class='large-4 medium-4 columns'>
-        <div class='mod modBlogPost'>
-          {% for image in post.images %}
-            {% unless forloop.first %}
-              {% break %}
-            {% endunless %}
-            <a href="{{post.url}}"><img alt="" src="{{image}}" /></a>
-          {% endfor %}
-          <div class='content'>
-            <p class='date'>{{post.date | date: "%B %d, %Y" }}</p>
-            <h4><a href="#">{{post.title}}</a></h4>
-            <p>{{post.excerpt}}</p>
-            <!--
-              <div class="tags">
-                {% for cat in post.categories %}
-                  <a href="#">{{cat | capitalize}}</a>
-                  {% unless forloop.last %}
-                    ,
-                  {% endunless %}
-                {% endfor %}
-              </div>
-            -->
-          </div>
-        </div>
-      </div>
-
-    {% endfor %}
-
-  </div>
-
-
-  <div class='two spacing'></div>
-  <div class='row'>
-    <div class='large-12 columns'>
-      <p class='centered-text'>
-        <a class='button' href='blog.html'>Weitere posts</a>
-      </p>
-    </div>
-  </div>
-  <div class='two spacing'></div>
-
-</div>
-
-
-{% include our-customers.html %}
+{% include sponsors.html %}

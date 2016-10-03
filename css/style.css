@@ -628,7 +628,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .shadow-text {
-  text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.60);
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.60);
 }
 
 hr {
@@ -661,6 +661,7 @@ hr {
   background-size: cover;
   background-position: 50% 50%;
 }
+
 .full.no-padding {
   padding: 0;
 }

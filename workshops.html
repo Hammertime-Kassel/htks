@@ -8,11 +8,6 @@ works:
     link_to: portfolio-item.html
     klass: wood
     desc: Design &amp; Development
-  - image: images/@stock/work-3d-print.jpg
-    title: Einführungskurs 3D-Druck
-    link_to: portfolio-item.html
-    klass: electro
-    desc: Design &amp; Development
   - image: images/@stock/work-laser-cutting.jpg
     title: Einführungskurs Lasercutter
     link_to: portfolio-item.html
@@ -21,7 +16,11 @@ works:
   - image: images/@stock/work-cnc-milling.jpg
     title: Einführungskurs CNC-Fräze
     link_to: portfolio-item.html
-    klass: development
+    klass: electro
+  - image: images/@stock/work-3d-print.jpg
+    title: Einführungskurs 3D-Druck
+    link_to: portfolio-item.html
+    klass: electro
     desc: Design &amp; Development
 #  - image: images/@stock/work-4.jpg
 #    title: Einführungskurs Wandtattoo Herstellung
@@ -33,11 +32,11 @@ works:
 #    link_to: portfolio-item.html
 #    klass: misc
 #    desc: Design &amp; Development
-  - image: images/@stock/work-microcontroller.jpg
-    title: Einfühung in Microcontroller
-    link_to: portfolio-item.html
-    klass: electro
-    desc: Design &amp; Development
+#  - image: images/@stock/work-microcontroller.jpg
+#    title: Einfühung in Microcontroller
+#    link_to: portfolio-item.html
+#    klass: electro
+#    desc: Design &amp; Development
 #  - image: images/@stock/work-wood-couch-table.jpg
 #    title: Couchtisch selber herstellen
 #    link_to: portfolio-item.html
@@ -58,20 +57,22 @@ works:
 #    link_to: portfolio-item.html
 #    klass: wood
 #    desc: Design &amp; Development
-  - image: images/@stock/work-wood-turning.jpg
-    title: Einführungskurs drechseln
-    link_to: portfolio-item.html
-    klass: wood
-    desc: Design &amp; Development
+#  - image: images/@stock/work-wood-turning.jpg
+#    title: Einführungskurs drechseln
+#    link_to: portfolio-item.html
+#    klass: wood
+#    desc: Design &amp; Development
 ---
 
 
-<div class='full parallax' style='background-image: url(images/@stock/portfolio-header-bg.jpg); color: #fff;'>
+<div class='full parallax' style='background-image: url(images/@stock/workshops.jpg); color: #fff;'>
+  <div class='four spacing'></div>
   <div class='row'>
-    <div class='large-12 columns'>
+    <div class='large-12 columns shadow-text'>
       {% include section-header.html title="Workshops" tagline="Blah blah" color="#fff" class="big" %}
     </div>
   </div>
+  <div class='four spacing'></div>
   <div class='four spacing'></div>
 </div>
 
@@ -108,7 +109,7 @@ works:
       </div>
       -->
 
-      <ul class='gallery large-block-grid-3 medium-block-grid-3 small-block-grid-2'>
+      <ul class='gallery large-block-grid-2 medium-block-grid-3 small-block-grid-2'>
 
         {% for work in page.works %}
           <li class="{{ work.klass }}">

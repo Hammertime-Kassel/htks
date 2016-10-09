@@ -23,14 +23,6 @@ section_id: contact
         <div class='form'>
           <div class='row'>
             <form id='contact_form' method='POST'>
-              <div class='large-12 columns'>
-                <p id='thanks' style='display: none;'>
-                  <b>Vielen Dank für Deine Nachricht, wir werden uns in Kürze bei Dir melden!</b>
-                </p>
-                <p id='form_error' style='display: none; color: red;'>
-                  <b>Leider konnte deine Nachricht nicht verschickt werden. <br>Versuche es bitte später erneut oder sende uns eine E-Mail.</b>
-                </p>
-              </div>
               <div class='medium-12 columns'>
                 <input class='required uppercase' name='name' placeholder='Name' type='text'>
                 <input class='required uppercase email ' name='email' placeholder='E-Mail' type='text'>
@@ -39,6 +31,14 @@ section_id: contact
                 <input type="hidden" name="_format" value="plain" />
                 <input type="hidden" name="_next" value="contact.html" />
                 <input class='button white' type='submit'>
+              </div>
+              <div class='large-12 columns'>
+                <p id='thanks' style='display: none;'>
+                  <b>Vielen Dank für Deine Nachricht, wir werden uns in Kürze bei Dir melden!</b>
+                </p>
+                <p id='form_error' style='display: none; color: red;'>
+                  <b>Leider konnte deine Nachricht nicht verschickt werden. <br>Versuche es bitte später erneut oder sende uns eine E-Mail.</b>
+                </p>
               </div>
             </form>
           </div>

@@ -14,7 +14,7 @@
 - name: Blog
   path: blog/
   section_id: blog
-- name: Forum
+- name: Community
   path: community.html
   section_id: community
 - name: Kontakt

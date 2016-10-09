@@ -22,7 +22,7 @@ section_id: contact
       <div class='medium-8 columns'>
         <div class='form'>
           <div class='row'>
-            <form method='POST' action='http://formspree.io/hello@htks.de'>
+            <form id='contact_form' method='POST'>
               <div class='large-12 columns'>
                 <p id='thanks' style='display: none;'>
                   Vielen Dank für Deine Nachricht, wir werden uns in Kürze bei Dir melden!
@@ -33,6 +33,7 @@ section_id: contact
                 <input class='required uppercase email ' name='email' placeholder='E-Mail' type='text'>
                 <input class='required uppercase' name='subject' placeholder='Betreff' type='text'>
                 <textarea class='required uppercase' name='message' placeholder='Nachricht'></textarea>
+                <input type="hidden" name="_format" value="plain" />
                 <input class='button white' type='submit'>
               </div>
             </form>

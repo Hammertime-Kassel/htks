@@ -89,6 +89,28 @@ jQuery(document).foundation();
       }
     });
 
+    $('form#test_form').validate({
+      messages: { },
+      submitHandler: function(form) {
+        $.ajax({
+          method: 'POST',
+          url: 'https://subscribe.newsletter2go.com?n2g=l3sogjg7-joig07oj-mf5',
+          data: $(form).serialize(),
+          success: function(data) {
+            $(form).trigger('reset');
+            $('#thanks').show();
+          },
+          error: function(data, text, errorThrown) {
+            alert('3');
+            alert(errorThrown);
+            alert(text);
+            $('#form_error').show();
+          }
+        });
+        return false;
+      }
+    });
+
     if($('.masonry-container').length > 0) {
 
       $('.masonry-container').each(function() {

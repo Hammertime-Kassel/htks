@@ -1,0 +1,39 @@
+---
+layout: default
+title: Test
+long_title: Test
+tagline:
+section_id:
+---
+
+<div class='full' style='background-image: url(images/@stock/help.jpg); color: #fff;'>
+  <div class='four spacing'></div>
+  <div class='row bgcolor-yellow-transparent'>
+    <div class='twelve columns shadow-text'>
+      {% include section-header.html title=page.long_title tagline=page.tagline color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class='four spacing'></div>
+  <div class='four spacing'></div>
+</div>
+
+<div class='full'>
+  <div class='row'>
+    <form method='POST' action='https://subscribe.newsletter2go.com?n2g=l3sogjg7-joig07oj-mf5'>
+      <div class='large-12 columns'>
+        <p id='thanks' style='display: none;'>
+          Vielen Dank für Deine Nachricht, wir werden uns in Kürze bei Dir melden!
+        </p>
+      </div>
+      <div class='medium-12 columns'>
+        <input class='required uppercase' name='firstname' placeholder='Vorname' type='text'>
+        <input class='required uppercase' name='lastname' placeholder='Nachname' type='text'>
+        <input class='required uppercase email' name='email' placeholder='E-Mail' type='text'>
+        <input type="hidden" name="_next" value="contact.html" />
+        <input class='button white' type='submit'>
+      </div>
+    </form>
+  </div>
+</div>
+<div class='spacing'></div>
+<div class='spacing'></div>

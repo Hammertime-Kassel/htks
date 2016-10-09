@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Workshops
+long_title: Unsere Workshops
+tagline: Hier kannst Du neues Lernen oder Dein Wissen weitergeben.
 section_id: workshops
 works:
   - image: images/@stock/work-woodwork.jpg
@@ -69,7 +71,7 @@ works:
   <div class='four spacing'></div>
   <div class='row'>
     <div class='large-12 columns shadow-text'>
-      {% include section-header.html title="Workshops" tagline="Möchtest du ein Workshop bei uns halten? Dann melde dich bitte bei uns!" color="#fff" class="big" %}
+      {% include section-header.html title=page.long_title tagline=page.tagline color="#fff" class="big" %}
     </div>
   </div>
   <div class='four spacing'></div>
@@ -78,59 +80,65 @@ works:
 
 
 <div class='full'>
-  <div class='row'>
-    <div class='mod modGallery'>
-      <h3>Mehr Workshops in Kürzen.</h3>
-      <div class='two spacing'></div>
-
-    <!--
-      <div class='gallery-nav'>
-        <ul>
-          <li class='current'>
-            <a data-cat='all' href='#'>Alle</a>
-          </li>
-          <li>
-            <a data-cat='wood' href='#'>Holz</a>
-          </li>
-          <li>
-            <a data-cat='electro' href='#'>Elektro</a>
-          </li>
-          <li>
-            <a data-cat='sewing' href='#'>Nähnen</a>
-          </li>
-          <li>
-            <a data-cat='upcycle' href='#'>Upcycling</a>
-          </li>
-          <li>
-            <a data-cat='print' href='#'>Drucken</a>
-          </li>
-          <li>
-            <a data-cat='misc' href='#'>Andere</a>
-          </li>
-        </ul>
-      </div>
-      -->
-
-      <ul class='gallery large-block-grid-2 medium-block-grid-3 small-block-grid-2'>
-
-        {% for work in page.works %}
-          <li class="{{ work.klass }}">
-            <!--<a href='{{ work.link_to }}'>-->
-            <a>
-              <img alt="" src="{{ work.image }}" />
-              <div class='overlay'>
-                <div class='thumb-info'>
-                  <h3>{{ work.title }}</h3>
-                  <p>{{ work.desc }}</p>
-                </div>
-              </div>
-            </a>
-          </li>
-        {% endfor %}
-
-      </ul>
-
+    <div class="row">
+      <p>Mehr Workshops in Kürze.</p>
     </div>
+    <div class="row modCallToAction">
+      <p>Möchtest Du ein Workshop bei uns halten? <a href="/contact.html">Dann melde Dich bei uns!</a></p>
+    </div>
+    <div class='row'>
+      <div class='mod modGallery'>
+
+      <!--
+        <div class='gallery-nav'>
+          <ul>
+            <li class='current'>
+              <a data-cat='all' href='#'>Alle</a>
+            </li>
+            <li>
+              <a data-cat='wood' href='#'>Holz</a>
+            </li>
+            <li>
+              <a data-cat='electro' href='#'>Elektro</a>
+            </li>
+            <li>
+              <a data-cat='sewing' href='#'>Nähnen</a>
+            </li>
+            <li>
+              <a data-cat='upcycle' href='#'>Upcycling</a>
+            </li>
+            <li>
+              <a data-cat='print' href='#'>Drucken</a>
+            </li>
+            <li>
+              <a data-cat='misc' href='#'>Andere</a>
+            </li>
+          </ul>
+        </div>
+        -->
+
+        <ul class='gallery large-block-grid-2 medium-block-grid-3 small-block-grid-2'>
+
+          {% for work in page.works %}
+            <li class="{{ work.klass }}">
+              <!--<a href='{{ work.link_to }}'>-->
+              <a>
+                <img alt="" src="{{ work.image }}" />
+                <div class='overlay'>
+                  <div class='thumb-info'>
+                    <h3>{{ work.title }}</h3>
+                    <p>{{ work.desc }}</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+
+        </ul>
+
+      </div>
+      
+      <div class='two spacing'></div>
   </div>
 
   <div class='four spacing'></div>

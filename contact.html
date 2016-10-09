@@ -25,7 +25,10 @@ section_id: contact
             <form id='contact_form' method='POST'>
               <div class='large-12 columns'>
                 <p id='thanks' style='display: none;'>
-                  Vielen Dank für Deine Nachricht, wir werden uns in Kürze bei Dir melden!
+                  <b>Vielen Dank für Deine Nachricht, wir werden uns in Kürze bei Dir melden!</b>
+                </p>
+                <p id='form_error' style='display: none; color: red;'>
+                  <b>Leider konnte deine Nachricht nicht verschickt werden. <br>Versuche es bitte später erneut oder sende uns eine E-Mail.</b>
                 </p>
               </div>
               <div class='medium-12 columns'>
@@ -34,6 +37,7 @@ section_id: contact
                 <input class='required uppercase' name='subject' placeholder='Betreff' type='text'>
                 <textarea class='required uppercase' name='message' placeholder='Nachricht'></textarea>
                 <input type="hidden" name="_format" value="plain" />
+                <input type="hidden" name="_next" value="contact.html" />
                 <input class='button white' type='submit'>
               </div>
             </form>

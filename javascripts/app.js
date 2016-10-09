@@ -77,11 +77,13 @@ jQuery(document).foundation();
           url: 'http://formspree.io/hello@htks.de',
           data: $(form).serialize(),
           success: function(data) {
-            if(data.match(/success/)) {
-              $(form).trigger('reset');
-              $('#thanks').show().fadeOut(5000);
-            }
-          }
+            $(form).trigger('reset');
+            $('#thanks').show();
+          },
+          error: function(data) {
+            $('#form_error').show();
+          },
+          dataType: 'json'
         });
         return false;
       }
@@ -745,10 +747,10 @@ jQuery(document).foundation();
   })
 })(Tc.$);
 (function($) {
-  Tc.Module.SectionHeader = Tc.Module.extend({    
+  Tc.Module.SectionHeader = Tc.Module.extend({
     init: function($ctx, sandbox, modId) {
       this._super($ctx, sandbox, modId);
-    },    
+    },
     dependencies: function() {
     },
     onBinding: function() {
@@ -797,5 +799,3 @@ jQuery(document).foundation();
     }
   })
 })(Tc.$);
-
-

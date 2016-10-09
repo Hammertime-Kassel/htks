@@ -10,6 +10,20 @@
   src: url('../fonts/steelfish/steelfish_bd-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/steelfish/steelfish_bd-webfont.woff') format('woff'), url('../fonts/steelfish/steelfish bd.otf') format('opentype');
   font-weight: bold;
 }
+
+/* 
+ * START Hammertime Custom CSS
+ */
+
+input.uppercase::-webkit-input-placeholder,
+textarea.uppercase::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+
+/* 
+ * END Hammertime Custom CSS
+ */
+
 /*!
  * jQuery UI CSS Framework 1.10.3
  * http://jqueryui.com

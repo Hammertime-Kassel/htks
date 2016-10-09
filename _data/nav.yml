@@ -6,17 +6,17 @@
         path: manifesto.html
       - name: Ausstattung
         path: equipment.html
-      - name: Helfen
-        path: help.html
+      - name: Unterstützen
+        path: support.html
 - name: Workshops
   path: workshops.html
   section_id: workshops
 - name: Blog
   path: blog/
   section_id: blog
-- name: Forum
-  path: forum.html
-  section_id: forum
+- name: Community
+  path: community.html
+  section_id: community
 - name: Kontakt
   path: contact.html
   section_id: contact

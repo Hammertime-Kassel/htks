@@ -5,14 +5,14 @@ slides:
   - bg: images/@stock/slide-1.jpg
     small_title:
       klass: bottom-to-top
-      text: Hammertime strebt an, jedem Menschen den Ort und die Mittel zur Verfügung zu stellen, um etwas eigenes zu erschaffen, zu reparieren oder zu experimentieren.
+      text: Erschaffe, repariere, experimentiere.
     title:
       klass: bottom-to-top
-      text: DIE DIY-WERKSTATT FÜR ALLE
+      text: Kassels DIY-Werkstatt für Jedermann
     buttons:
       klass: bottom-to-top
       items:
-        - text: Mehr erfahren
+        - text: Wofür wir einstehen
           link_to: manifesto.html
   - bg: images/@stock/slide-4.jpg
   - bg: images/@stock/slide-5.jpg
@@ -22,53 +22,53 @@ slides:
 works:
   - image: images/@stock/work-woodwork.jpg
     title: Einführungskurs Holzwerkstatt
-    link_to: portfolio-item.html
+    #link_to: portfolio-item.html
     klass: wood
   - image: images/@stock/work-3d-print.jpg
     title: Einführungskurs 3D-Druck
-    link_to: portfolio-item.html
+    #link_to: portfolio-item.html
     klass: electro
   - image: images/@stock/work-laser-cutting.jpg
     title: Einführungskurs Lasercutter
-    link_to: portfolio-item.html
+    #link_to: portfolio-item.html
     klass: electro
   - image: images/@stock/work-cnc-milling.jpg
     title: Einführungskurs CNC-Fräze
-    link_to: portfolio-item.html
+    #link_to: portfolio-item.html
     klass: electro
 
 
-services:
-  - icon: trophy
-    title: Web Design
-    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
-  - icon: cogs
-    title: Web Development
-    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
-  - icon: pagelines
-    title: Branding
-    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
-  - icon: lock
-    title: Security
-    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+#services:
+#  - icon: trophy
+#    title: Web Design
+#    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+#  - icon: cogs
+#    title: Web Development
+#    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+#  - icon: pagelines
+#    title: Branding
+#    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
+#  - icon: lock
+#    title: Security
+#    desc: Acusamus laborum totam omnis inventore et error aut et eos aut. fuga mollitia vitae id enim omnis perspiciatis. modi maxime eos.
 
-milestones:
-  - icon: folder-open
-    from: 0
-    to: 69
-    title: Projects Completed
-  - icon: coffee
-    from: 0
-    to: 726
-    title: Cups of coffee offered
-  - icon: thumbs-up
-    from: 0
-    to: 59
-    title: Happy clients
-  - icon: file-text
-    from: 0
-    to: 21
-    title: Articles Published
+#milestones:
+#  - icon: folder-open
+#    from: 0
+#    to: 69
+#    title: Projects Completed
+#  - icon: coffee
+#    from: 0
+#    to: 726
+#    title: Cups of coffee offered
+#  - icon: thumbs-up
+#    from: 0
+#    to: 59
+#    title: Happy clients
+#  - icon: file-text
+#    from: 0
+#    to: 21
+#    title: Articles Published
 
 ---
 
@@ -134,23 +134,27 @@ milestones:
 <div class="three spacing"></div>
 
 <div class="row">
-  <h2 class='centered-text'>In kürze in Kassel!</h2>
+  <h2 class='centered-text'>In Kürze in Kassel!</h2>
+</div>
+<div class='row modCallToAction centered-text'>
+  <p>Um die Idee der Werkstatt verwirklichen zu können, benötigen wir nicht nur finanzielle Unterstützung. Auch Sachmittel und fachliches Know-how wären uns eine große Hilfe.</p>
+  <p>Möchtest Du uns unterstützen? <a href="/contact.html">Dann melde Dich bei uns!<a/></p> 
 </div>
 
 <div class="four spacing"></div>
 
 <div class="row">
   <div class="medium-3 large-3 columns">
-    {% include icon-text.html title='Offene Werkstatt' desc='Mache was du schon immer wolltest<br><a href="services.html">Mehr erfahren</a>' icon_class='fa icon-tools' delay='0' shape_class='icon-text-circle' %}
+    {% include icon-text.html link="equipment.html" title='Offene Werkstatt' desc='Mache, was du schon immer machen wolltest<br><a href="equipment.html">Mehr erfahren</a>' icon_class='fa icon-tools' delay='0' shape_class='icon-text-circle' %}
   </div>
   <div class="medium-3 large-3 columns">
-    {% include icon-text.html title='Community' desc='Treffe gleichgesinnte, teile dein Wissen und lerne neues' icon_class='fa fa-comments-o' delay='200' shape_class='icon-text-circle' %}
+    {% include icon-text.html link="community.html" title='Community' desc='Treffe gleichgesinnte, teile dein Wissen und lerne etwas Neues<br><a href="community.html">Mehr erfahren</a>' icon_class='fa fa-comments-o' delay='200' shape_class='icon-text-circle' %}
   </div>
   <div class="medium-3 large-3 columns">
-    {% include icon-text.html title='Workshops' desc='Von 3D-Drucker zur Nähmaschine<br><a href="portofolio.html">Mehr erfahren</a>' icon_class='fa fa-calendar' delay='400' shape_class='icon-text-circle' %}
+    {% include icon-text.html link="workshops.html" title='Workshops' desc='Von der Nähmaschine bis zum 3D-Drucker<br><a href="workshops.html">Mehr erfahren</a>' icon_class='fa fa-calendar' delay='400' shape_class='icon-text-circle' %}
   </div>
   <div class="medium-3 large-3 columns">
-    {% include icon-text.html title='Repair-Cafe' desc='Wegwerfen war gestern<br>Mehr in Kürze' icon_class='fa fa-bug' delay='600' shape_class='icon-text-circle' %}
+    {% include icon-text.html link="#" title='Repair-Cafe' desc='Wegwerfen war gestern<br>Mehr in Kürze' icon_class='fa fa-bug' delay='600' shape_class='icon-text-circle' %}
   </div>
 </div>
 
@@ -160,11 +164,13 @@ milestones:
   <div class="row">
     <div class="large-12 columns">
       {% include section-header.html title="Unsere Workshops" %}
-      <div class="spacing"></div>
-      <p>Mehr Workshops in Kürzen</p>
-      <p>Möchtest du ein Workshop bei uns halten? <a href="contact.html">Dann melde dich bei uns</a></p>
-      <div class="three spacing"></div>
     </div>
+  </div>
+  <div class="row centered-text">
+      <p>Mehr Workshops in Kürze.</p>
+  </div>
+  <div class="row modCallToAction centered-text">
+      <p>Möchtest Du einen Workshop halten? <a href="/contact.html">Dann melde Dich bei uns!</a></p>
   </div>
 
   <div class="mod modGallery">
@@ -190,11 +196,13 @@ milestones:
   <div class='row'>
     <div class='large-12 columns'>
       {% include section-header.html title="Newsletter" %}
-      <div class='spacing'></div>
-      <p>
-        Wir geben deine Daten nicht weiter!
-      </p>
     </div>
+  </div>
+  <div class='row modCallToAction centered-text'>
+        <p>Möchtest du auf dem Laufenden bleiben? Dann abonniere unseren Newsletter.</p>
+  </div>
+  <div class='row centered-text'>
+    <p>Wir geben deine Daten nicht weiter. Versprochen.</p>
   </div>
   <div class='row'>
     <script id="n2g_script">
@@ -210,16 +218,18 @@ milestones:
 <div class='full parallax' style='background-image: url(images/@stock/help.jpg); color: #fff;'>
   <div class='row'>
     <div class='large-12 columns shadow-text'>
-      {% include section-header.html title="Helfen" color="#fff" %}
+      {% include section-header.html title="Unterstützen" color="#fff" %}
       <div class='spacing'></div>
       <p class='centered-text'>
-        <b>Hilf uns dabei die Werkstatt zum Wirklichkeit zu machen!</b>
+        <b>Hilf uns dabei, die Werkstatt zur Wirklichkeit zu machen!</b>
       </p>
       <div class='buttons-wrapper {{ slide.buttons.klass }}'>
         <div class='row'>
           <div class='large-12 columns'>
             <div class='two spacing'></div>
-              <a class='button {{ button.klass }}' href='help.html'>Mehr erfahren</a>
+            <center>
+              <a class='button {{ button.klass }}' href='support.html'>Mehr erfahren</a>
+              </center>
           </div>
         </div>
       </div>

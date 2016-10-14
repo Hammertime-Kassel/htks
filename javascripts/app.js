@@ -69,6 +69,10 @@ jQuery(document).foundation();
 
     });
 
+    $(document).ready(function() {
+      $("div.lazy").lazyload();
+    });
+
     $('form#contact_form').validate({
       messages: { },
       submitHandler: function(form) {

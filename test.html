@@ -3,10 +3,13 @@ layout: default
 title: Test
 long_title: Test
 tagline:
+data-small: images/@stock/help-lazyload.jpg
+data-original: images/@stock/help.jpg
 section_id:
 ---
 
-<div class='full' style='background-image: url(images/@stock/help.jpg); color: #fff;'>
+<div class='full lazy' style='background-image: url({% page.data-small %}); color: #fff;'
+      data-original="{% page.data-original %}">
   <div class='four spacing'></div>
   <div class='row bgcolor-yellow-transparent'>
     <div class='twelve columns shadow-text'>
@@ -20,6 +23,12 @@ section_id:
 <div class='full'>
   <div class='row'>
     <form id='test_form' method='POST'>
+      <div class='medium-12 columns'>
+        <input class='required uppercase' name='firstname' placeholder='Vorname' type='text'>
+        <input class='required uppercase' name='lastname' placeholder='Nachname' type='text'>
+        <input class='required uppercase email ' name='email' placeholder='E-Mail' type='text'>
+        <input class='button white' type='submit'>
+      </div>
       <div class='large-12 columns'>
         <p id='thanks' style='display: none;'>
           <b>Vielen Dank für Deine Nachricht, wir werden uns in Kürze bei Dir melden!</b>
@@ -27,12 +36,6 @@ section_id:
         <p id='form_error' style='display: none; color: red;'>
           <b>Leider konnte deine Nachricht nicht verschickt werden. Versuche es bitte später erneut oder sende uns eine E-Mail.</b>
         </p>
-      </div>
-      <div class='medium-12 columns'>
-        <input class='required uppercase' name='firstname' placeholder='Vorname' type='text'>
-        <input class='required uppercase' name='lastname' placeholder='Nachname' type='text'>
-        <input class='required uppercase email ' name='email' placeholder='E-Mail' type='text'>
-        <input class='button white' type='submit'>
       </div>
     </form>
   </div>

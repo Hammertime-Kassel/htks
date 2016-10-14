@@ -3,10 +3,13 @@ layout: default
 title: Manifest
 long_title: Unser Manifest
 tagline: Dafür stehen wir ein.
+data-small: images/@stock/manifesto-lazyload.jpg
+data-original: images/@stock/manifesto.jpg
 section_id: about
 ---
 
-<div class='full' style='background-image: url(images/@stock/manifesto.jpg); color: #fff;'>
+<div class='full lazy' style='background-image: url({% page.data-small %}); color: #fff;'
+      data-original="{% page.data-original %}">
   <div class='four spacing'></div>
   <div class='row'>
     <div class='twelve columns shadow-text'>

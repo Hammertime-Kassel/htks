@@ -2,7 +2,8 @@
 layout: default
 section_id: home
 slides:
-  - bg: images/@stock/slide-1.jpg
+  - bg-lazyload: images/@stock/slide-1-lazyload.jpg
+    bg-original: images/@stock/slide-1.jpg
     small_title:
       klass: bottom-to-top
       text: Erschaffe, repariere, experimentiere.
@@ -14,9 +15,12 @@ slides:
       items:
         - text: Wofür wir einstehen
           link_to: manifesto.html
-  - bg: images/@stock/slide-4.jpg
-  - bg: images/@stock/slide-5.jpg
-  - bg: images/@stock/slide-9.jpg
+  - bg: images/@stock/slide-4-lazyload.jpg
+    bg-original: images/@stock/slide-4.jpg
+  - bg: images/@stock/slide-5-lazyload.jpg
+    bg-original: images/@stock/slide-5.jpg
+  - bg: images/@stock/slide-9-lazyload.jpg
+    bg-original: images/@stock/slide-9.jpg
 
 
 works:
@@ -100,7 +104,7 @@ works:
         {% endif %}
 
         <li class='frame {{style}} {{ slide.klass }}'>
-          <div class='bg' style='background-image: url({{ slide.bg}});'></div>
+          <div class='bg' style='background-image: url({{ slide.bg-lazyload }});' data-original="{% slide.bg-original %}"></div>
            <div class='small-title shadow-text {{ slide.small_title.klass }}'>
             <div class='row'>
               <div class='large-12 columns'>

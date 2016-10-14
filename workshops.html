@@ -3,6 +3,8 @@ layout: default
 title: Workshops
 long_title: Unsere Workshops
 tagline: Hier kannst Du neues Lernen oder Dein Wissen weitergeben.
+data-small: images/@stock/workshops-lazyload.jpg
+data-original: images/@stock/workshops.jpg
 section_id: workshops
 works:
   - image: images/@stock/work-woodwork.jpg
@@ -67,8 +69,8 @@ works:
 ---
 
 
-<div class='full parallax lazy' style='background-image: url(images/@stock/workshops-small.jpg); color: #fff;'
-      data-original="images/@stock/workshops.jpg">
+<div class='full parallax lazy' style='background-image: url({% page.data-small %}); color: #fff;'
+      data-original="{% page.data-original %}">
   <div class='four spacing'></div>
   <div class='row'>
     <div class='large-12 columns shadow-text'>
@@ -138,7 +140,7 @@ works:
         </ul>
 
       </div>
-      
+
       <div class='two spacing'></div>
   </div>
 

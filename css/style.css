@@ -11,7 +11,7 @@
   font-weight: bold;
 }
 
-/* 
+/*
  * START Hammertime Custom CSS
  */
 
@@ -20,7 +20,7 @@ textarea.uppercase::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 
-/* 
+/*
  * END Hammertime Custom CSS
  */
 
@@ -641,8 +641,16 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.shadow-text-light {
+  text-shadow: 0.03em 0.03em 0.5em rgba(0, 0, 0, 0.5);
+}
+
 .shadow-text {
-  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.60);
+  text-shadow: 0.03em 0.03em 0.5em rgba(0, 0, 0, 0.9);
+}
+
+.shadow-text-strong {
+  text-shadow: 0.06em 0.06em 0.3em rgba(0, 0, 0, 1);
 }
 
 .bgcolor-yellow-transparent {
@@ -2539,8 +2547,8 @@ form input.error, form textarea.error {
   transition-duration: 1s;
 }
 .modDefaultSlider .sequence .title h2 {
-  font-size: 5rem;
-  line-height: 5rem;
+  font-size: 5.9rem;
+  line-height: 5.8rem;
   display: inline-block;
   color: #fff;
   letter-spacing: 2px;

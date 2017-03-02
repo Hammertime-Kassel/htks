@@ -17,6 +17,9 @@
 - name: Community
   path: community.html
   section_id: community
+- name: Partner
+  path: _includes/sponsors.html
+  section_id: partners
 - name: Kontakt
   path: contact.html
   section_id: contact

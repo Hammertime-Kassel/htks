@@ -15,7 +15,7 @@
   path: blog/
   section_id: blog
 - name: Community
-  href: "https://forum.hammertimekassel.de/"
+  url: https://forum.hammertimekassel.de/
   section_id: community
 - name: Kontakt
   path: contact.html

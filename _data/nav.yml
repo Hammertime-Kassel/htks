@@ -16,7 +16,6 @@
   section_id: blog
 - name: Community
   url: https://forum.hammertimekassel.de/
-  external: true
   section_id: community
 - name: Kontakt
   path: contact.html

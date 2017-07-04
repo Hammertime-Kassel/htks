@@ -38,7 +38,7 @@
             </li>
           {% else %}
             <li class="{{active_class}}">
-              {% if child.url %}
+              {% if item.url %}
                 <a href="{{ item.url }}">{{ item.name }}</a>
               {% else %}
                 <a href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>

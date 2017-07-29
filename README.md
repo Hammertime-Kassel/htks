@@ -1,8 +1,10 @@
 # Hammertime Kassel
 
-## Run locally
+## Run site locally
 
-### Install bundler
+### Setup
+
+You need to do this once.
 
 1. Open Terminal
 2. Check whether you have Ruby 2.1.0 or higher installed:
@@ -29,7 +31,7 @@ bundle install
 
 Regulary run `bundle update` to update depedencies.
 
-Then run:
+To preview the site, run:
 
 ```shell
 bundle exec jekyll serve
@@ -37,3 +39,6 @@ bundle exec jekyll serve
 
 Open http://localhost:4000 in your browser.
 
+## Contribute
+
+TODO

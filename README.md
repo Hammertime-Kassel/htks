@@ -11,7 +11,6 @@ You need to do this once.
 
 ```shell
 ruby --version
-ruby 2.X.X
 ```
 
 3. If you don't have Ruby installed, install [Ruby 2.1.0 or higher](https://www.ruby-lang.org/en/downloads/).

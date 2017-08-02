@@ -5,24 +5,28 @@ long_title: Unsere Ausstattung
 tagline: Alles, was Du zum Werkeln brauchst
 data-small: images/@stock/equipment-lazyload.jpg
 data-original: images/@stock/equipment.jpg
-section_id: about
-services_left:
-  - icon: check
-    title: Holzwerkstatt
-    desc: Tischkreissäge, Kappsäge, Bandsäge, Stichsäge, Oberfräse, Exzenterschleifer, Drechselbank, Bohrmaschine, Akkuschrauber
-  - icon: check
-    title: Fablab / Elektrowerkstatt
-    desc: 3D-Drucker, CNC-Fräse, Lasercutter, Lötstationen, Messgeräte, Oszilloskop, Mikrocontroller, PCs
-  - icon: check
-    title: Nähwerkstatt
-    desc: Nähmaschine für Anfänger, Computergesteuerte Nähmaschine, Overlock-Nähmaschine, Bügelstation
-services_right:
-  - icon: check
-    title: Textil- und Druck-Werkstatt
-    desc: Schneideplotter, Transferpresse / Heißpresse, Tassenpresse, Kappenpresse
-  - icon: check
-    title: Kunststoff-Upcycling
-    desc: Mehr Details in Kürze.
+section_id: equipment
+areas:
+  - name: Textil- und Druckwerkstatt
+    services:
+      available:
+        left:
+          - name: Transferpresse / Heißpresse
+            desc: Lorem ipsum dolor
+            link: /transferpresse.html
+        right:
+          - name: Schneideplotter
+            desc: Lorem ipsum dolor
+            link: /
+      planned:
+        left:
+          - name: Kappenpresse
+            desc: Lorem ipsum dolor
+            link: /
+        right:
+          - name: Tassenpresse
+            desc: Lorem ipsum dolor
+            link: /
 ---
 
 <div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
@@ -39,31 +43,35 @@ services_right:
 
 
 <div class='full'>
-  <div class='row'>
-    <div class='medium-6 columns'>
-      {% for service in page.services_left %}
-        <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
-          <div class='icon-text-simple'>
-            <i class='fa fa-{{service.icon}}'></i>
-            <h3>{{service.title}}</h3>
-            <p>{{service.desc}}</p>
+  {% for area in page.areas %}
+    <div class='row'>
+      <div class="blub">test</div>
+      <div class='medium-6 columns'>
+        {% for service1 in area.services_available_left %}
+          <div class="blub">test</div>
+          <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+            <div class='icon-text-simple'>
+              <i class='fa fa-{{service.icon}}'></i>
+              <h3>{{service1.name}}</h3>
+              <p>{{service1.desc}}</p>
+            </div>
+            <div class='two spacing'></div>
           </div>
-          <div class='two spacing'></div>
-        </div>
-      {% endfor %}
-    </div>
-    <div class='medium-6 columns'>
-      {% for service in page.services_right %}
-        <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
-          <div class='icon-text-simple'>
-            <i class='fa fa-{{service.icon}}'></i>
-            <h3>{{service.title}}</h3>
-            <p>{{service.desc}}</p>
+        {% endfor %}
+      </div>
+      <div class='medium-6 columns'>
+        {% for service2 in area.services_available_right %}
+          <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+            <div class='icon-text-simple'>
+              <i class='fa fa-{{service.icon}}'></i>
+              <h3>{{service2.name}}</h3>
+              <p>{{service2.desc}}</p>
+            </div>
+            <div class='two spacing'></div>
           </div>
-          <div class='two spacing'></div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
+  {% endfor %}
   <div class='spacing'></div>
 </div>

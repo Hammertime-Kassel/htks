@@ -19,12 +19,109 @@ areas:
             desc: Lorem ipsum dolor
             link: /
       planned:
+        name: Geplant
         left:
           - name: Kappenpresse
             desc: Lorem ipsum dolor
             link: /
         right:
           - name: Tassenpresse
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: FabLab / Elektrowerkstatt
+    services:
+      available:
+        left:
+          - name: 3D-Drucker
+            desc: Lorem ipsum dolor
+            link: /
+          - name: Lötstationen
+            desc: Lorem ipsum dolor
+            link: /
+        right:
+          - name: Lasercutter (bis 06.09.)
+            desc: Lorem ipsum dolor
+            link: /
+      planned:
+        name: Geplant
+        left:
+          - name: CNC-Fräse
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Nähwerkstatt
+    services:
+      available:
+        left:
+          - name: Nähmaschine
+            desc: Lorem ipsum dolor
+            link: /
+          - name: Bügeleisen und -Brett
+            desc: Lorem ipsum dolor
+            link: /
+        right:
+          - name: Overlock-Nähmaschine
+            desc: Lorem ipsum dolor
+            link: /
+      planned:
+        name: Geplant
+        left:
+          - name: Coverlock-Nähmaschine
+            desc: Lorem ipsum dolor
+            link: /
+        right:
+          - name: Strickmaschine
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Siebdruck
+    services:
+      available:
+        left:
+          - name: Siebdruckstation
+            desc: Lorem ipsum dolor
+            link: /
+      planned:
+        name: Geplant
+        left:
+          - name: Siebdruckkarussell
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Kunststoff-Upcycling
+    services:
+      planned:
+        name: Geplant
+        left:
+          - name:
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Kinderwerkstatt
+    services:
+      planned:
+        name: Geplant
+        left:
+          - name:
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Holzwerkstatt
+    services:
+      planned:
+        name: Geplant
+        left:
+          - name:
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Metallwerkstat
+    services:
+      planned:
+        name: Geplant
+        left:
+          - name: 
             desc: Lorem ipsum dolor
             link: /
 ---
@@ -45,33 +142,64 @@ areas:
 <div class='full'>
   {% for area in page.areas %}
     <div class='row'>
-      <div class="blub">test</div>
-      <div class='medium-6 columns'>
-        {% for service1 in area.services_available_left %}
-          <div class="blub">test</div>
-          <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
-            <div class='icon-text-simple'>
-              <i class='fa fa-{{service.icon}}'></i>
-              <h3>{{service1.name}}</h3>
-              <p>{{service1.desc}}</p>
+      <h2>{{area.name}}</h2>
+      <div class='row'>
+        <div class='medium-6 columns'>
+          {% for service in area.services.available.left %}
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-check'></i>
+                <h3>{{service.name}}</h3>
+                <!--<p>{{service.desc}}</p>-->
+              </div>
+              <div class='two spacing'></div>
             </div>
-            <div class='two spacing'></div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
+        <div class='medium-6 columns'>
+          {% for service in area.services.available.right %}
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-check'></i>
+                <h3>{{service.name}}</h3>
+                <!--<p>{{service.desc}}</p>-->
+              </div>
+              <div class='two spacing'></div>
+            </div>
+          {% endfor %}
+        </div>
       </div>
-      <div class='medium-6 columns'>
-        {% for service2 in area.services_available_right %}
-          <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
-            <div class='icon-text-simple'>
-              <i class='fa fa-{{service.icon}}'></i>
-              <h3>{{service2.name}}</h3>
-              <p>{{service2.desc}}</p>
+
+      <div class='row'>
+        <h3 class='medium-6 columns'>{{area.services.planned.name}}</h3>
+        <div class='two spacing'></div>
+        <div class='medium-6 columns'>
+          {% for service in area.services.planned.left %}
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-times-circle'></i>
+                <h3>{{service.name}}</h3>
+                <!--<p>{{service.desc}}</p>-->
+              </div>
+              <div class='two spacing'></div>
             </div>
-            <div class='two spacing'></div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
+        <div class='medium-6 columns'>
+          {% for service in area.services.planned.right %}
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-times-circle'></i>
+                <h3>{{service.name}}</h3>
+                <!--<p>{{service.desc}}</p>-->
+              </div>
+              <div class='two spacing'></div>
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
+    <div class='two spacing'></div>
   {% endfor %}
   <div class='spacing'></div>
 </div>

@@ -75,6 +75,14 @@ works:
 
 ---
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class='mod modDefaultSlider'>
   <div class='sequence' data-autostop='on' data-timeout='0'>
@@ -134,11 +142,48 @@ works:
   </div>
 </div>
 
+<div class="spacing"></div>
+
+<div class="full">
+  <div class="mod modSectionHeader ">
+    <div class="special-title centered-text">
+      <h2>Nächste Termine</h2>
+    </div>
+  </div>
+
+  <div class="row modCallToAction centered-text">
+    <p>Die Werkstatt hat regelmäßig geöffnet. Schau doch mal (wieder) vorbei!</p>
+  </div>
+
+  <div class="row centered-text">
+    <div class="fb-page" data-href="https://www.facebook.com/hammertimekassel/" data-tabs="events" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/hammertimekassel/" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/hammertimekassel/">Nächste Events</a>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="spacing"></div>
+
+  <div class="row centered-text">
+    <p>Du findest uns auch bei <a href="https://www.meetup.com/de-DE/Hammertime-Meetup/" target="blank">Meetup</a>.</p>
+  </div>
+
+</div>
+
 <div class="three spacing"></div>
 
-<div class='row modCallToAction centered-text'>
-  <p>Um die Idee der Werkstatt verwirklichen zu können, benötigen wir nicht nur finanzielle Unterstützung. Auch Sachmittel und fachliches Know-how wären uns eine große Hilfe.</p>
-  <p>Möchtest Du uns unterstützen? <a href="/contact.html">Dann melde Dich bei uns!<a/></p>
+<div class="full" style="background: #f5f5f5;">
+  <div class="mod modSectionHeader ">
+    <div class="special-title centered-text">
+      <h2>Unterstützen</h2>
+    </div>
+  </div>
+
+  <div class='row modCallToAction centered-text'>
+    <p>Um die Idee der Werkstatt verwirklichen zu können, benötigen wir nicht nur finanzielle Unterstützung. Auch Sachmittel und fachliches Know-how wären uns eine große Hilfe.</p>
+    <p>Möchtest Du uns unterstützen? <a href="/contact.html">Dann melde Dich bei uns!<a/></p>
+  </div>
 </div>
 
 <div class="four spacing"></div>
@@ -195,7 +240,7 @@ works:
 <div class='full parallax' style='background-image: url(images/@stock/help.jpg); color: #fff;'>
   <div class='row'>
     <div class='large-12 columns shadow-text'>
-      {% include section-header.html title="Unterstützen" color="#fff" %}
+      {% include section-header.html title="Mitmachen" color="#fff" %}
       <div class='spacing'></div>
       <p class='centered-text'>
         <b>Hilf uns dabei, die Werkstatt zur Wirklichkeit zu machen!</b>

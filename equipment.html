@@ -5,24 +5,125 @@ long_title: Unsere Ausstattung
 tagline: Alles, was Du zum Werkeln brauchst
 data-small: images/@stock/equipment-lazyload.jpg
 data-original: images/@stock/equipment.jpg
-section_id: about
-services_left:
-  - icon: check
-    title: Holzwerkstatt
-    desc: Tischkreissäge, Kappsäge, Bandsäge, Stichsäge, Oberfräse, Exzenterschleifer, Drechselbank, Bohrmaschine, Akkuschrauber
-  - icon: check
-    title: Fablab / Elektrowerkstatt
-    desc: 3D-Drucker, CNC-Fräse, Lasercutter, Lötstationen, Messgeräte, Oszilloskop, Mikrocontroller, PCs
-  - icon: check
-    title: Nähwerkstatt
-    desc: Nähmaschine für Anfänger, Computergesteuerte Nähmaschine, Overlock-Nähmaschine, Bügelstation
-services_right:
-  - icon: check
-    title: Textil- und Druck-Werkstatt
-    desc: Schneideplotter, Transferpresse / Heißpresse, Tassenpresse, Kappenpresse
-  - icon: check
-    title: Kunststoff-Upcycling
-    desc: Mehr Details in Kürze.
+section_id: equipment
+areas:
+  - name: Textil- und Druckwerkstatt
+    services:
+      available:
+        left:
+          - name: Transferpresse / Heißpresse
+            desc: Lorem ipsum dolor
+            link: /transferpresse.html
+        right:
+          - name: Schneideplotter
+            desc: Lorem ipsum dolor
+            link: /
+      planned:
+        name: Geplant
+        left:
+          - name: Kappenpresse
+            desc: Lorem ipsum dolor
+            link: /
+        right:
+          - name: Tassenpresse
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: FabLab / Elektrowerkstatt
+    services:
+      available:
+        left:
+          - name: 3D-Drucker
+            desc: Lorem ipsum dolor
+            link: /
+          - name: Lötstationen
+            desc: Lorem ipsum dolor
+            link: /
+        right:
+          - name: Lasercutter (bis 06.09.)
+            desc: Lorem ipsum dolor
+            link: /
+      planned:
+        name: Geplant
+        left:
+          - name: CNC-Fräse
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Nähwerkstatt
+    services:
+      available:
+        left:
+          - name: Nähmaschine
+            desc: Lorem ipsum dolor
+            link: /
+          - name: Bügeleisen und -Brett
+            desc: Lorem ipsum dolor
+            link: /
+        right:
+          - name: Overlock-Nähmaschine
+            desc: Lorem ipsum dolor
+            link: /
+      planned:
+        name: Geplant
+        left:
+          - name: Coverlock-Nähmaschine
+            desc: Lorem ipsum dolor
+            link: /
+        right:
+          - name: Strickmaschine
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Siebdruck
+    services:
+      available:
+        left:
+          - name: Siebdruckstation
+            desc: Lorem ipsum dolor
+            link: /
+      planned:
+        name: Geplant
+        left:
+          - name: Siebdruckkarussell
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Kunststoff-Upcycling
+    services:
+      planned:
+        name: Geplant
+        left:
+          - name:
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Kinderwerkstatt
+    services:
+      planned:
+        name: Geplant
+        left:
+          - name:
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Holzwerkstatt
+    services:
+      planned:
+        name: Geplant
+        left:
+          - name:
+            desc: Lorem ipsum dolor
+            link: /
+
+  - name: Metallwerkstat
+    services:
+      planned:
+        name: Geplant
+        left:
+          - name: 
+            desc: Lorem ipsum dolor
+            link: /
 ---
 
 <div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
@@ -39,31 +140,66 @@ services_right:
 
 
 <div class='full'>
-  <div class='row'>
-    <div class='medium-6 columns'>
-      {% for service in page.services_left %}
-        <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
-          <div class='icon-text-simple'>
-            <i class='fa fa-{{service.icon}}'></i>
-            <h3>{{service.title}}</h3>
-            <p>{{service.desc}}</p>
-          </div>
-          <div class='two spacing'></div>
+  {% for area in page.areas %}
+    <div class='row'>
+      <h2>{{area.name}}</h2>
+      <div class='row'>
+        <div class='medium-6 columns'>
+          {% for service in area.services.available.left %}
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-check'></i>
+                <h3>{{service.name}}</h3>
+                <!--<p>{{service.desc}}</p>-->
+              </div>
+              <div class='two spacing'></div>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
-    </div>
-    <div class='medium-6 columns'>
-      {% for service in page.services_right %}
-        <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
-          <div class='icon-text-simple'>
-            <i class='fa fa-{{service.icon}}'></i>
-            <h3>{{service.title}}</h3>
-            <p>{{service.desc}}</p>
-          </div>
-          <div class='two spacing'></div>
+        <div class='medium-6 columns'>
+          {% for service in area.services.available.right %}
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-check'></i>
+                <h3>{{service.name}}</h3>
+                <!--<p>{{service.desc}}</p>-->
+              </div>
+              <div class='two spacing'></div>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
+      </div>
+
+      <div class='row'>
+        <h3 class='medium-6 columns'>{{area.services.planned.name}}</h3>
+        <div class='two spacing'></div>
+        <div class='medium-6 columns'>
+          {% for service in area.services.planned.left %}
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-times-circle'></i>
+                <h3>{{service.name}}</h3>
+                <!--<p>{{service.desc}}</p>-->
+              </div>
+              <div class='two spacing'></div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class='medium-6 columns'>
+          {% for service in area.services.planned.right %}
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-times-circle'></i>
+                <h3>{{service.name}}</h3>
+                <!--<p>{{service.desc}}</p>-->
+              </div>
+              <div class='two spacing'></div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
-  </div>
+    <div class='two spacing'></div>
+  {% endfor %}
   <div class='spacing'></div>
 </div>

@@ -83,8 +83,8 @@ works:
 
 
 <div class='full'>
-    <div class="row">
-      <p>Mehr Workshops in Kürze.</p>
+    <div class="row modCallToAction">
+      <p>Diese Seite befindet sich noch im Aufbau.</p>
     </div>
     <div class="row modCallToAction">
       <p>Möchtest Du ein Workshop bei uns halten? <a href="/contact.html">Dann melde Dich bei uns!</a></p>
@@ -118,13 +118,13 @@ works:
             </li>
           </ul>
         </div>
-        -->
+
 
         <ul class='gallery large-block-grid-2 medium-block-grid-3 small-block-grid-2'>
 
           {% for work in page.works %}
             <li class="{{ work.klass }}">
-              <!--<a href='{{ work.link_to }}'>-->
+              <a href='{{ work.link_to }}'>
               <a>
                 <img alt="" src="{{ work.image }}" />
                 <div class='overlay'>
@@ -137,7 +137,7 @@ works:
             </li>
           {% endfor %}
 
-        </ul>
+        </ul>-->
 
       </div>
 

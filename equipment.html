@@ -13,21 +13,21 @@ areas:
         left:
           - name: Transferpresse / Heißpresse
             desc: Lorem ipsum dolor
-            link: /transferpresse.html
+            link: 
         right:
           - name: Schneideplotter
             desc: Lorem ipsum dolor
-            link: /
+            link:
       planned:
         name: Geplant
         left:
           - name: Kappenpresse
             desc: Lorem ipsum dolor
-            link: /
+            link:
         right:
           - name: Tassenpresse
             desc: Lorem ipsum dolor
-            link: /
+            link:
 
   - name: FabLab / Elektrowerkstatt
     services:
@@ -35,27 +35,27 @@ areas:
         left:
           - name: 3D-Drucker
             desc: Lorem ipsum dolor
-            link: /
+            link:
           - name: Lötstationen
             desc: Lorem ipsum dolor
-            link: /
+            link:
         right:
           - name: Lasercutter (bis 06.09.)
             desc: Lorem ipsum dolor
-            link: /
+            link:
           - name: Ätzküvette
             desc: Lorem ipsum dolor
-            link: /
+            link:
       planned:
         name: Geplant
         left:
           - name: CNC-Fräse
             desc: Lorem ipsum dolor
-            link: /
+            link:
         right:
           - name: UV Belichter
             desc: Lorem ipsum dolor
-            link: /
+            link:
 
   - name: Nähwerkstatt
     services:
@@ -63,27 +63,27 @@ areas:
         left:
           - name: Nähmaschine
             desc: Lorem ipsum dolor
-            link: /
+            link:
           - name: Bügeleisen und -brett
             desc: Lorem ipsum dolor
-            link: /
+            link:
         right:
           - name: Overlock-Nähmaschine
             desc: Lorem ipsum dolor
-            link: /
+            link:
       planned:
         name: Geplant
         left:
           - name: Coverlock-Nähmaschine
             desc: Lorem ipsum dolor
-            link: /
+            link:
           - name: Ledernähmaschine
             desc: Lorem ipsum dolor
-            link: /
+            link:
         right:
           - name: Strickmaschine
             desc: Lorem ipsum dolor
-            link: /
+            link:
 
   - name: Siebdruck
     services:
@@ -91,13 +91,13 @@ areas:
         left:
           - name: Siebdruckstation
             desc: Lorem ipsum dolor
-            link: /
+            link:
       planned:
         name: Geplant
         left:
           - name: Siebdruckkarussell
             desc: Lorem ipsum dolor
-            link: /
+            link:
 
   - name: Kunststoff-Upcycling
     services:
@@ -106,7 +106,7 @@ areas:
         left:
           - name:
             desc: Lorem ipsum dolor
-            link: /
+            link:
 
   - name: Kinderwerkstatt
     services:
@@ -115,7 +115,7 @@ areas:
         left:
           - name:
             desc: Lorem ipsum dolor
-            link: /
+            link:
 
   - name: Holzwerkstatt
     services:
@@ -124,7 +124,7 @@ areas:
         left:
           - name:
             desc: Lorem ipsum dolor
-            link: /
+            link:
 
   - name: Metallwerkstat
     services:
@@ -133,7 +133,7 @@ areas:
         left:
           - name:
             desc: Lorem ipsum dolor
-            link: /
+            link:
 ---
 
 <div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
@@ -150,6 +150,9 @@ areas:
 
 
 <div class='full'>
+  {% comment %}
+    TODO much duplicate code here, see if planned services and left / right assignment can be refactored
+  {% endcomment %}
   {% for area in page.areas %}
     <div class='row'>
       <h2>{{area.name}}</h2>
@@ -159,7 +162,8 @@ areas:
             <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
               <div class='icon-text-simple'>
                 <i class='fa fa-check'></i>
-                <h3>{{service.name}}</h3>
+                {% assign servicelink = service.link == "" ||= false %}
+                <h3>{% if servicelink %}<a href="{{service.link}}">{% endif %}{{service.name}}{% if servicelink %}</a>{% endif %}</h3>
                 <!--<p>{{service.desc}}</p>-->
               </div>
               <div class='two spacing'></div>
@@ -171,7 +175,8 @@ areas:
             <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
               <div class='icon-text-simple'>
                 <i class='fa fa-check'></i>
-                <h3>{{service.name}}</h3>
+                {% assign servicelink = service.link == "" ||= false %}
+                <h3>{% if servicelink %}<a href="{{service.link}}">{% endif %}{{service.name}}{% if servicelink %}</a>{% endif %}</h3>
                 <!--<p>{{service.desc}}</p>-->
               </div>
               <div class='two spacing'></div>
@@ -188,7 +193,8 @@ areas:
             <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
               <div class='icon-text-simple'>
                 <i class='fa fa-times-circle'></i>
-                <h3>{{service.name}}</h3>
+                {% assign servicelink = service.link == "" ||= false %}
+                <h3>{% if servicelink %}<a href="{{service.link}}">{% endif %}{{service.name}}{% if servicelink %}</a>{% endif %}</h3>
                 <!--<p>{{service.desc}}</p>-->
               </div>
               <div class='two spacing'></div>
@@ -200,7 +206,8 @@ areas:
             <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
               <div class='icon-text-simple'>
                 <i class='fa fa-times-circle'></i>
-                <h3>{{service.name}}</h3>
+                {% assign servicelink = service.link == "" ||= false %}
+                <h3>{% if servicelink %}<a href="{{service.link}}">{% endif %}{{service.name}}{% if servicelink %}</a>{% endif %}</h3>
                 <!--<p>{{service.desc}}</p>-->
               </div>
               <div class='two spacing'></div>

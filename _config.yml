@@ -14,3 +14,11 @@ markdown: kramdown
 
 paginate: 3
 paginate_path: "blog/page:num"
+
+defaults:
+  -
+    scope:
+      path: "equipment"
+      type: "pages"
+    values:
+      layout: "equipment-profile"

@@ -20,6 +20,15 @@ textarea.uppercase::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 
+p.subtitle {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 1.4em;
+  font-weight: normal;
+  letter-spacing: 0em;
+}
+
+
 /*
  * END Hammertime Custom CSS
  */

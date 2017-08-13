@@ -1,1 +1,3 @@
-# TODO
+name: "Metallwerkstatt" # the full name of the area
+short_description: "" # a short description of the area in a few words
+description: "Metallwerkstatt" # a more lengthy description of the area

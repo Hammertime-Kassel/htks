@@ -1,6 +1,7 @@
+type: "3D-Drucker"
 producer: "Ultimaker B.V."
 producer_link: https://ultimaker.com/
-model: "Ultimaker 3 3D Drucker"
+model: "Ultimaker 3"
 model_link: https://ultimaker.com/en/products/ultimaker-3
 description: "Der 3D Drucker Ultimaker 3 ist ein Gerät für professionelle Anwender. Mit diesem 3D Drucker lässt sich eine große Palette an Materialien, wie z.B. PLA, ABS, Nylon, PET(G), sowie flexiblem Kunststoff verarbeiten. Mit Hilfe des Dual-Extruders können auch komplexe Objekte gedruckt werden, wobei der Druck von Stützstrukturen mit wasserlöslichem Kunststoff erfolgen kann. Durch das beheizte Druckbett wird das sogenannte Warping minimiert."
 short_description: "Professioneller 3D Drucker."

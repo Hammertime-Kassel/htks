@@ -6,135 +6,9 @@ tagline: Alles, was Du zum Werkeln brauchst
 data-small: images/@stock/equipment-lazyload.jpg
 data-original: images/@stock/equipment.jpg
 section_id: equipment
-areas:
-  - name: Textil- und Druckwerkstatt
-    services:
-      available:
-        left:
-          - name: Transferpresse / Heißpresse
-            desc: Lorem ipsum dolor
-            link: /equipment/secabo_ts7_swing_away_heat_press.html
-        right:
-          - name: Schneideplotter
-            desc: Lorem ipsum dolor
-            link:
-      planned:
-        name: Geplant
-        left:
-          - name: Kappenpresse
-            desc: Lorem ipsum dolor
-            link:
-        right:
-          - name: Tassenpresse
-            desc: Lorem ipsum dolor
-            link:
-
-  - name: FabLab / Elektrowerkstatt
-    services:
-      available:
-        left:
-          - name: 3D-Drucker
-            desc: Lorem ipsum dolor
-            link:
-          - name: Lötstationen
-            desc: Lorem ipsum dolor
-            link:
-        right:
-          - name: Lasercutter (bis 06.09.)
-            desc: Lorem ipsum dolor
-            link:
-          - name: Ätzküvette
-            desc: Lorem ipsum dolor
-            link:
-      planned:
-        name: Geplant
-        left:
-          - name: CNC-Fräse
-            desc: Lorem ipsum dolor
-            link:
-        right:
-          - name: UV Belichter
-            desc: Lorem ipsum dolor
-            link:
-
-  - name: Nähwerkstatt
-    services:
-      available:
-        left:
-          - name: Nähmaschine
-            desc: Lorem ipsum dolor
-            link:
-          - name: Bügeleisen und -brett
-            desc: Lorem ipsum dolor
-            link:
-        right:
-          - name: Overlock-Nähmaschine
-            desc: Lorem ipsum dolor
-            link:
-      planned:
-        name: Geplant
-        left:
-          - name: Coverlock-Nähmaschine
-            desc: Lorem ipsum dolor
-            link:
-          - name: Ledernähmaschine
-            desc: Lorem ipsum dolor
-            link:
-        right:
-          - name: Strickmaschine
-            desc: Lorem ipsum dolor
-            link:
-
-  - name: Siebdruck
-    services:
-      available:
-        left:
-          - name: Siebdruckstation
-            desc: Lorem ipsum dolor
-            link:
-      planned:
-        name: Geplant
-        left:
-          - name: Siebdruckkarussell
-            desc: Lorem ipsum dolor
-            link:
-
-  - name: Kunststoff-Upcycling
-    services:
-      planned:
-        name: Geplant
-        left:
-          - name:
-            desc: Lorem ipsum dolor
-            link:
-
-  - name: Kinderwerkstatt
-    services:
-      planned:
-        name: Geplant
-        left:
-          - name:
-            desc: Lorem ipsum dolor
-            link:
-
-  - name: Holzwerkstatt
-    services:
-      planned:
-        name: Geplant
-        left:
-          - name:
-            desc: Lorem ipsum dolor
-            link:
-
-  - name: Metallwerkstatt
-    services:
-      planned:
-        name: Geplant
-        left:
-          - name:
-            desc: Lorem ipsum dolor
-            link:
 ---
+
+{% assign areas = site.data.areas %}
 
 <div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
       data-original="{{ page.data-original }}">
@@ -148,14 +22,48 @@ areas:
   <div class='four spacing'></div>
 </div>
 
-
 <div class='full'>
+
+  {% for area_item in areas %}
+
+    {% assign area_id = area_item[0] %}
+    {% assign area = area_item[1] %}
+
+    <div class='row'>
+      <h2>{{area.info.name}}</h2>
+      <div class='row'>
+        {% for equipment_item in area.equipment %}
+
+          {% assign equipment_id = equipment_item[0] %}
+          {% assign equipment = equipment_item[1] %}
+
+          {% if equipment.status ==  %}
+            {% assign icon = "" %}
+          {% else %}
+            {% assign icon = "" %}
+          {% endif %}
+
+          <div class='medium-6 columns'>
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-check'></i>
+                <h3><a href="/equipment/{{equipment_id}}.html">{{equipment.info.type}} {{equipment.info.producer}} {{equipment.info.model}}</a></h3>
+                <p>{{equipment.info.short_description}}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+
   {% comment %}
     TODO much duplicate code here, see if planned services and left / right assignment can be refactored
   {% endcomment %}
-  {% for area in page.areas %}
+  {% comment %}
+  {% for area in areas %}
     <div class='row'>
-      <h2>{{area.name}}</h2>
+      <h2>{{area.info.name}}</h2>
       <div class='row'>
         <div class='medium-6 columns'>
           {% for service in area.services.available.left %}
@@ -219,4 +127,5 @@ areas:
     <div class='two spacing'></div>
   {% endfor %}
   <div class='spacing'></div>
+  {% endcomment %}
 </div>

@@ -5,7 +5,7 @@ layout: default
   TODO insert status working or not working
 {% endcomment %}
 
-{% assign equipment = site.data.areas[page.area_id][page.equipment_id] %}
+{% assign equipment = site.data.areas[page.area_id].equipment[page.equipment_id] %}
 {% capture image_base_path %}/images/areas/{{page.area_id}}/{{page.equipment_id}}{% endcapture %}
 
 <div class='full'>
@@ -17,7 +17,53 @@ layout: default
       </p>
     </header>
 
-    <div class='spacing'></div>
+    <p>
+      {% if equipment.info.status == site.data.equipment_status.okay %}
+        {% assign status_icon = "check" %}
+        {% assign status_caption = "Gerät funktioniert" %}
+        {% assign status_text = "Alles in Ordnung, du kannst das Gerät benutzen!" %}
+        {% assign status_class = "success" %}
+
+      {% elsif equipment.info.status == site.data.equipment_status.limited %}
+        {% assign status_icon = "exclamation-circle" %}
+        {% assign status_caption = "Eingeschränkt nutzbar" %}
+        {% assign status_text = "Das Gerät ist eingeschränkt nutzbar. Bitte beachte die Hinweise oder kontaktiere uns." %}
+        {% assign status_class = "warning" %}
+
+      {% elsif equipment.info.status == site.data.equipment_status.broken %}
+        {% assign status_icon = "times-circle" %}
+        {% assign status_caption = "Defekt" %}
+        {% assign status_text = "Sorry, aber das Gerät ist defekt und kann aktuell nicht benutzt werden." %}
+        {% assign status_class = "alert" %}
+
+      {% elsif equipment.info.status == site.data.equipment_status.repairing %}
+        {% assign status_icon = "wrench" %}
+        {% assign status_caption = "In Reparatur" %}
+        {% assign status_text = "Sorry, aber das Gerät wird gerade repariert." %}
+        {% assign status_class = "alert" %}
+
+      {% elsif equipment.info.status == site.data.equipment_status.planned %}
+        {% assign status_icon = "calendar" %}
+        {% assign status_caption = "Anschaffung geplant" %}
+        {% assign status_text = "Sorry, aber das Gerät ist noch nicht verfügbar." %}
+        {% assign status_class = "alert" %}
+
+      {% endif %}
+
+      <div class='spacing'></div>
+
+      <div data-alert class="alert-box {{status_class}} radius">
+        <div class='mod modIconText'>
+          <div class='icon-text-simple'>
+            <i class='fa fa-{{status_icon}}'></i>
+            <h3>{{status_caption}}</h3>
+            <p>{{status_text}}</p>
+            {% if equipment.info.additional_status_text != blank %}
+            <p>{{equipment.info.additional_status_text}}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
 
     <div class='mod modDefaultSlider'>
       <div class='sequence' data-autostop='on' data-timeout='0'>
@@ -90,47 +136,6 @@ layout: default
       <label>{{item.name}}:&nbsp;</label><span>{{item.value}}</span>
     </p>
     {% endfor %}
-
-    <h2>Status</h2>
-    <p>
-      {% if equipment.info.status == "okay" %}
-        {% assign status_icon = "check" %}
-        {% assign status_caption = "Gerät funktioniert" %}
-        {% assign status_text = "Alles in Ordnung, du kannst das Gerät benutzen!" %}
-        {% assign status_class = "success" %}
-
-      {% elsif equipment.info.status == "limited" %}
-        {% assign status_icon = "exclamation-circle" %}
-        {% assign status_caption = "Eingeschränkt nutzbar" %}
-        {% assign status_text = "Das Gerät ist eingeschränkt nutzbar. Bitte beachte die Hinweise oder kontaktiere uns." %}
-        {% assign status_class = "warning" %}
-
-      {% elsif equipment.info.status == "broken" %}
-        {% assign status_icon = "times-circle" %}
-        {% assign status_caption = "Defekt" %}
-        {% assign status_text = "Sorry, aber das Gerät ist defekt und kann aktuell nicht benutzt werden." %}
-        {% assign status_class = "alert" %}
-
-      {% elsif equipment.info.status == "repairing" %}
-        {% assign status_icon = "wrench" %}
-        {% assign status_caption = "In Reparatur" %}
-        {% assign status_text = "Sorry, aber das Gerät wird gerade repariert." %}
-        {% assign status_class = "alert" %}
-
-      {% endif %}
-
-      <div data-alert class="alert-box {{status_class}} radius">
-        <div class='mod modIconText'>
-          <div class='icon-text-simple'>
-            <i class='fa fa-{{status_icon}}'></i>
-            <h3>{{status_caption}}</h3>
-            <p>{{status_text}}</p>
-            {% if equipment.info.additional_status_text != blank %}
-            <p>{{equipment.info.additional_status_text}}</p>
-            {% endif %}
-          </div>
-        </div>
-      </div>
 
     </p>
 

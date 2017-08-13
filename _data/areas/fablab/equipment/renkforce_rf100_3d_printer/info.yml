@@ -1,6 +1,7 @@
+type: "3D-Drucker"
 producer: "Conrad Electronics"
 producer_link: https://www.conrad.de/
-model: "Renkforce RF100 3D Drucker"
+model: "Renkforce RF100"
 model_link: https://www.conrad.de/de/renkforce-rf100-3d-drucker-starter-kit-inkl-filament-1507428.html
 description: "Der 3D Drucker Renkforce RF100 ist für den Einstieg in die Welt des 3D-Drucks geeignet. Mit diesem Drucker kann ausschließich der Kunststoff PLA (Polylactide), ein biologisch abbaubarer Kunststoff, verarbeitet werden. Durch die einfache Bedienung des Druckers kommt man auch ohne Vorkenntnisse im 3D-Druck recht schnell zu ersten Ergebnissen."
 short_description: "3D Drucker für Einsteiger."

@@ -26,11 +26,12 @@ Each subfolder of an area folder represents a specific part of our equipment, e.
 
 #### Add a New Service
 
-To create a new service, create a new subfolder within the area folder in the [\_data/areas](https://github.com/Hammertime-Kassel/htks/tree/master/_data/areas) folder. If there is no fitting area folder, you need to create a new one (see above). The folder's name must be lowercase and words must be separated by underscores, e.g. `secabo_ts7_swing_away_heat_press` and is now called the `equipment_id`. The `equipment_id` needs to be unique. Hint: Use the tool's or device's model number.
+To create a new service, create a new subfolder within the `equipment` folder in the [\_data/areas](https://github.com/Hammertime-Kassel/htks/tree/master/_data/areas) folder. If there is no fitting area folder, you need to create a new one (see above). The folder's name must be lowercase and words must be separated by underscores, e.g. `secabo_ts7_swing_away_heat_press` and is now called the `equipment_id`. The `equipment_id` needs to be unique. Hint: Use the tool's or device's model number.
 
 Place an `info.yml` file within the folder and add the following informations:
 
 ```yaml
+type: "" # the general type of the equipment, e.g. "3D-Printer"
 producer: "" # name of the producer
 producer_link: "" # (optional) link to producer's website
 model: "" # name of the model
@@ -51,8 +52,7 @@ technical_data: # list of technical informations. List of "name" and "value" pai
   -
     name: ""
     value: ""
-available: true # `true` if the equipment is available, `false` if not
-status: "" # possible values: "okay" => equipment is available and functional, "limited" => equipment is available but limited in functionality, "broken" => equipment is broken and cannot be used, "repairing" => the equipment is being repaired and cannot be used
+status: "" # possible values: "planned" => equipment is not available yet; "okay" => equipment is available and functional; "limited" => equipment is available but limited in functionality; "broken" => equipment is broken and cannot be used; "repairing" => the equipment is being repaired and cannot be used
 additional_status_text: "" # (optional) an additional note that will be displayed beneath the status
 images: # (optional) list of images of the equipment. images needs to be placed in the `/images/areas/<area_id>/<equipment_id>/` folder
   - original: "" # original, bigger image. needs to be placed in the `/images/areas/<area_id>/<equipment_id>/original` folder

@@ -32,6 +32,7 @@ Place an `info.yml` file within the folder and add the following informations:
 
 ```yaml
 type: "" # the general type of the equipment, e.g. "3D-Printer"
+disable_profile_page: false # set `true` to disable the equipment's profile page, e.g. if there is no profile page available yet or important informations are missing
 producer: "" # name of the producer
 producer_link: "" # (optional) link to producer's website
 model: "" # name of the model

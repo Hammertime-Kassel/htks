@@ -1,3 +1,4 @@
+disable_profile_page: true
 type: "3D-Drucker"
 producer: "Ultimaker B.V."
 producer_link: https://ultimaker.com/
@@ -42,5 +43,4 @@ technical_data:
   -
     name: "Umgebung"
     value: "+15 °C bis +32 °C, 10 % - 90 % relative Luftfeuchtigkeit"
-available: true
 status: "okay"

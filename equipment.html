@@ -8,6 +8,15 @@ data-original: images/@stock/equipment.jpg
 section_id: equipment
 ---
 
+{% comment %}
+  TODO sort areas alphabetically (for the target language)
+  TODO sort equipment alphabetically (for the target language)
+  TODO consider custom sorting for equipment
+  TODO show only two equipments per row
+  TODO color code for status
+  TODO status for areas
+{% endcomment %}
+
 {% assign areas = site.data.areas %}
 
 <div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
@@ -37,17 +46,48 @@ section_id: equipment
           {% assign equipment_id = equipment_item[0] %}
           {% assign equipment = equipment_item[1] %}
 
-          {% if equipment.status ==  %}
-            {% assign icon = "" %}
-          {% else %}
-            {% assign icon = "" %}
+          {% if equipment.info.status == site.data.equipment_status.okay %}
+            {% assign status_icon = "check" %}
+            {% assign status_caption = "Gerät funktioniert" %}
+            {% assign status_text = "Alles in Ordnung, du kannst das Gerät benutzen!" %}
+            {% assign status_class = "success" %}
+
+          {% elsif equipment.info.status == site.data.equipment_status.limited %}
+            {% assign status_icon = "exclamation-circle" %}
+            {% assign status_caption = "Eingeschränkt nutzbar" %}
+            {% assign status_text = "Das Gerät ist eingeschränkt nutzbar. Bitte beachte die Hinweise oder kontaktiere uns." %}
+            {% assign status_class = "warning" %}
+
+          {% elsif equipment.info.status == site.data.equipment_status.broken %}
+            {% assign status_icon = "times-circle" %}
+            {% assign status_caption = "Defekt" %}
+            {% assign status_text = "Sorry, aber das Gerät ist defekt und kann aktuell nicht benutzt werden." %}
+            {% assign status_class = "alert" %}
+
+          {% elsif equipment.info.status == site.data.equipment_status.repairing %}
+            {% assign status_icon = "wrench" %}
+            {% assign status_caption = "In Reparatur" %}
+            {% assign status_text = "Sorry, aber das Gerät wird gerade repariert." %}
+            {% assign status_class = "alert" %}
+
+          {% elsif equipment.info.status == site.data.equipment_status.planned %}
+            {% assign status_icon = "calendar" %}
+            {% assign status_caption = "Anschaffung geplant" %}
+            {% assign status_text = "Sorry, aber das Gerät ist noch nicht verfügbar." %}
+            {% assign status_class = "alert" %}
+
           {% endif %}
+
+          {% capture complete_status_text %}{{status_text}}{% if equipment.info.additional_status_text != blank %}&nbsp;{{equipment.info.additional_status_text}}{% endif %}{% endcapture %}
 
           <div class='medium-6 columns'>
             <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
               <div class='icon-text-simple'>
-                <i class='fa fa-check'></i>
-                <h3><a href="/equipment/{{equipment_id}}.html">{{equipment.info.type}} {{equipment.info.producer}} {{equipment.info.model}}</a></h3>
+                <i class='fa fa-{{status_icon}}' data-tooltip aria-haspopup="true" class="has-tip" title="{{complete_status_text}}"></i>
+
+                {% capture profile_page_path %}/equipment/{{equipment_id}}.html{% endcapture %}
+
+                <h3>{% unless equipment.info.disable_profile_page == true %}<a href="{{profile_page_path}}">{% endunless %}{{equipment.info.type}} {{equipment.info.producer}} {{equipment.info.model}}{% unless equipmentinfo.disable_profile_page == true %}</a>{% endunless %}</h3>
                 <p>{{equipment.info.short_description}}</p>
               </div>
             </div>

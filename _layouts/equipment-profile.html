@@ -5,15 +5,15 @@ layout: default
   TODO insert status working or not working
 {% endcomment %}
 
-{% assign service = site.data.areas[page.area_id][page.service_id] %}
-{% capture image_base_path %}/images/areas/{{page.area_id}}/{{page.service_id}}{% endcapture %}
+{% assign equipment = site.data.areas[page.area_id][page.equipment_id] %}
+{% capture image_base_path %}/images/areas/{{page.area_id}}/{{page.equipment_id}}{% endcapture %}
 
 <div class='full'>
   <div class='row'>
     <header>
-      <h1>{{service.info.producer}} {{service.info.model}}</h1>
+      <h1>{{equipment.info.producer}} {{equipment.info.model}}</h1>
       <p class="subtitle">
-        {{service.info.short_description}}
+        {{equipment.info.short_description}}
       </p>
     </header>
 
@@ -28,7 +28,7 @@ layout: default
           <span></span>
         </a>
         <ul class='sequence-pagination'>
-          {% for image in service.info.images %}
+          {% for image in equipment.info.images %}
             {% if forloop.first %}
               {% assign class = 'current' %}
             {% else %}
@@ -38,7 +38,7 @@ layout: default
           {% endfor %}
         </ul>
         <ul class='sequence-canvas'>
-          {% for image in service.info.images %}
+          {% for image in equipment.info.images %}
             {% if forloop.first %}
               {% assign style = 'static' %}
             {% else %}
@@ -64,28 +64,28 @@ layout: default
 
     <h2>Hersteller</h2>
     <p>
-      <a href="{{service.info.producer_link}}">{{service.info.producer}}</a>
+      <a href="{{equipment.info.producer_link}}">{{equipment.info.producer}}</a>
     </p>
 
     <h2>Modell</h2>
     <p>
-      <a href="{{service.info.model_link}}">{{service.info.model}}</a>
+      <a href="{{equipment.info.model_link}}">{{equipment.info.model}}</a>
     </p>
 
     <h2>Beschreibung</h2>
     <p>
-      {{service.info.description}}
+      {{equipment.info.description}}
     </p>
 
     <h2>Technische Daten</h2>
-    {% for item in service.info.technical_data %}
+    {% for item in equipment.info.technical_data %}
     <p>
       <label>{{item.name}}:</label>&nbsp;<span>{{item.value}}</span>
     </p>
     {% endfor %}
 
     <h2>Zubehör</h2>
-    {% for item in service.info.equipment %}
+    {% for item in equipment.info.equipment %}
     <p>
       <label>{{item.name}}:&nbsp;</label><span>{{item.value}}</span>
     </p>
@@ -93,25 +93,25 @@ layout: default
 
     <h2>Status</h2>
     <p>
-      {% if service.info.status == "okay" %}
+      {% if equipment.info.status == "okay" %}
         {% assign status_icon = "check" %}
         {% assign status_caption = "Gerät funktioniert" %}
         {% assign status_text = "Alles in Ordnung, du kannst das Gerät benutzen!" %}
         {% assign status_class = "success" %}
 
-      {% elsif service.info.status == "limited" %}
+      {% elsif equipment.info.status == "limited" %}
         {% assign status_icon = "exclamation-circle" %}
         {% assign status_caption = "Eingeschränkt nutzbar" %}
         {% assign status_text = "Das Gerät ist eingeschränkt nutzbar. Bitte beachte die Hinweise oder kontaktiere uns." %}
         {% assign status_class = "warning" %}
 
-      {% elsif service.info.status == "broken" %}
+      {% elsif equipment.info.status == "broken" %}
         {% assign status_icon = "times-circle" %}
         {% assign status_caption = "Defekt" %}
         {% assign status_text = "Sorry, aber das Gerät ist defekt und kann aktuell nicht benutzt werden." %}
         {% assign status_class = "alert" %}
 
-      {% elsif service.info.status == "repairing" %}
+      {% elsif equipment.info.status == "repairing" %}
         {% assign status_icon = "wrench" %}
         {% assign status_caption = "In Reparatur" %}
         {% assign status_text = "Sorry, aber das Gerät wird gerade repariert." %}
@@ -125,8 +125,8 @@ layout: default
             <i class='fa fa-{{status_icon}}'></i>
             <h3>{{status_caption}}</h3>
             <p>{{status_text}}</p>
-            {% if service.info.additional_status_text != blank %}
-            <p>{{service.info.additional_status_text}}</p>
+            {% if equipment.info.additional_status_text != blank %}
+            <p>{{equipment.info.additional_status_text}}</p>
             {% endif %}
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 ## Maintenance of Equipment
 
-The workshop's available or planned equipment is displayed on the [equipment page](http://hammertimekassel.de/equipment.html) and its subordinated pages. The data for this sites is stored within the [\_data/areas](https://github.com/Hammertime-Kassel/htks/tree/master/_data/areas) folder.
+The workshop's available or planned equipment is displayed on the [equipment page](http://hammertimekassel.de/equipment/) and its subordinated pages. The data for this sites is stored within the [\_data/areas](https://github.com/Hammertime-Kassel/htks/tree/master/_data/areas) folder.
 
 ### Areas
 

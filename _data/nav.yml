@@ -5,7 +5,7 @@
       - name: Manifest
         path: manifesto.html
       - name: Ausstattung
-        path: equipment.html
+        path: equipment/
       - name: Unterstützen
         path: support.html
 - name: Workshops

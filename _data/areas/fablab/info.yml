@@ -1,3 +1,4 @@
 name: "Fablab / Elektrowerkstatt" # the full name of the area
 short_description: "" # a short description of the area in a few words
 description: "" # a more lengthy description of the area
+status: "available"

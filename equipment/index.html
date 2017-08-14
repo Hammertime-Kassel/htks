@@ -38,8 +38,30 @@ section_id: equipment
     {% assign area_id = area_item[0] %}
     {% assign area = area_item[1] %}
 
+    {% endif %}
+
     <div class='row'>
+
       <h2>{{area.info.name}}</h2>
+
+      <p class="subtitle">
+        {{area.info.short_description}}
+      </p>
+
+      {% if area.info.status == site.data.area_status.planned %}
+
+        <div class='medium-6 columns'>
+          <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+            <div class='icon-text-simple'>
+              <i class='fa fa-calendar' data-tooltip aria-haspopup="true" class="has-tip" title="{{area_status_text}}"></i>
+              <h3>In Planung</h3>
+              <p>Dieser Teil der Werkstatt befindet sich noch in Planung. Gern kannst du uns dabei unterstützen!</p>
+            </div>
+          </div>
+        </div>
+
+      {% endif %}
+
       <div class='row'>
         {% for equipment_item in area.equipment %}
 

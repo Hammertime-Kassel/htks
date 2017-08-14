@@ -1,3 +1,4 @@
 name: "Kinderwerkstatt" # the full name of the area
-short_description: "" # a short description of the area in a few words
+short_description: "Ein Teil der Werkstatt, der speziell für die Kids da ist!" # a short description of the area in a few words
 description: "" # a more lengthy description of the area
+status: "planned"

@@ -17,7 +17,8 @@ section_id: equipment
   TODO status for areas
 {% endcomment %}
 
-{% assign areas = site.data.areas %}
+{% assign area_data = site.data.areas %}
+{% assign area_list = site.data.areas.info.area_list | sort: 'name' %}
 
 <div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
       data-original="{{ page.data-original }}">
@@ -33,20 +34,19 @@ section_id: equipment
 
 <div class='full'>
 
-  {% for area_item in areas %}
+  {% for area in area_list %}
 
-    {% assign area_id = area_item[0] %}
-    {% assign area = area_item[1] %}
+    {% assign single_area_data = area_data[area.area_id] %}
 
     <div class='row'>
 
-      <h2>{{area.info.name}}</h2>
+      <h2>{{area.name}}</h2>
 
       <p class="subtitle">
-        {{area.info.short_description}}
+        {{single_area_data.info.short_description}}
       </p>
 
-      {% if area.info.status == site.data.area_status.planned %}
+      {% if single_area_data.info.status == site.data.area_status.planned %}
 
         <div class='medium-6 columns'>
           <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
@@ -61,7 +61,7 @@ section_id: equipment
       {% endif %}
 
       <div class='row'>
-        {% for equipment_item in area.equipment %}
+        {% for equipment_item in single_area_data.equipment %}
 
           {% assign equipment_id = equipment_item[0] %}
           {% assign equipment = equipment_item[1] %}

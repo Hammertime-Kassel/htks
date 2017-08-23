@@ -1,0 +1,25 @@
+area_list:
+  -
+    name: "Kinderwerkstatt"
+    area_id: "children_workshop"
+  -
+    name: "Fablab / Elektrowerkstatt"
+    area_id: "fablab"
+  -
+    name: "Metallwerkstatt"
+    area_id: "metal_workshop"
+  -
+    name: "Siebdruck"
+    area_id: "screen_printing"
+  -
+    name: "Nähwerkstatt"
+    area_id: "sewing"
+  -
+    name: "Textil- und Druckwerkstatt"
+    area_id: "textile_printing"
+  -
+    name: "Upcycling"
+    area_id: "upcycling"
+  -
+    name: "Holzwerkstatt"
+    area_id: "wood_workshop"

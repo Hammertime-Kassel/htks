@@ -131,7 +131,7 @@ layout: default
       <h2>Technische Daten</h2>
       {% for item in equipment.info.technical_data %}
         <p>
-          <label>{{item.name}}:</label>&nbsp;<span>{{item.value}}</span>
+          <label>{{item.name}}:</label><span>{{item.value}}</span>
         </p>
       {% endfor %}
     {% endif %}
@@ -140,7 +140,7 @@ layout: default
       <h2>Zubehör</h2>
       {% for item in equipment.info.equipment %}
         <p>
-          <label>{{item.name}}:</label>&nbsp;<span>{{item.value}}</span>
+          <label>{{item.name}}:</label><span>{{item.value}}</span>
         </p>
       {% endfor %}
     {% endif %}

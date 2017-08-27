@@ -140,7 +140,7 @@ layout: default
       <h2>Zubehör</h2>
       {% for item in equipment.info.equipment %}
         <p>
-          <label>{{item.name}}:</label><span>{{item.value}}</span>
+          <label>{{item.name}}{% if item.value %}:{% endif %}</label>{% if item.value %}<span>{{item.value}}</span>{% endif %}
         </p>
       {% endfor %}
     {% endif %}

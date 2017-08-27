@@ -1,0 +1,16 @@
+type: "Schneideplotter"
+producer: "Graphtec"
+producer_link: http://graphteccorp.com/
+model: "CE 5000-60"
+model_link: http://graphteccorp.com/imaging/ce5000/
+description: "Ein Schneideplotter schneidet Materialien wie Papier, unterschiedliche Folien oder Stoff. Dafür benötigt er sogenannte Vektordateien, die dem Schneideplotter die Schneidelinien vorgeben. Wird das Messer gegen einen Stift ausgetauscht, lassen sich mit dem Gerät auch Grafiken zeichnen."
+short_description: "Ein Schneideplotter schneidet Materialien wie Papier, unterschiedliche Folien oder Stoff anhand von Vektordateien."
+technical_data:
+  -
+    name: "Maximaler Schneidebereich"
+    value: "603 mm x 50 m"
+  -
+    name: "Maximale Mediendicke"
+    value: "0,25 mm"
+status: "okay"
+#additional_status_text: "Der Techniker ist informiert!"

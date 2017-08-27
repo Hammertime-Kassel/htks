@@ -1,0 +1,5 @@
+type: "CNC-Fräsmaschine"
+short_description: "Mit einer CNC-Fräsmaschine lassen sich Werkstücke aus Holz, Kunststoff und ähnlichen Werkstoffen computergesteuert mit hoher Präsision bearbeiten."
+status: "planned"
+disable_profile_page: true
+#additional_status_text: "Der Techniker ist informiert!"

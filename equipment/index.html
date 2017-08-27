@@ -108,6 +108,9 @@ section_id: equipment
                 {% capture profile_page_path %}/equipment/{{equipment_id}}.html{% endcapture %}
 
                 <h3>{% unless equipment.info.disable_profile_page == true %}<a href="{{profile_page_path}}">{% endunless %}{{equipment.info.type}} {{equipment.info.producer}} {{equipment.info.model}}{% unless equipmentinfo.disable_profile_page == true %}</a>{% endunless %}</h3>
+                {% if equipment.info.status == "planned" %}
+                  <p><b>Geplant, noch nicht verfügbar</b></p>
+                {% endif %}
                 <p>{{equipment.info.short_description}}</p>
               </div>
             </div>

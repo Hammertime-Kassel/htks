@@ -1,0 +1,24 @@
+type: "Labornetzgerät"
+producer: "PeakTech"
+producer_link: http://www.peaktech.de/
+model: "6085"
+model_link: http://www.peaktech.de/produktdetails/kategorie/acdc-stabilisierte-labornetzgeraete/produkt/p-6085.html
+description: "Ein analoges Labornetzgerät. Die Ausgangsspannung bzw. der Ausgangsstrom ist kontinuierlich veränderbar."
+short_description: "Analoges Labornetzgerät."
+technical_data:
+  -
+    name: "Ausgangsspannung"
+    value: "0 - 15 V DC"
+  -
+    name: "Ausgangsstrom"
+    value: "0 - 2 A DC"
+  -
+    name: "Ausgangsleistung"
+    value: "30 W"
+  -
+    name: "Restwelligkeit (U)	"
+    value: "1 mV eff"
+  -
+    name: "Restwelligkeit (I)"
+    value: "6 mA eff"
+status: "okay"

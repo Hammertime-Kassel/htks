@@ -3,15 +3,16 @@ layout: default
 data-small: /images/@stock/blog-lazyload.jpg
 data-original: /images/@stock/blog.jpg
 section_id: blog
+title: Blog
 ---
 
-
-<div class='full parallax lazy' style='background-image: url({{site.url}}/images/@stock/blog-lazyload.jpg); color: #fff;'
-      data-original="{{site.url}}/images/@stock/blog.jpg">
+<!-- <div class='full parallax' style='background-image: url({{site.url}}/images/@stock/blog-header-bg.jpg); color: #fff;'> -->
+<div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
+      data-original="{{ page.data-original }}">
   <div class='four spacing'></div>
   <div class='row'>
     <div class='large-12 columns shadow-text'>
-      {% include section-header.html title="Blog" tagline="Anleitungen, Geschichten und Neuigkeiten." color="#fff" class="big" %}
+      {% include section-header.html title=page.long_title tagline=page.tagline color="#fff" class="big" %}
     </div>
   </div>
   <div class='four spacing'></div>
@@ -20,10 +21,41 @@ section_id: blog
 
 <div class='full' style='background: #f5f5f5'>
   <div class='row'>
-    <p>Hier entsteht bald ein Blog, in dem wir Anleitungen, Geschichten und Neuigkeiten präsentieren.</p>
+    <div class='large-9 columns'>
+
+      {{content}}
+
+      {% if paginator %}
+        <div class="pager">
+          {% if paginator.next_page %}
+            {% if paginator.next_page == 1 %}
+              <a href="/blog" class="older">Ältere Einträge</a>
+            {% else %}
+              <a href="/blog/page{{ paginator.next_page }}" class="older">Ältere Einträge</a>
+            {% endif %}
+          {% else %}
+            <span class="older">Ältere Einträge</span>
+          {% endif %}
+          {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+              <a href="/blog" class="newer">Neuere Einträge</a>
+            {% else %}
+              <a href="/blog/page{{ paginator.previous_page }}" class="newer">Neuere Einträge</a>
+            {% endif %}
+          {% else %}
+            <span class="newer">Neuere Einträge</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+
+      <div class='four spacing'></div>
+    </div>
+    <!--
+    <div class='large-3 columns' id='sidebar'>
+       {% include sidebar.html %}
+      <div class='four spacing'></div>
+    </div>
+    -->
   </div>
-  <div class="row modCallToAction">
-      <p>Möchtest Du zu unserem Blog beitragen? <a href="/contact.html">Dann melde Dich bei uns!</a></p>
-  </div>
-  <div class='four spacing'></div>
 </div>

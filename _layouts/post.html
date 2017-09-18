@@ -1,8 +1,19 @@
 ---
-# TODO either delete or use as template in /blog/index.html
 layout: blog
 section_id: blog
+long_title: Blog
+tagline: Neues und Interessantes rund um Hammertime
 ---
+
+{% comment %}
+Workaround for date localization
+TODO duplicate code, see blog/index.html
+{% endcomment %}
+{% assign months = "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember" | split: "|" %}
+{% assign m = page.date | date: "%-m" | minus: 1 %}
+{% assign day = page.date | date: "%d" %}
+{% assign month = months[m] %}
+{% assign year = page.date | date: "%Y" %}
 
 <div class='row'>
   <div class='large-12 columns'>
@@ -14,11 +25,7 @@ section_id: blog
       </div>
       <div class='content'>
         <p class='info'>
-          <span>{{page.date | date: "%B %d, %Y" }}</span>
-          /
-          <span>
-            by {{page.author}}
-          </span>
+          <span class="date">{{ day }}.{{ month }} {{ year }} von {{page.author}}</span>
         </p>
         <h3><a href="{{page.url}}">{{page.title}}</a></h3>
         {{ content }}

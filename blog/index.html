@@ -12,6 +12,7 @@ tagline: Neues und Interessantes rund um Hammertime
 
   {% comment %}
   Workaround for date localization
+  TODO duplicate code, see post.html
   {% endcomment %}
   {% assign months = "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember" | split: "|" %}
   {% assign m = post.date | date: "%-m" | minus: 1 %}

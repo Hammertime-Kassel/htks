@@ -1,39 +1,91 @@
 ---
-layout: blog
+layout: default
 title: Blog
 section_id: blog
 long_title: Blog
 tagline: Neues und Interessantes rund um Hammertime
-#data-small: images/@stock/workshops-lazyload.jpg #TODO
-#data-original: images/@stock/workshops.jpg # TODO
 ---
 
-{% for post in paginator.posts %}
-
-  {% comment %}
-  Workaround for date localization
-  TODO duplicate code, see post.html
-  {% endcomment %}
-  {% assign months = "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember" | split: "|" %}
-  {% assign m = post.date | date: "%-m" | minus: 1 %}
-  {% assign day = post.date | date: "%d" %}
-  {% assign month = months[m] %}
-  {% assign year = post.date | date: "%Y" %}
-
-  <div class='big mod modBlogPost'>
-    <div class='images'>
-      {% for image in post.images %}
-        <div class='image'><img alt="" src="{{site.url}}/{{image}}" /></div>
-      {% endfor %}
-    </div>
-    <div class='content'>
-      <p class='info'>
-        <span class="date">{{ day }}.{{ month }} {{ year }} von {{post.author}}</span>
-      </p>
-      <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-      <p>{{post.excerpt}}</p>
-      <div class='spacing'></div>
-      <a class="button small" href="{{post.url}}">Mehr lesen</a>
+<div class='full parallax lazy' style='background-image: url({{site.url}}/images/@stock/blog-lazyload.jpg); color: #fff;' data-original="{{site.url}}/images/@stock/blog.jpg">
+  <div class='four spacing'></div>
+  <div class='row'>
+    <div class='large-12 columns shadow-text'>
+      {% include section-header.html title=page.long_title tagline=page.tagline color="#fff" class="big" %}
     </div>
   </div>
-{% endfor %}
+  <div class='four spacing'></div>
+  <div class='four spacing'></div>
+</div>
+
+<div class='full' style='background: #f5f5f5'>
+  <div class='row'>
+    <div class='large-9 columns'>
+
+      {% for post in paginator.posts %}
+
+        {% comment %}
+        Workaround for date localization
+        TODO duplicate code, see post.html
+        {% endcomment %}
+        {% assign months = "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember" | split: "|" %}
+        {% assign m = post.date | date: "%-m" | minus: 1 %}
+        {% assign day = post.date | date: "%d" %}
+        {% assign month = months[m] %}
+        {% assign year = post.date | date: "%Y" %}
+
+        <div class='big mod modBlogPost'>
+          <div class='images'>
+            {% for image in post.images %}
+              <div class='image'><img alt="" src="{{site.url}}/{{image}}" /></div>
+            {% endfor %}
+          </div>
+          <div class='content'>
+            <p class='info'>
+              <span class="date">{{ day }}.{{ month }} {{ year }} von {{post.author}}</span>
+            </p>
+            <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+            <p>{{post.excerpt}}</p>
+            <div class='spacing'></div>
+            <a class="button small" href="{{post.url}}">Mehr lesen</a>
+          </div>
+        </div>
+      {% endfor %}
+
+      {% comment %}
+      TODO paginator prev/next buttons should only appear if there are posts available
+      {% endcomment %}
+
+      {% if paginator %}
+        <div class="pager">
+          {% if paginator.next_page %}
+            {% if paginator.next_page == 1 %}
+              <a href="/blog" class="older">Ältere Beiträge</a>
+            {% else %}
+              <a href="/blog/page{{ paginator.next_page }}" class="older">Ältere Beiträge</a>
+            {% endif %}
+          {% else %}
+            <span class="older">Ältere Beiträge</span>
+          {% endif %}
+          {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+              <a href="/blog" class="newer">Neuere Beiträge</a>
+            {% else %}
+              <a href="/blog/page{{ paginator.previous_page }}" class="newer">Neuere Beiträge</a>
+            {% endif %}
+          {% else %}
+            <span class="newer">Neuere Beiträge</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+
+      <div class='four spacing'></div>
+    </div>
+    <!--
+    <div class='large-3 columns' id='sidebar'>
+       {% include sidebar.html %}
+      <div class='four spacing'></div>
+    </div>
+    -->
+  </div>
+</div>

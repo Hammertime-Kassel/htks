@@ -8,7 +8,7 @@ images:
   - images/blog/news-september-2017/ht-eroeffnung-005.jpg
   - images/blog/news-september-2017/ht-eroeffnung-008.jpg
 excerpt:
-  "Was bisher passiert ist, wo wir jetzt stehen und was die nächsten Schritte sind."
+  "Was seit der Eröffnung passiert ist, wo wir jetzt stehen und welche nächsten Schritte wir planen."
 categories: news
 author: Thorben Egberts
 ---
@@ -39,6 +39,6 @@ Unsere nächsten großen Schritte sind:
 - Überarbeitung der Bilder auf unserer Website (wir haben leider noch viele Stock-Fotos statt realer Bilder)
 - „Spread the Word!” Wir leben aktuell von Mund-zu-Mund-Pro­pa­gan­da und wollen mehr Werbung machen
 
-Unabhängig davon suchen wir [wie in unserem letzten Zeitungsartikel berichtet](https://www.lokalo24.de/lokales/kassel/mehr-platz-selbermacher-selbstmach-werkstatt-hammertime-will-sich-vergroessern-8686477.html) weitere Unterstützer (auch für Workshops) und mittelfristig größere Räumlichkeiten (mindestens 200m², möglichst günstig, ggf. auch renovierungsbedürftig). Auch hilft es uns sehr, wenn ihr uns über die sozialen Medien ([Facebook](https://www.facebook.com/hammertimekassel/), [Twitter](https://twitter.com/htks_de) und [Instagram](https://www.instagram.com/hammertimekassel/)) unterstützt und unsere Reichweite erhöht!
+Unabhängig davon suchen wir [wie in unserem letzten Zeitungsartikel berichtet](https://www.lokalo24.de/lokales/kassel/mehr-platz-selbermacher-selbstmach-werkstatt-hammertime-will-sich-vergroessern-8686477.html) weitere Unterstützer (auch für Workshops) und mittelfristig größere Räumlichkeiten (mindestens 200m², möglichst günstig, ggf. auch renovierungsbedürftig). Auch hilft es uns sehr, wenn ihr uns über die sozialen Medien ([Facebook](https://www.facebook.com/hammertimekassel/), [Twitter](https://twitter.com/htks_de), [Instagram](https://www.instagram.com/hammertimekassel/) und [Meetup](https://www.meetup.com/de-DE/Hammertime-Meetup/)) unterstützt und unsere Reichweite erhöht!
 
 An dieser Stelle möchten wir uns noch einmal ganz herzlich bei all unseren bisherigen Unterstützerinnen und Unterstützern bedanken. Egal wie klein ihr euren Beitrag vielleicht selbst empfunden habt. Es hat uns immer wieder ein Stückchen vorangebracht. Ihr seid großartig!

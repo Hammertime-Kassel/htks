@@ -1,5 +1,6 @@
 <head>
   <meta content="{{ site.title }}" property="og:site_name">
+  <meta property="og:image" content="{{ site.url }}/images/social/fb-header-small.png" />
   {% if page.title %}
     <meta content="{{ page.title }}" property="og:title">
   {% else %}
@@ -29,8 +30,6 @@
     {% for image in page.images %}
       <meta content="{{ site.url }}/{{ image }}" property="article:image">
     {% endfor %}
-  {% elsif page.image %}
-    <meta content="/img/srcset/{{ page.image }}" property="og:image">
   {% else %}
     <meta content="{{ site.url }}/images/social/fb-header-small.png" property="og:image">
   {% endif %}

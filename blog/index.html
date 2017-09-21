@@ -13,8 +13,6 @@ tagline: Neues und Interessantes rund um Hammertime
       {% include section-header.html title=page.long_title tagline=page.tagline color="#fff" class="big" %}
     </div>
   </div>
-  <div class='four spacing'></div>
-  <div class='four spacing'></div>
 </div>
 
 <div class='full' style='background: #f5f5f5'>
@@ -69,11 +67,24 @@ tagline: Neues und Interessantes rund um Hammertime
         </div>
       {% endif %}
 
+    </div>
+
+    <div style="display: inline-block">
+      {% include blog-sidebar.html %}
+    </div>
+
+  </div>
+
+  <div class='row'>
+
+    <div class='large-9 columns'>
+
+      {% include blog-sidebar-portrait.html %}
+
       <div class='four spacing'></div>
 
     </div>
 
-    {% include blog-sidebar.html %}
-
   </div>
+
 </div>

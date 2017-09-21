@@ -30,8 +30,6 @@
     {% for image in page.images %}
       <meta content="{{ site.url }}/{{ image }}" property="article:image">
     {% endfor %}
-  {% else %}
-    <meta content="{{ site.url }}/images/social/fb-header-small.png" property="og:image">
   {% endif %}
   {% if page.categories %}
     {% for category in page.categories limit:1 %}

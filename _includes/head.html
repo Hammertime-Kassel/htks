@@ -5,7 +5,9 @@
   {% else %}
     <meta content="{{ site.title }}" property="og:title">
   {% endif %}
-  {% if page.layout != 'post' %}
+  {% if page.layout == 'post' %}
+    <meta property="og:image" content="{{ site.url }}/images/social/fb-blog-post.jpg">
+  {% else %}
     <meta property="og:image" content="{{ site.url }}/images/social/fb-header-small.png">
   {% endif %}
   {% if page.title %}
@@ -27,10 +29,6 @@
   {% if page.date %}
     <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     <meta content="https://www.facebook.com/hammertimekassel/" property="article:author">
-  {% endif %}
-
-  {% if page.layout == 'post' %}
-    <meta content="{{ site.url }}/images/social/fb-blog-post.jpg" property="article:image">
   {% endif %}
   {% if page.images %}
     {% for image in page.images %}

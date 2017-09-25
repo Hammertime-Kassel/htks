@@ -1,0 +1,57 @@
+type: "Nähmaschine"
+producer: "W6"
+producer_link: https://www.w6-naehmaschinen.de/
+model: "N 454D"
+model_link: https://www.w6-naehmaschinen.de/naehmaschinen/overlock/w6-naehmaschine-n-454d
+equipment:
+  -
+    name: "Zubehör"
+    value: "Pinzette, 2x Schraubendreher, Garnrollennetze, Ölflasche, Nadeleinfädler, Pinsel, Einfädelhaken, Garnabziehscheiben, Nadelset, Fußanlasser"
+description: "Ist die robuste Kettelmaschine für kreative und begeisterte Näher und auch Overlock Neu-Einsteiger. Das Innenleben der OV ist aus Metall und steht für Präzision und Langlebigkeit. Wenn der Wunsch besteht, Innennähte schneller, schöner, und sauberer zu nähen, dann ist die W6 N 454 D Overlock die richtige Wahl."
+short_description: "Die Kettel-Maschine für umfangreiche Kreationen."
+technical_data:
+  -
+    name: "Oberfadenspannung"
+    value: "manuell regelbar"
+  -
+    name: "Nählicht"
+    value: "LED"
+  -
+    name: "Nähen ohne Fußanlasser"
+    value: "ja, Start-/Stopp-Taste"
+  -
+    name: "Nähen mit Zwillingsnadel"
+    value: "ja"
+  -
+    name: "Stoffobertransport"
+    value: "nein"
+  -
+    name: "Nähfußdruck verstellbar"
+    value: "nein"
+  -
+    name: "Nadeleinfädler"
+    value: "ja, automatisch"
+  -
+    name: "Knopflochvarianten"
+    value: "4"
+  -
+    name: "Freiarm"
+    value: "ja"
+  -
+    name: "Fußanlasser"
+    value: "ja"
+  -
+    name: "Nähalphabete"
+    value: "2"
+  -
+    name: "Anzahl Nähprogramme"
+    value: "115"
+status: "okay" # TODO use constant
+#additional_status_text: "Der Techniker ist informiert!"
+#images:
+#  - original: bernina-380-big-1.jpg
+#    small: bernina-380-small-1.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+#  - original: bernina-380-big-2.jpg
+#    small: bernina-380-small-2.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

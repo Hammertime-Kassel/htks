@@ -1,0 +1,57 @@
+type: "Nähmaschine"
+producer: "Bernina"
+producer_link: https://www.bernina.com/
+model: "380"
+model_link: https://www.bernina.com/de-DE/Produkte-DE/Produkteubersicht-BERNINA/Nahen-Quilten-und-Sticken/BERNINA-3er-Serie/BERNINA-380
+equipment:
+  -
+    name: "Standardnähfüsse"
+    value: "Rücktransportfuss, Overlockfuss, Autom. Knopflochschlittenfuss, Reissverschlussfuss, Blindstichfuss, Jeansfuss, Offener Stickfuss"
+description: "Ein modernes, helles LCD-Display gibt Ihnen jederzeit Überblick über die eingestellten Funktionen. Direktwahltasten erlauben eine schnelle und einfache Bedienung. Start-/Stopptaste und Geschwindigkeitsregler, halbautomatischer Einfädler, automatisches Knopfloch oder schnelle Stichwahl sparen Zeit und machen exaktes Nähen und Patchworken möglich. Helles LED-Nählicht, Anschiebetisch sowie das Freihandsystem erhöhen den Nähkomfort. So einfach geht stylisch nähen!"
+short_description: "Die BERNINA 380 ist das Topmodell der BERNINA 3er Serie. Sie glänzt mit einer einmaligen Optik und einer Vielzahl von Funktionen, die das Nähen und Quilten vereinfachen."
+technical_data:
+  -
+    name: "Oberfadenspannung"
+    value: "manuell regelbar"
+  -
+    name: "Nählicht"
+    value: "LED"
+  -
+    name: "Nähen ohne Fußanlasser"
+    value: "ja, Start-/Stopp-Taste"
+  -
+    name: "Nähen mit Zwillingsnadel"
+    value: "ja"
+  -
+    name: "Stoffobertransport"
+    value: "nein"
+  -
+    name: "Nähfußdruck verstellbar"
+    value: "nein"
+  -
+    name: "Nadeleinfädler"
+    value: "ja, automatisch"
+  -
+    name: "Knopflochvarianten"
+    value: "4"
+  -
+    name: "Freiarm"
+    value: "ja"
+  -
+    name: "Fußanlasser"
+    value: "ja"
+  -
+    name: "Nähalphabete"
+    value: "2"
+  -
+    name: "Anzahl Nähprogramme"
+    value: "115"
+status: "okay" # TODO use constant
+#additional_status_text: "Der Techniker ist informiert!"
+#images:
+#  - original: bernina-380-big-1.jpg
+#    small: bernina-380-small-1.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+#  - original: bernina-380-big-2.jpg
+#    small: bernina-380-small-2.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

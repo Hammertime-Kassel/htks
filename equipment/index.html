@@ -81,19 +81,19 @@ section_id: equipment
           {% elsif equipment.info.status == site.data.equipment_status.broken %}
             {% assign status_icon = "times-circle" %}
             {% assign status_caption = "Defekt" %}
-            {% assign status_text = "Sorry, aber das Gerät ist defekt und kann aktuell nicht benutzt werden." %}
+            {% assign status_text = "Tut uns Leid, das Gerät ist defekt und kann aktuell nicht benutzt werden." %}
             {% assign status_class = "alert" %}
 
           {% elsif equipment.info.status == site.data.equipment_status.repairing %}
             {% assign status_icon = "wrench" %}
             {% assign status_caption = "In Reparatur" %}
-            {% assign status_text = "Sorry, aber das Gerät wird gerade repariert." %}
+            {% assign status_text = "Tut uns Leid, das Gerät wird gerade repariert." %}
             {% assign status_class = "alert" %}
 
           {% elsif equipment.info.status == site.data.equipment_status.planned %}
             {% assign status_icon = "calendar" %}
             {% assign status_caption = "Anschaffung geplant" %}
-            {% assign status_text = "Sorry, aber das Gerät ist noch nicht verfügbar." %}
+            {% assign status_text = "Tut uns Leid, das Gerät ist noch nicht verfügbar." %}
             {% assign status_class = "alert" %}
 
           {% endif %}

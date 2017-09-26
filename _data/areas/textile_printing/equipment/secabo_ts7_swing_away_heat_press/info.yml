@@ -36,19 +36,20 @@ technical_data:
     value: "+5°C - +35°C/ 30% - 70% Luftfeuchtigkeit"
 status: "okay" # TODO use constant
 #additional_status_text: "Der Techniker ist informiert!"
-images:
-  - original: secabo-ts7-big-1.jpg
-    small: secabo-ts7-small-1.jpg
-    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  - original: secabo-ts7-big-2.jpg
-    small: secabo-ts7-small-2.jpg
-    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  - original: secabo-ts7-big-3.jpg
-    small: secabo-ts7-small-3.jpg
-    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  - original: secabo-ts7-big-4.jpg
-    small: secabo-ts7-small-4.jpg
-    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  - original: secabo-ts7-big-5.jpg
-    small: secabo-ts7-small-5.jpg
-    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+# TODO place own images under images/areas/textile_printing/secabo_ts7_swing_away_heat_press/original and /small
+#images:
+#  - original: secabo-ts7-big-1.jpg
+#    small: secabo-ts7-small-1.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+#  - original: secabo-ts7-big-2.jpg
+#    small: secabo-ts7-small-2.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+#  - original: secabo-ts7-big-3.jpg
+#    small: secabo-ts7-small-3.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+#  - original: secabo-ts7-big-4.jpg
+#    small: secabo-ts7-small-4.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+#  - original: secabo-ts7-big-5.jpg
+#    small: secabo-ts7-small-5.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

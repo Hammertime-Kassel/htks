@@ -7,39 +7,39 @@ equipment:
   -
     name: "Zubehör"
     value: "Pinzette, 2x Schraubendreher, Garnrollennetze, Ölflasche, Nadeleinfädler, Pinsel, Einfädelhaken, Garnabziehscheiben, Nadelset, Fußanlasser"
-description: "Ist die robuste Kettelmaschine für kreative und begeisterte Näher und auch Overlock Neu-Einsteiger. Das Innenleben der OV ist aus Metall und steht für Präzision und Langlebigkeit. Wenn der Wunsch besteht, Innennähte schneller, schöner, und sauberer zu nähen, dann ist die W6 N 454 D Overlock die richtige Wahl."
+description: "Eine robuste Kettelmaschine für kreative und begeisterte Näher und auch Overlock Neu-Einsteiger. Das Innenleben der OV ist aus Metall und steht für Präzision und Langlebigkeit. Wenn der Wunsch besteht, Innennähte schneller, schöner, und sauberer zu nähen, dann ist die W6 N 454 D Overlock die richtige Wahl."
 short_description: "Die Kettel-Maschine für umfangreiche Kreationen."
 technical_data:
   -
     name: "Oberfadenspannung"
-    value: "manuell regelbar"
+    value: "Manuell regelbar"
   -
     name: "Nählicht"
     value: "LED"
   -
     name: "Nähen ohne Fußanlasser"
-    value: "ja, Start-/Stopp-Taste"
+    value: "Ja, Start-/Stopp-Taste"
   -
     name: "Nähen mit Zwillingsnadel"
-    value: "ja"
+    value: "Ja"
   -
     name: "Stoffobertransport"
-    value: "nein"
+    value: "Nein"
   -
     name: "Nähfußdruck verstellbar"
-    value: "nein"
+    value: "Nein"
   -
     name: "Nadeleinfädler"
-    value: "ja, automatisch"
+    value: "Ja, automatisch"
   -
     name: "Knopflochvarianten"
     value: "4"
   -
     name: "Freiarm"
-    value: "ja"
+    value: "Ja"
   -
     name: "Fußanlasser"
-    value: "ja"
+    value: "Ja"
   -
     name: "Nähalphabete"
     value: "2"

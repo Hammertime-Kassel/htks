@@ -5,41 +5,41 @@ model: "380"
 model_link: https://www.bernina.com/de-DE/Produkte-DE/Produkteubersicht-BERNINA/Nahen-Quilten-und-Sticken/BERNINA-3er-Serie/BERNINA-380
 equipment:
   -
-    name: "Standardnähfüsse"
-    value: "Rücktransportfuss, Overlockfuss, Autom. Knopflochschlittenfuss, Reissverschlussfuss, Blindstichfuss, Jeansfuss, Offener Stickfuss"
-description: "Ein modernes, helles LCD-Display gibt Ihnen jederzeit Überblick über die eingestellten Funktionen. Direktwahltasten erlauben eine schnelle und einfache Bedienung. Start-/Stopptaste und Geschwindigkeitsregler, halbautomatischer Einfädler, automatisches Knopfloch oder schnelle Stichwahl sparen Zeit und machen exaktes Nähen und Patchworken möglich. Helles LED-Nählicht, Anschiebetisch sowie das Freihandsystem erhöhen den Nähkomfort. So einfach geht stylisch nähen!"
+    name: "Standardnähfüße"
+    value: "Rücktransportfuß, Overlockfuß, autom. Knopflochschlittenfuß, Reissverschlussfuß, Blindstichfuß, Jeansfuß, offener Stickfuß"
+description: "Ein modernes, helles LCD-Display gibt dir jederzeit Überblick über die eingestellten Funktionen. Direktwahltasten erlauben eine schnelle und einfache Bedienung. Start-/Stopptaste und Geschwindigkeitsregler, halbautomatischer Einfädler, automatisches Knopfloch oder schnelle Stichwahl sparen Zeit und machen exaktes Nähen und Patchworken möglich. Helles LED-Nählicht, Anschiebetisch sowie das Freihandsystem erhöhen den Nähkomfort."
 short_description: "Die BERNINA 380 ist das Topmodell der BERNINA 3er Serie. Sie glänzt mit einer einmaligen Optik und einer Vielzahl von Funktionen, die das Nähen und Quilten vereinfachen."
 technical_data:
   -
     name: "Oberfadenspannung"
-    value: "manuell regelbar"
+    value: "Manuell regelbar"
   -
     name: "Nählicht"
     value: "LED"
   -
     name: "Nähen ohne Fußanlasser"
-    value: "ja, Start-/Stopp-Taste"
+    value: "Ja, Start-/Stopp-Taste"
   -
     name: "Nähen mit Zwillingsnadel"
-    value: "ja"
+    value: "Ja"
   -
     name: "Stoffobertransport"
-    value: "nein"
+    value: "Nein"
   -
     name: "Nähfußdruck verstellbar"
-    value: "nein"
+    value: "Nein"
   -
     name: "Nadeleinfädler"
-    value: "ja, automatisch"
+    value: "Ja, automatisch"
   -
     name: "Knopflochvarianten"
     value: "4"
   -
     name: "Freiarm"
-    value: "ja"
+    value: "Ja"
   -
     name: "Fußanlasser"
-    value: "ja"
+    value: "Ja"
   -
     name: "Nähalphabete"
     value: "2"

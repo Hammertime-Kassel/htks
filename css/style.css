@@ -28,6 +28,9 @@ p.subtitle {
   letter-spacing: 0em;
 }
 
+.blogPostSubMenu {
+  width: 97%;
+}
 
 /*
  * END Hammertime Custom CSS
@@ -1090,12 +1093,13 @@ form input.error, form textarea.error {
   overflow: auto;
   padding: 0 10px;
 }
-.pager a {
+
+/*.pager a {
   color: #999;
-}
-.pager a:hover {
+}*/
+/*.pager a:hover {
   color: #F9CE06;
-}
+}*/
 .pager .older {
   float: left;
 }
@@ -1103,7 +1107,36 @@ form input.error, form textarea.error {
   float: right;
 }
 
+/* Pager within Post */
+.PageNavigation {
+  /*font-size: 14px;*/
+  display: block;
+  width: 97%;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  /*margin: 1em 0;*/
+}
+
+.PageNavigation .next {
+  text-align: right;
+}
+
+.PageNavigation .prev {
+  text-align: left;
+}
+
+/*Blog comments (disqus)*/
+.PostCommentSection {
+  width: 97%;
+}
+
 /*Blog comments */
+/* (deprecated) */
 .comments-wrapper {
   width: 97%;
 }

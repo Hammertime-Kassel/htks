@@ -1,9 +1,50 @@
 <head>
-  <meta property="og:url"         content="http://hammertimekassel.de" />
-  <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Hammertime - Kassel" />
-  <meta property="og:description" content="Erschaffe, repariere, experimentiere. Kassels DIY-Werkstatt für jedermann. Treffe gleichgesinnte, teile dein Wissen und lerne etwas Neues." />
-  <meta property="og:image"       content="http://hammertimekassel.de/images/social/fb-header-small.png" />
+  <meta content="{{ site.title }}" property="og:site_name">
+  {% if page.title %}
+    <meta content="{{ page.title }}" property="og:title">
+  {% else %}
+    <meta content="{{ site.title }}" property="og:title">
+  {% endif %}
+  {% if page.layout == 'post' %}
+    <meta property="og:image" content="{{ site.url }}/images/social/fb-blog-post.jpg">
+  {% else %}
+    <meta property="og:image" content="{{ site.url }}/images/social/fb-header-small.png">
+  {% endif %}
+  {% if page.title %}
+    <meta content="article" property="og:type">
+  {% else %}
+    <meta content="website" property="og:type">
+  {% endif %}
+
+  {% if page.excerpt %}
+    <meta content="{{ page.excerpt }}" property="og:description">
+  {% elsif page.description %}
+    <meta content="{{ page.description }}" property="og:description">
+  {% else %}
+    <meta content="{{ site.description }}" property="og:description">
+  {% endif %}
+  {% if page.url %}
+    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+  {% endif %}
+  {% if page.date %}
+    <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+    <meta content="https://www.facebook.com/hammertimekassel/" property="article:author">
+  {% endif %}
+  {% if page.images %}
+    {% for image in page.images %}
+      <meta content="{{ site.url }}/{{ image }}" property="article:image">
+    {% endfor %}
+  {% endif %}
+  {% if page.categories %}
+    {% for category in page.categories limit:1 %}
+    <meta content="{{ category }}" property="article:section">
+    {% endfor %}
+  {% endif %}
+  {% if page.tags %}
+    {% for tag in page.tags %}
+    <meta content="{{ tag }}" property="article:tag">
+    {% endfor %}
+  {% endif %}
   <meta property="fb:app_id"      content="1630905370507909" />
 
   <meta charset="utf-8">

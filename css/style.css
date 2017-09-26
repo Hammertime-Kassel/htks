@@ -32,6 +32,31 @@ p.subtitle {
   width: 97%;
 }
 
+/* TODO alert, success and warning colors are duplicate code with foundation.scss */
+.color-alert {
+  color: #f04124;
+}
+
+.color-success {
+  color: #43AC6A;
+}
+
+.color-warning {
+  color: #f08a24;
+}
+
+.color-alert-important {
+  color: #f04124 !important;
+}
+
+.color-success-important {
+  color: #43AC6A !important;
+}
+
+.color-warning-important {
+  color: #f08a24 !important;
+}
+
 /*
  * END Hammertime Custom CSS
  */

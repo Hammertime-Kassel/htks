@@ -1,0 +1,78 @@
+type: "Siebdruckmaschine"
+producer: "Siebdruckversand"
+producer_link: https://www.siebdruck-versand.de/
+model: "HDT1000"
+model_link: https://www.siebdruck-versand.de/Siebdruckmaschinen/HDT1000-Siebdruckmaschine-Handdrucktisch::12.html
+equipment:
+  -
+    name: "Belichtungseinheit"
+    value: "400Watt"
+  -
+    name: "Halterung für die Belichtungseinheit"
+    value: "Zum Einspannen in die Maschine"
+  -
+    name: "A3 Siebdruckrahmen"
+    value: "Mit Gewebe für Textildruck auf hellen und dunklen Textilien / Pappe / Holz"
+  -
+    name: "35cm Beschichtungsrinne"
+    value: "Zweiseitiges Qualitätsmodell zum Auftrag der Fotoemulsion"
+  -
+    name: "30cm Siebdruckrakel"
+    value: "Mit großzügigem Holzgriff und extralanger, flexibler Rakellippe"
+  -
+    name: "Acrylglasplatte"
+    value: "Zum Beschweren der Belichtungsfilme"
+  -
+    name: "TEXPRINT-AQ Siebdruckfarbe"
+    value: "Wasserbasiert, umweltfreundlich"
+  -
+    name: "Entfetter DEGREASER"
+    value: "In der Sprühflasche zur Vorbereitung der Siebdruckrahmen"
+  -
+    name: "Entschichter ULTRASTRIP"
+    value: "In der Sprühflasche zum Entfernen der Emulsion"
+  -
+    name: "Fotoemulsion FLX SCREEN"
+    value: "Für feinste Details / Raster aber auch Typos und Flächendruck"
+  -
+    name: "Starker Sprühkleber"
+    value: "Zur Befestigung der Textilien an der Druckplatte"
+  -
+    name: "WASHOUT-AQ"
+    value: "Biologisch abbaubarer Siebreiniger für wasserbasierte Farben"
+  -
+    name: "Metall-Farbspachtel"
+    value: "Zum Auftragen der Siebdruckfarbe"
+  -
+    name: "Gelblichtlampe"
+    value: "Zur Verarbeitung lichtsensibler Fotoemulsion"
+  -
+    name: "Siebklebeband SMART-RES"
+    value: "Zum Abkleben offener Randflächen des Siebdruckrahmens"
+  -
+    name: "Belichtungsfilm MICRONOM PRO A4 und A3"
+    value: "Für perfekte Belichtungsvorlagen"
+  -
+    name: "Entschichterschwamm mit Griff"
+    value: "Zum Entfernen/Entschichten der Schablone"
+  -
+    name: "Robuster Reinigungsschwamm"
+    value: "Zum Entfernen der Siebdruckfarbe"
+  -
+    name: "Schwarze Belichtungsunterlage"
+    value: "Zum randscharfen Belichten der Siebe"
+  -
+    name: "Montagewerkzeuge"
+    value: "Für Siebdruckmaschine und Belichtungseinheit"
+
+description: "Der Siebdruck ist eine effektive und leicht zu erlernende Drucktechnik, mit der ohne großen Aufwand eine Fülle von Stoffen und Materialien bedruckt werden kann. Egal ob T-Shirts, Holz, Glas, Kunststoff, Papier oder Karton. In nur kurzer Zeit kann aus einer Design-Idee ein fertiges Serien-Produkt oder ein Kunstwerk werden."
+short_description: "Siebdruckmaschine für den professionellen Siebdruck auf T-Shirts, Hoodies, Pullover, Jutebeutel, Papier, Holz usw."
+status: "okay" # TODO use constant
+#additional_status_text: "Der Techniker ist informiert!"
+#images:
+#  - original: bernina-380-big-1.jpg
+#    small: bernina-380-small-1.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+#  - original: bernina-380-big-2.jpg
+#    small: bernina-380-small-2.jpg
+#    title: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

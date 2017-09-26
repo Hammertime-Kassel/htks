@@ -1,0 +1,5 @@
+type: "UV-Belichtungsgerät"
+short_description: "Zur Herstellung von gedruckten Schaltungen."
+status: "planned"
+disable_profile_page: true
+#additional_status_text: "Der Techniker ist informiert!"

@@ -1,0 +1,26 @@
+type: "Lötstation"
+producer: "Ersa"
+producer_link: http://www.kurtzersa.de/
+model: "RDS 80"
+model_link: http://www.kurtzersa.de/electronics-production-equipment/loetwerkzeuge-zubehoer/loetstationen-entloetstationen/produkt-details/rds-80.html
+description: "Digitale Lötstation mit robustem, kraftvollem Lötkolben. PTC-Heizelement mit bis zu 290 W Anheizleistung. Großes, gut lesbares Display. Drei programmierbare Festtemperaturen. Stufenlose Temperatureinstellung von 150 bis 450 °C. Standby- und Auto-Power-off-Funktion."
+short_description: "Universelle, digitale Lötstation."
+technical_data:
+  -
+    name: "Nennleistung"
+    value: "80 Watt"
+  -
+    name: "Temperaturbereich"
+    value: "150-450°C"
+  -
+    name: "Ausführung antistatisch"
+    value: "Nein"
+equipment:
+  -
+    name: "Antistatikmatte"
+    value: "ESD-Tisch-Arbeitsmatte"
+  -
+    name: "ESD-Spiral-Ableitkabel"
+  -
+    name: "Erdungsanschluss über Blindstecker"
+status: "okay"

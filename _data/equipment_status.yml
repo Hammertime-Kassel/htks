@@ -1,0 +1,5 @@
+planned: "planned" # equipment is not available yet
+okay: "okay" # equipment is available and functional
+limited: "limited" # equipment is available but limited in functionality
+broken: "broken" # equipment is broken and cannot be used
+repairing: repairing # the equipment is being repaired and cannot be used

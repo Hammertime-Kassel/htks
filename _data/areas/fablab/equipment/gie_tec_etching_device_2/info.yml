@@ -1,0 +1,35 @@
+type: "Ätzküvette"
+producer: "Gie-Tec"
+producer_link: http://www.gie-tec.de/
+model: "Ätzgerät 2"
+model_link: http://www.gie-tec.de/downloads/db_141030.pdf
+description: "Ein Ätzgerät für die Labor- und Kleinserienfertigung gedruckter Schaltungen. Die Belüftung der Ätzflüssigkeit
+geschieht durch eine leistungsfähige Membranpumpe und einen hochporösem Lufschlauch am Boden der Ätzküvette. Die Heizung lässt sich stufenlos zwischen 36°C und 45°C einstellen."
+short_description: "Ätzgerät zur Kleinserienfertigung gedruckter Schaltungen."
+technical_data:
+  -
+    name: "Abmessungen (L x B x H)"
+    value: "445 mm x 105 mm x 320 mm"
+  -
+    name: "Heizung"
+    value: "150W, stufenlos zwischen 36°C und 45°C"
+  -
+    name: "Luftverteilerrahmen"
+    value: "Doppelt"
+  -
+    name: "Beschickungsöffnung"
+    value: "365 x 25 mm"
+  -
+    name: "Fassungsvermögen"
+    value: "2,25 l"
+  -
+    name: "Ätzmittelbedarf"
+    value: "600 g"
+  -
+    name: "Max. Platinengröße"
+    value: "235 x 330 mm"
+equipment:
+  -
+    name: "Schutzkleidung"
+    value: "Schutzhandschuhe und Schutzbrille"
+status: "okay"

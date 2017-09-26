@@ -1,0 +1,151 @@
+---
+layout: default
+---
+
+{% assign equipment = site.data.areas[page.area_id].equipment[page.equipment_id] %}
+{% capture image_base_path %}/images/areas/{{page.area_id}}/{{page.equipment_id}}{% endcapture %}
+
+<div class='full'>
+  <div class='row'>
+    <header>
+      <h1>{{equipment.info.type}} {{equipment.info.producer}} {{equipment.info.model}}</h1>
+      <p class="subtitle">
+        {{equipment.info.short_description}}
+      </p>
+    </header>
+
+    {% if equipment.info.status == site.data.equipment_status.okay %}
+      {% assign status_icon = "check" %}
+      {% assign status_caption = "Gerät funktioniert" %}
+      {% assign status_text = "Alles in Ordnung, du kannst das Gerät benutzen!" %}
+      {% assign status_class = "success" %}
+
+    {% elsif equipment.info.status == site.data.equipment_status.limited %}
+      {% assign status_icon = "exclamation-circle" %}
+      {% assign status_caption = "Eingeschränkt nutzbar" %}
+      {% assign status_text = "Das Gerät ist eingeschränkt nutzbar. Bitte beachte die Hinweise oder kontaktiere uns." %}
+      {% assign status_class = "warning" %}
+
+    {% elsif equipment.info.status == site.data.equipment_status.broken %}
+      {% assign status_icon = "times-circle" %}
+      {% assign status_caption = "Defekt" %}
+      {% assign status_text = "Tut uns Leid, das Gerät ist defekt und kann aktuell nicht benutzt werden." %}
+      {% assign status_class = "alert" %}
+
+    {% elsif equipment.info.status == site.data.equipment_status.repairing %}
+      {% assign status_icon = "wrench" %}
+      {% assign status_caption = "In Reparatur" %}
+      {% assign status_text = "Tut uns Leid, das Gerät wird gerade repariert." %}
+      {% assign status_class = "alert" %}
+
+    {% elsif equipment.info.status == site.data.equipment_status.planned %}
+      {% assign status_icon = "calendar" %}
+      {% assign status_caption = "Anschaffung geplant" %}
+      {% assign status_text = "Tut uns Leid, das Gerät ist noch nicht verfügbar." %}
+      {% assign status_class = "alert" %}
+
+    {% endif %}
+
+    <div class='spacing'></div>
+
+    <div data-alert class="alert-box {{status_class}} radius">
+      <div class='mod modIconText'>
+        <div class='icon-text-simple'>
+          <i class='fa fa-{{status_icon}}'></i>
+          <h3>{{status_caption}}</h3>
+          <p>{{status_text}}</p>
+          {% if equipment.info.additional_status_text %}
+            <p>{{equipment.info.additional_status_text}}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if equipment.info.images %}
+      <div class='mod modDefaultSlider'>
+        <div class='sequence' data-autostop='on' data-timeout='0'>
+          <a class='sequence-prev' href='javascript:void(0);'>
+            <span></span>
+          </a>
+          <a class='sequence-next' href='javascript:void(0);'>
+            <span></span>
+          </a>
+          <ul class='sequence-pagination'>
+            {% for image in equipment.info.images %}
+              {% if forloop.first %}
+                {% assign class = 'current' %}
+              {% else %}
+                {% assign class = '' %}
+              {% endif %}
+              <li class="{{class}}"></li>
+            {% endfor %}
+          </ul>
+          <ul class='sequence-canvas'>
+            {% for image in equipment.info.images %}
+              {% if forloop.first %}
+                {% assign style = 'static' %}
+              {% else %}
+                {% assign style = '' %}
+              {% endif %}
+
+              <li class='frame {{style}} bottom-to-top'>
+                <div class='bg lazy' style='background-image: url({{image_base_path}}/small/{{ image.small }});' data-original="{{image_base_path}}/original/{{image.original}}"></div>
+                 <div class='small-title bottom-to-top'>
+                  <div class='row'>
+                    <div class='large-12 columns'>
+                      <h2 class='shadow-text-strong'>{{ image.title }}</h2>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class='spacing'></div>
+    {% endif %}
+
+    {% if equipment.info.producer %}
+      <h2>Hersteller</h2>
+      <p>
+        {% if equipment.info.producer_link %}<a href="{{equipment.info.producer_link}}">{% endif %}{{equipment.info.producer}}{% if equipment.info.producer_link %}</a>{% endif %}
+      </p>
+    {% endif %}
+
+    {% if equipment.info.model %}
+      <h2>Modell</h2>
+      <p>
+        {% if equipment.info.model_link %}<a href="{{equipment.info.model_link}}">{% endif %}{{equipment.info.model}}{% if equipment.info.model_link %}</a>{% endif %}
+      </p>
+    {% endif %}
+
+    {% if equipment.info.description %}
+      <h2>Beschreibung</h2>
+      <p>
+        {{equipment.info.description}}
+      </p>
+    {% endif %}
+
+    {% if equipment.info.technical_data %}
+      <h2>Technische Daten</h2>
+      {% for item in equipment.info.technical_data %}
+        <p>
+          <label>{{item.name}}:</label><span>{{item.value}}</span>
+        </p>
+      {% endfor %}
+    {% endif %}
+
+    {% if equipment.info.equipment %}
+      <h2>Zubehör</h2>
+      {% for item in equipment.info.equipment %}
+        <p>
+          <label>{{item.name}}{% if item.value %}:{% endif %}</label>{% if item.value %}<span>{{item.value}}</span>{% endif %}
+        </p>
+      {% endfor %}
+    {% endif %}
+
+    <div class='two spacing'></div>
+
+  </div>
+</div>

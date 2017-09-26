@@ -1,0 +1,45 @@
+type: "3D-Drucker"
+producer: "Conrad Electronics"
+producer_link: https://www.conrad.de/
+model: "Renkforce RF100"
+model_link: https://www.conrad.de/de/renkforce-rf100-3d-drucker-starter-kit-inkl-filament-1507428.html
+description: "Der 3D Drucker Renkforce RF100 ist für den Einstieg in die Welt des 3D-Drucks geeignet. Mit diesem Drucker kann ausschließich der Kunststoff PLA (Polylactide), ein biologisch abbaubarer Kunststoff, verarbeitet werden. Durch die einfache Bedienung des Druckers kommt man auch ohne Vorkenntnisse im 3D-Druck recht schnell zu ersten Ergebnissen."
+short_description: "3D Drucker für Einsteiger."
+technical_data:
+  -
+    name: "Druckverfahren"
+    value: "Fused Deposition Modeling (FDM)"
+  -
+    name: "Druckvolumen (BxHxT)"
+    value: "100 mm x 100 mm x 100 mm"
+  -
+    name: "Unterstützte Materialien"
+    value: "PLA, PLA Compounds, Elastisch"
+  -
+    name: "Durchmesser Extruder-Düse"
+    value: "0,4 mm"
+  -
+    name: "Temperatur Extruder-Düse"
+    value: "180 °C - 260 °C"
+  -
+    name: "Temperatur Druckbett"
+    value: "unbeheizt"
+  -
+    name: "Filament-Durchmesser"
+    value: "1,75 mm"
+  -
+    name: "Schichtdicke"
+    value: "0,1 mm bis 0,2 mm"
+  -
+    name: "Druckgeschwindigkeit"
+    value: "30 mm/s - 300 mm/s"
+  -
+    name: "Schnittstellen"
+    value: "SD Card, USB"
+  -
+    name: "Stromversorgung"
+    value: "Wechselspannung 230 V / 50 Hz - 60 Hz, 120 W"
+  -
+    name: "Umgebung"
+    value: "+5 °C bis +55 °C, 30 % - 90 % relative Luftfeuchtigkeit"
+status: "okay"

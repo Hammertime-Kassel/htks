@@ -97,7 +97,23 @@ ruby --version
 gem install bundler
 ```
 
-5. Install requirements
+5. Create the folder for the project (eg. create /htks or /hammertime directory under your Project directory)
+
+```shell
+cd path_to_your_project_directoy
+mkdir htks
+cd htks
+```
+
+6. Clone the repository from GitHub to your local ```htks``` project directory
+
+```shell
+git clone https://github.com/Hammertime-Kassel/htks.git
+```
+or clone the repository in your versioning tool (eg. SourceTree).
+
+
+7. Install requirements on your local ```htks``` project directory
 
 ```shell
 bundle install

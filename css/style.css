@@ -730,6 +730,11 @@ hr {
   padding: 0;
 }
 
+.two-padding {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 .parallax {
   background-attachment: fixed;
 }

@@ -11,12 +11,15 @@
 - name: Workshops
   path: workshops.html
   section_id: workshops
-- name: Blog
-  path: blog/
-  section_id: blog
+- name: Projekte
+  path: projekte/
+  section_id: projects
 - name: Community
   url: https://forum.hammertimekassel.de/
   section_id: community
+- name: Blog
+  path: blog/
+  section_id: blog
 - name: Kontakt
   path: contact.html
   section_id: contact

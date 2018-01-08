@@ -78,7 +78,7 @@ jQuery(document).foundation();
       submitHandler: function(form) {
         $.ajax({
           type: 'POST',
-          url: 'http://formspree.io/hello@htks.de',
+          url: 'https://formspree.io/hello@htks.de',
           data: $(form).serialize(),
           success: function(data) {
             $(form).trigger('reset');

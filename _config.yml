@@ -22,3 +22,6 @@ defaults:
       type: "pages"
     values:
       layout: "equipment-profile"
+
+gems:
+  - jekyll-sitemap

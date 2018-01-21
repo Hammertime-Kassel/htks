@@ -23,30 +23,12 @@ section_id: projects
 <div class='full'>
 
   <div class="row modCallToAction centered-text">
-    <p>Wir organisieren unsere Projekte im Forum. Klicke auf den Link, um mehr zu erfahren oder dich zu beteiligen!</p>
+    <p>Besuche unser Forum, um mehr zu über unsere Projekte zu erfahren!</p>
   </div>
 
   <center>
-    <table class="hover">
-      <thead>
-        <tr>
-          <th width="200">Projekt</th>
-          <th>Worum geht's?</th>
-        </tr>
-      </thead>
-      <tbody>
 
-        {% for project in project_list %}
-
-          <tr>
-            <td><a href="{{project.link}}">{{project.name}}</a></td>
-            <td>{{project.description}}</td>
-          </tr>
-
-        {% endfor %}
-
-      </tbody>
-    </table>
+    <a class='button {{ button.klass }}' href='https://forum.hammertimekassel.de/c/projekte'>Projekte im Forum ansehen</a>
 
   </center>
 

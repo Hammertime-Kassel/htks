@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hammertime 2020: Die Ergebnisse"
-date:   2018-01-27 21:32:00
+date:   2018-01-27 20:32:00
 images:
   - images/blog/ht-2020-ergebnisse/001.jpg
   - images/blog/ht-2020-ergebnisse/002.jpg

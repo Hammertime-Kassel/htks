@@ -42,4 +42,4 @@ technical_data:
   -
     name: "Umgebung"
     value: "+15 °C bis +32 °C, 10 % - 90 % relative Luftfeuchtigkeit"
-status: "okay"
+status: "repairing"

@@ -3,8 +3,8 @@ layout: post
 title:  "Der neue Lasercutter ist da!"
 date:   2018-04-29 09:08:00
 images:
-#  - images/blog/ht-2020-ergebnisse/001.jpg
-# push test
+  - images/blog/neuer-laser/thunder-laser-front.jpg
+  - images/blog/neuer-laser/thunder-laser-hammertime.jpg
 excerpt:
   "Wir freuen uns, euch den neuen Lasercutter bzw. Lasergraviergerät vorstellen zu können. Es ist eines der wichtigsten Vorhaben für dieses Jahr."
 categories: news

@@ -5,6 +5,8 @@ date:   2018-04-29 09:08:00
 images:
   - images/blog/neuer-laser/thunder-laser-front.jpg
   - images/blog/neuer-laser/thunder-laser-hammertime.jpg
+  - images/blog/neuer-laser/thunder-laser-auspacken.jpeg
+  - images/blog/neuer-laser/thunder-laser-werkstatt.jpeg
 excerpt:
   "Wir freuen uns, euch den neuen Lasercutter bzw. Lasergraviergerät vorstellen zu können. Es ist eines der wichtigsten Vorhaben für dieses Jahr."
 categories: news

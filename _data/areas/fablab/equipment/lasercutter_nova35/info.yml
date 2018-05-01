@@ -1,0 +1,45 @@
+type: "Lasercutter / Lasergraviergerät"
+producer: "Allplast GmbH / Thunder Laser"
+producer_link: https://www.deinlasershop.de/index.php
+model: "NOVA-35"
+model_link: https://www.deinlasershop.de/product_info.php?info=p2_nova-35---2-jahre-garantie-.html
+description:
+  "Mit dem Gerät lassen sich unterschiedliche Holze, Metalle und Kunststoffe schneiden und gravieren."
+short_description: "Schneiden und Gravieren verschiedener Materialien."
+technical_data:
+  -
+    name: "Arbeitsbereich"
+    value: "900 x 600 mm"
+  -
+    name: "Tischgröße"
+    value: "1000 x 730 mm"
+  -
+    name: "Höhenspiel Tisch"
+    value: "230 mm"
+  -
+    name: "Schneidunterlage"
+    value: "Messertisch oder Wabentisch aus Stahl"
+  -
+    name: "max. Werkstückgewicht"
+    value: "30kg"
+  -
+    name: "Laserquelle"
+    value: "Geschlossene Glas-Laserröhre"
+  -
+    name: "Laserleistung"
+    value: "80 Watt aktiv wassergekühlt"
+  -
+    name: "max. Graviergeschwindigkeit"
+    value: "1000mm/s"
+  -
+    name: "Gravierbare Materialien"
+    value: "Edelstahl; Kunststoffe auf Laminatbasis; Acryl-/Plexiglas; lackierte Metalle; eloxiertes Aluminium; Holz, Sperrholz, MDF und Furnier; Glas; Stein, Granit und Marmor; Keramik und Fliesen; Leder; Gummi; Papier, Pappe und Karton; Kork; Stoffe und Textilien; Otoplastiken; Biogravur: z.B. Bratwurst oder Apfel"
+  -
+    name: "Schneidbare Materialien"
+    value: "Kunststoffe auf Laminatbasis; Acryl-/Plexiglas; Holz, Sperrholz, MDF und Furnier; Papier, Pappe und Karton; Kork; Folie; Leder; Gummi; Stoffe und Textilien"
+equipment:
+  -
+    name: "Abrollvorichtung"
+    value: "Mit der Abrollvorichtung lassen sich Runde Gegenstände wie Gläser gravieren."
+status: "okay"
+#additional_status_text: "Der Techniker ist informiert!"

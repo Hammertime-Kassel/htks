@@ -69,24 +69,45 @@
   <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}">
   <link rel="icon" href="/images/favicon.ico" type="image/vnd.microsoft.icon">
   <script src="{{ "/javascripts/libs.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+
+  <!-- Analytics -->
+
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-87248688-1', 'auto');ga('send', 'pageview');
-    // terrificjs bootstrap
-    (function($) {
-        $(document).ready(function() {
-            var $page = $('body');
-            var config = {
-              dependencyPath: {
-                plugin: 'javascripts/'
-              }
-            }
-            var application = new Tc.Application($page, config);
-            application.registerModules();
-            application.start();
-        });
-    })(Tc.$);
+    var gaProperty = 'UA-87248688-1';
+    var disableStr = 'ga-disable-' + gaProperty;
+
+    if (document.cookie.indexOf(disableStr + '=true') > -1) {
+    	window[disableStr] = true;
+    }
+
+    function gaOptout() {
+    	document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+    	window[disableStr] = true;
+    	console.log('Das Tracking durch Google Analytics wurde in Ihrem Browser für diese Website deaktiviert.');
+    }
+
+    function gaOptin() {
+    	document.cookie = disableStr + '=false; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+    	window[disableStr] = false;
+    	console.log('Das Tracking durch Google Analytics wurde in Ihrem Browser für diese Website aktiviert.');
+    }
+
   </script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,300" media="screen" rel="stylesheet" type="text/css" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js?aip=1','ga');
+    ga('create', 'UA-87248688-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+  </script>
+
+  <!-- Analytics END -->
+
+
+  <!--<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,300" media="screen" rel="stylesheet" type="text/css" />-->
+
   <script src="{{ "/javascripts/masonry.pkgd.js" | prepend: site.baseurl }}" type="text/javascript"></script>
   <script src="{{ "/javascripts/imagesloaded.pkgd.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
   <script src="{{ "/javascripts/slick.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
@@ -94,4 +115,89 @@
   <script src="{{ "/javascripts/jquery.lazyload.min.js" | prepend: site.baseurl }}" type="text/javascript"></script>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <!-- Cookie Consent -->
+
+  <link rel="stylesheet" type="text/css" href="/javascripts/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="/javascripts/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <!--<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>-->
+
+  <script>
+
+    function onCookiesDisabled() {
+      gaOptout(); // Disable Google Analytics
+    }
+
+    function onCookiesEnabled() {
+      gaOptin(); // Enable Google Analytics
+    }
+
+  </script>
+
+  <script>
+
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000"
+        },
+        "button": {
+          "background": "#f9ce06",
+          "text": "#000000"
+        }
+      },
+      "theme": "classic",
+      "position": "bottom-left",
+      "type": "opt-in",
+      "content": {
+        "message": "Diese Website nutzt Cookies und Analyse-Tools.",
+        "dismiss": "Ausblenden",
+        "allow": "Erlauben",
+        "link": "Datenschutz",
+        "href": "/datenschutz.html"
+      },
+      onInitialise: function (status) {
+        var type = this.options.type;
+        var didConsent = this.hasConsented();
+        if (type == 'opt-in' && didConsent) {
+          // enable cookies
+          onCookiesEnabled();
+        }
+        if (type == 'opt-out' && !didConsent) {
+          // disable cookies
+          onCookiesDisabled()
+        }
+      },
+
+      onStatusChange: function(status, chosenBefore) {
+        var type = this.options.type;
+        var didConsent = this.hasConsented();
+        if (type == 'opt-in' && didConsent) {
+          // enable cookies
+          onCookiesEnabled();
+        }
+        if (type == 'opt-out' && !didConsent) {
+          // disable cookies
+          onCookiesDisabled()
+        }
+      },
+
+      onRevokeChoice: function() {
+        var type = this.options.type;
+        if (type == 'opt-in') {
+          // disable cookies
+          onCookiesDisabled()
+        }
+        if (type == 'opt-out') {
+          // enable cookies
+          onCookiesEnabled();
+        }
+      },
+    })});
+  </script>
+
+  <!-- Cookie Consent END -->
+
 </head>

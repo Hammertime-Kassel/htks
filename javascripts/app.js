@@ -73,7 +73,7 @@ jQuery(document).foundation();
       $("div.lazy").lazyload();
     });
 
-    $('form#contact_form').validate({
+    /*$('form#contact_form').validate({
       messages: { },
       submitHandler: function(form) {
         $.ajax({
@@ -91,7 +91,7 @@ jQuery(document).foundation();
         });
         return false;
       }
-    });
+    });*/
 
     /*$('form#test_form').validate({
       messages: { },

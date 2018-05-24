@@ -122,80 +122,29 @@
   <script src="/javascripts/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
   <!--<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>-->
-
   <script>
-
-    function onCookiesDisabled() {
-      gaOptout(); // Disable Google Analytics
-    }
-
-    function onCookiesEnabled() {
-      gaOptin(); // Enable Google Analytics
-    }
-
-  </script>
-
-  <script>
-
     window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#000"
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#000"
+          },
+          "button": {
+            "background": "#f9ce06",
+            "text": "#000000"
+          }
         },
-        "button": {
-          "background": "#f9ce06",
-          "text": "#000000"
+        "theme": "classic",
+        "position": "bottom-left",
+        "content": {
+          "message": "Diese Website nutzt Cookies, um ein besseres Nutzererlebnis bieten zu können.",
+          "dismiss": "Verstanden",
+          "allow": "Cookies erlauben",
+          "link": "Datenschutz",
+          "href": "/datenschutz.html"
         }
-      },
-      "theme": "classic",
-      "position": "bottom-left",
-      "type": "opt-in",
-      "content": {
-        "message": "Diese Website nutzt Cookies und Analyse-Tools.",
-        "dismiss": "Ausblenden",
-        "allow": "Erlauben",
-        "link": "Datenschutz",
-        "href": "/datenschutz.html"
-      },
-      onInitialise: function (status) {
-        var type = this.options.type;
-        var didConsent = this.hasConsented();
-        if (type == 'opt-in' && didConsent) {
-          // enable cookies
-          onCookiesEnabled();
-        }
-        if (type == 'opt-out' && !didConsent) {
-          // disable cookies
-          onCookiesDisabled()
-        }
-      },
-
-      onStatusChange: function(status, chosenBefore) {
-        var type = this.options.type;
-        var didConsent = this.hasConsented();
-        if (type == 'opt-in' && didConsent) {
-          // enable cookies
-          onCookiesEnabled();
-        }
-        if (type == 'opt-out' && !didConsent) {
-          // disable cookies
-          onCookiesDisabled()
-        }
-      },
-
-      onRevokeChoice: function() {
-        var type = this.options.type;
-        if (type == 'opt-in') {
-          // disable cookies
-          onCookiesDisabled()
-        }
-        if (type == 'opt-out') {
-          // enable cookies
-          onCookiesEnabled();
-        }
-      },
-    })});
+      })
+    });
   </script>
 
   <!-- Cookie Consent END -->

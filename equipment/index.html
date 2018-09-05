@@ -16,7 +16,7 @@ section_id: equipment
 {% assign area_data = site.data.areas %}
 {% assign area_list = site.data.areas.info.area_list | sort: 'name' %}
 
-<div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
+<div class='full parallax lazy two-padding' style='background-image: url({{ page.data-small }}); color: #fff;'
       data-original="{{ page.data-original }}">
   <div class='four spacing'></div>
   <div class='row'>
@@ -28,7 +28,7 @@ section_id: equipment
   <div class='four spacing'></div>
 </div>
 
-<div class='full'>
+<div class='full two-padding'>
 
   {% for area in area_list %}
 

@@ -8,7 +8,7 @@
         path: equipment/
       - name: Unterstützen
         path: support.html
-      - name: "Exposé (Download)"
+      - name: 'Exposé <i class="fa fa-download" aria-hidden="true"></i>'
         path: "downloads/Expose%20Hammertime%20Kassel.pdf"
 - name: Workshops
   path: workshops.html

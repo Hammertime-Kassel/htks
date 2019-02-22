@@ -2,7 +2,7 @@
 title: Hammertime Kassel
 email: hello@htks.de
 description: > # this means to ignore newlines until "baseurl:"
-  Erschaffe, repariere, experimentiere. Kassels DIY-Werkstatt für jedermann. Treffe gleichgesinnte, teile dein Wissen und lerne etwas Neues.
+  Erschaffe, repariere, experimentiere. Kassels DIY-Werkstatt für jedermann. Treffe Gleichgesinnte, teile dein Wissen und lerne etwas Neues.
 baseurl: "" # the subpath of your site, e.g. /blog/
 # twitter_username: jekyllrb
 url: "https://www.hammertimekassel.de" # the base hostname & protocol for your site

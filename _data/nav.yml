@@ -8,6 +8,8 @@
         path: equipment/
       - name: Unterstützen
         path: support.html
+      - name: Expose (Download)
+        path: "downloads/Expose%20Hammertime%20Kassel.pdf"
 - name: Workshops
   path: workshops.html
   section_id: workshops

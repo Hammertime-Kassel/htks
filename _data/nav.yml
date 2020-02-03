@@ -6,6 +6,8 @@
         path: manifesto.html
       - name: Ausstattung
         path: equipment/
+      - name: Preise
+        path: pricing/
       - name: Unterstützen
         path: support.html
       - name: 'Exposé <i class="fa fa-download" aria-hidden="true"></i>'

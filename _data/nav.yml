@@ -8,6 +8,8 @@
         path: equipment/
       - name: Preise
         path: pricing/
+      - name: AGB
+        path: agb/
       - name: Unterstützen
         path: support.html
       - name: 'Exposé <i class="fa fa-download" aria-hidden="true"></i>'

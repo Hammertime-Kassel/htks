@@ -10,6 +10,8 @@
         path: pricing/
       - name: AGB
         path: agb/
+      - name: Werkstattordnung
+        path: werkstattordnung/
       - name: Unterstützen
         path: support.html
       - name: 'Exposé <i class="fa fa-download" aria-hidden="true"></i>'

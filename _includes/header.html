@@ -22,8 +22,8 @@
           {% endif %}
 
           {% if item.children %}
-            <li class="has-dropdown {{active_class}}">
-              <a href="/{{ item.path }}" target="{{item.target}}">{{ item.name }}</a>
+            <li class="has-dropdown {{active_class}}"">
+              <a href="#" style="cursor:default;">{{ item.name }}</a>
               <ul class='dropdown'>
                 {% for child in item.children %}
                   <li>

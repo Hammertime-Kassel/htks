@@ -16230,7 +16230,7 @@ if (!JSON) {
       index : 0,
       sticky_class : 'sticky',
       custom_back_text: true,
-      back_text: 'Back',
+      back_text: '<i class="fa fa-angle-left"></i>&nbsp;Zurück',
       mobile_show_parent_link: true,
       is_hover: true,
       scrolltop : true, // jump to top when sticky nav menu toggle is clicked
@@ -16663,4 +16663,3 @@ if (!JSON) {
     reflow : function () {}
   };
 }(jQuery, window, window.document));
-

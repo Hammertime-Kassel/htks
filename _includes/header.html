@@ -3,8 +3,8 @@
     <ul class='title-area'>
       <li class='name'>
         <h1>
-          <a href='{{site.url}}/index.html'>
-            <img alt="" src="{{site.url}}/images/logo-bordered.png" />
+          <a href='/index.html'>
+            <img alt="" src="/images/logo-bordered.png" />
           </a>
         </h1>
       </li>
@@ -23,14 +23,14 @@
 
           {% if item.children %}
             <li class="has-dropdown {{active_class}}">
-              <a href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
+              <a href="/{{ item.path }}" target="{{item.target}}">{{ item.name }}</a>
               <ul class='dropdown'>
                 {% for child in item.children %}
                   <li>
                     {% if child.url %}
-                      <a href="{{ child.url }}">{{ child.name }}</a>
+                      <a href="{{ child.url }}" target="{{child.target}}">{{ child.name }}</a>
                     {% else %}
-                      <a href="{{site.url}}/{{ child.path }}">{{ child.name }}</a>
+                      <a href="/{{ child.path }}" target="{{child.target}}">{{ child.name }}</a>
                     {% endif %}
                   </li>
                 {% endfor %}
@@ -39,9 +39,9 @@
           {% else %}
             <li class="{{active_class}}">
               {% if item.url %}
-                <a href="{{ item.url }}">{{ item.name }}</a>
+                <a href="{{ item.url }}" target="{{item.target}}">{{ item.name }}</a>
               {% else %}
-                <a href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
+                <a href="/{{ item.path }}" target="{{item.target}}">{{ item.name }}</a>
               {% endif %}
             </li>
           {% endif %}

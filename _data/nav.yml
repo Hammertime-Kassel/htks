@@ -1,9 +1,19 @@
-- name: Die Werkstatt
+- name: Über uns
   path:
   section_id: about
   children:
-      - name: Manifest
-        path: manifesto.html
+      - name: 'Was ist Hammertime?'
+        path: about/
+      - name: Hammertime Manifest
+        path: manifesto/
+      - name: Unterstützen
+        path: support/
+- name: Werkstatt
+  path:
+  section_id: werkstatt
+  children:
+      - name: Öffnungszeiten
+        path: opening-hours/
       - name: Ausstattung
         path: equipment/
       - name: Preise
@@ -12,22 +22,36 @@
         path: agb/
       - name: Werkstattordnung
         path: werkstattordnung/
-      - name: Unterstützen
-        path: support.html
-      - name: 'Exposé <i class="fa fa-download" aria-hidden="true"></i>'
-        path: "downloads/Expose%20Hammertime%20Kassel.pdf"
-- name: Workshops
-  path: workshops.html
-  section_id: workshops
-- name: Projekte
-  path: projekte/
-  section_id: projects
+- name: Events
+  path:
+  section_id: events
+  children:
+      - name: Workshops
+        path: workshops/
+      - name: Veranstaltungen
+        path: events/
+      - name: Workshops anbieten
+        path: own-workshops/
 - name: Community
-  url: https://forum.hammertimekassel.de/
+  path:
   section_id: community
-- name: Blog
-  path: blog/
-  section_id: blog
+  children:
+      - name: Forum
+        url: 'https://forum.hammertimekassel.de/'
+        target: '_blank'
+      - name: Projekte
+        path: projects/
+      - name: Hammertime Meetup
+        url: 'https://www.meetup.com/de-DE/Hammertime-Meetup/'
+        target: '_blank'
+- name: Raum
+  path:
+  section_id: space
+  children:
+      - name: Raum mieten
+        path: rent/
+      - name: Meetup veranstalten
+        path: your-meetup/
 - name: Kontakt
-  path: contact.html
+  path: contact/
   section_id: contact

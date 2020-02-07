@@ -48,7 +48,7 @@
   path:
   section_id: space
   children:
-      - name: Raum mieten
+      - name: Mieten
         path: rent/
       - name: Meetup veranstalten
         path: your-meetup/

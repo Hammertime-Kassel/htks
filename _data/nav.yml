@@ -6,8 +6,6 @@
         path: about/
       - name: Hammertime Manifest
         path: manifesto/
-      - name: Unterstützen
-        path: support/
 - name: Werkstatt
   path:
   section_id: werkstatt
@@ -52,6 +50,8 @@
         path: rent/
       - name: Meetup veranstalten
         path: your-meetup/
+- name: Unterstützen
+  path: support/
 - name: Kontakt
   path: contact/
   section_id: contact

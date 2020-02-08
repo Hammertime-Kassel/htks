@@ -52,6 +52,15 @@
         path: your-meetup/
 - name: Unterstützen
   path: support/
+  children:
+      - name: Helfer gesucht
+        path: /helfer/
+      - name: Spenden
+        path: /spenden/
+      - name: Sponsor werden
+        path: /sponsor/
+      - name: Partner werden
+        path: /partner/
 - name: Kontakt
   path: contact/
   section_id: contact

@@ -11,9 +11,10 @@
   section_id: werkstatt
   children:
       - name: Öffnungszeiten
-        path: opening-hours/
+        path: oeffnungszeiten/
+      # TODO Ausstattung in mehrere Unterseiten je Werkstattbereich organisieren
       - name: Ausstattung
-        path: equipment/
+        path: ausstattung/
       - name: Preise
         path: pricing/
       - name: AGB
@@ -29,7 +30,7 @@
       - name: Veranstaltungen
         path: events/
       - name: Workshops anbieten
-        path: own-workshops/
+        path: eigene-workshops/
 - name: Community
   path:
   section_id: community
@@ -38,7 +39,7 @@
         url: 'https://forum.hammertimekassel.de/'
         target: '_blank'
       - name: Projekte
-        path: projects/
+        path: projekte/
       - name: Hammertime Meetup
         url: 'https://www.meetup.com/de-DE/Hammertime-Meetup/'
         target: '_blank'
@@ -47,20 +48,21 @@
   section_id: space
   children:
       - name: Mieten
-        path: rent/
+        path: raum-mieten/
       - name: Meetup veranstalten
-        path: your-meetup/
+        path: dein-meetup/
 - name: Unterstützen
   path: support/
+  section_id: support
   children:
       - name: Helfer gesucht
-        path: /helfer/
+        path: helfer/
       - name: Spenden
-        path: /spenden/
+        path: spenden/
       - name: Sponsor werden
-        path: /sponsor/
+        path: sponsor/
       - name: Partner werden
-        path: /partner/
+        path: partner/
 - name: Kontakt
-  path: contact/
+  path: kontakt/
   section_id: contact

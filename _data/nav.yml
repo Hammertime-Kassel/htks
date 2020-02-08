@@ -55,8 +55,8 @@
   path: support/
   section_id: support
   children:
-      - name: Helfer gesucht
-        path: helfer/
+      - name: Mithelfen
+        path: helfen/
       - name: Spenden
         path: spenden/
       - name: Sponsor werden

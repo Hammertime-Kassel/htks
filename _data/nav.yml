@@ -60,7 +60,7 @@
       - name: Spenden
         path: spenden/
       - name: Sponsor werden
-        path: sponsor/
+        path: sponsoring/
       - name: Partner werden
         path: partner/
 - name: Kontakt

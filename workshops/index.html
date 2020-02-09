@@ -6,143 +6,118 @@ tagline: Hier kannst Du neues Lernen oder Dein Wissen weitergeben.
 data-small: /images/@stock/workshops-lazyload.jpg
 data-original: /images/@stock/workshops.jpg
 section_id: events
-works:
-  - image: images/@stock/work-woodwork.jpg
-    title: Einführungskurs Holzwerkstatt
-    link_to: portfolio-item.html
-    klass: wood
-    desc: Design &amp; Development
-  - image: images/@stock/work-laser-cutting.jpg
-    title: Einführungskurs Lasercutter
-    link_to: portfolio-item.html
-    klass: electro
-    desc: Design &amp; Development
-  - image: images/@stock/work-cnc-milling.jpg
-    title: Einführungskurs CNC-Fräse
-    link_to: portfolio-item.html
-    klass: electro
-  - image: images/@stock/work-3d-print.jpg
-    title: Einführungskurs 3D-Druck
-    link_to: portfolio-item.html
-    klass: electro
-    desc: Design &amp; Development
-#  - image: images/@stock/work-4.jpg
-#    title: Einführungskurs Wandtattoo Herstellung
-#    link_to: portfolio-item.html
-#    klass: development
-#    desc: Design &amp; Development
-#  - image: images/@stock/work-4.jpg
-#    title: Fahrradangänger selber herstellen
-#    link_to: portfolio-item.html
-#    klass: misc
-#    desc: Design &amp; Development
-#  - image: images/@stock/work-microcontroller.jpg
-#    title: Einfühung in Microcontroller
-#    link_to: portfolio-item.html
-#    klass: electro
-#    desc: Design &amp; Development
-#  - image: images/@stock/work-wood-couch-table.jpg
-#    title: Couchtisch selber herstellen
-#    link_to: portfolio-item.html
-#    klass: wood
-#    desc: Design &amp; Development
-#  - image: images/@stock/work-4.jpg
-#    title: Bilder auf Holz übertragen
-#    link_to: portfolio-item.html
-#    klass: misc
-#    desc: Design &amp; Development
-#  - image: images/@stock/work-4.jpg
-#    title: LED Lampe aus Holz und Plexiglas herstellen
-#    link_to: portfolio-item.html
-#    klass: misc
-#    desc: Design &amp; Development
-#  - image: images/@stock/work-wood-cutting-board.jpg
-#    title: Holzschneidebrett selbst herstelleb
-#    link_to: portfolio-item.html
-#    klass: wood
-#    desc: Design &amp; Development
-#  - image: images/@stock/work-wood-turning.jpg
-#    title: Einführungskurs drechseln
-#    link_to: portfolio-item.html
-#    klass: wood
-#    desc: Design &amp; Development
 ---
 
 
-<div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
+<div class='full lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
       data-original="{{ page.data-original }}">
   <div class='four spacing'></div>
-  <div class='row'>
-    <div class='large-12 columns shadow-text'>
+  <div class='row bgcolor-yellow-transparent'>
+    <div class='twelve columns shadow-text-light'>
       {% include section-header.html title=page.long_title tagline=page.tagline color="#fff" class="big" %}
     </div>
   </div>
-  <div class='four spacing'></div>
-  <div class='four spacing'></div>
 </div>
 
-
 <div class='full'>
-    <div class="row modCallToAction">
-      <p>Diese Seite befindet sich noch im Aufbau.</p>
-    </div>
-    <div class="row modCallToAction">
-      <p>Möchtest Du ein Workshop bei uns halten? <a href="/contact.html">Dann melde Dich bei uns!</a></p>
-    </div>
-    <div class='row'>
-      <div class='mod modGallery'>
+  <div class='row'>
+    <div class='large-12 columns'>
 
-      <!--
-        <div class='gallery-nav'>
-          <ul>
-            <li class='current'>
-              <a data-cat='all' href='#'>Alle</a>
+      <div class="mod modSectionHeader ">
+        <div class="special-title centered-text">
+          <h2>Hammertime Workshops</h2>
+        </div>
+      </div>
+
+      <div class="row modCallToAction centered-text">
+        <p>
+          Unsere Werkstattbereiche bieten öffentliche Workshops an. Für diese gilt:
+        <p>
+
+        <center>
+          <ul style="max-width:500px;text-align:left;">
+            <li>
+              Nutzer mit einer <a href="/preise/">Jahreskarte</a> erhalten 10% Rabatt (bitte bei der Ticketauswahl
+              bzw. beim Kauf vor Ort berücksichtigen)
             </li>
             <li>
-              <a data-cat='wood' href='#'>Holz</a>
-            </li>
-            <li>
-              <a data-cat='electro' href='#'>Elektro</a>
-            </li>
-            <li>
-              <a data-cat='sewing' href='#'>Nähnen</a>
-            </li>
-            <li>
-              <a data-cat='upcycle' href='#'>Upcycling</a>
-            </li>
-            <li>
-              <a data-cat='print' href='#'>Drucken</a>
-            </li>
-            <li>
-              <a data-cat='misc' href='#'>Andere</a>
+              Workshops bescheinigen (wo möglich) eine Einweisung für bestimmte Geräte. Dadurch
+              können separate Gebühren für Einweisungen vermieden werden. So kannst du nach dem Workshop
+              eigenständig in der Werkstatt weiterarbeiten.
             </li>
           </ul>
-        </div>
+        </center>
 
+        <center>
+          <div>
+            <a class="button white" target="_blank" href='http://hammertime-kassel.eventbrite.com/'>
+              <i class='fa fa-calendar' aria-hidden="true"></i>&nbsp;Termine auf Eventbrite ansehen
+            </a>
+          </div>
+        </center>
 
-        <ul class='gallery large-block-grid-2 medium-block-grid-3 small-block-grid-2'>
-
-          {% for work in page.works %}
-            <li class="{{ work.klass }}">
-              <a href='{{ work.link_to }}'>
-              <a>
-                <img alt="" src="{{ work.image }}" />
-                <div class='overlay'>
-                  <div class='thumb-info'>
-                    <h3>{{ work.title }}</h3>
-                    <p>{{ work.desc }}</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-          {% endfor %}
-
-        </ul>-->
-
+        <center>
+          <div data-alert class="alert-box secondary round" style="max-width:660px">
+            <h3>
+              <i class='fa fa-info-circle fa-xs ht-info-color' aria-hidden="true"></i>&nbsp;Bezahlung im Voraus
+            </h3>
+            <div>
+              Die Bezahlung des Workshops erfolgt aus organisatorischen Gründen immer im Voraus. Bevorzugt nehmen wir
+              Buchungen über unseren Online-Ticketanbieter (Eventbrite) an. Eine Bestellung und Zahlung in der Werkstatt ist aber
+              ebenfalls möglich.
+            </div>
+          </div>
+        </center>
       </div>
 
       <div class='two spacing'></div>
-  </div>
 
-  <div class='four spacing'></div>
+      <div class="mod modSectionHeader ">
+        <div class="special-title centered-text">
+          <h2>Workshops Dritter</h2>
+        </div>
+      </div>
+
+      <div class="row modCallToAction centered-text">
+        <p>
+          Wir ermöglichen auch Dritten (also Personen außerhalb des Hammertime-Teams) die Veranstaltung eigener
+          Workshops in unserer Werkstatt. Für diese gilt:
+        </p>
+      </div>
+
+      <div class="row">
+        <center>
+          <ul style="max-width:500px;text-align:left;">
+            <li>
+              Für Nutzer mit einer Jahreskarte kann der sonst übliche Workshop-Rabatt <strong>nicht</strong>
+              garantiert werden, weil der jeweilige Anbieter darüber entscheidet
+            </li>
+            <li>
+              Die Veranstaltung ist eventuell nicht in unserer Eventbrite-Seite sichtbar. In diesem Fall kündigen
+              wir den Workshop auf anderen Kanälen (insbesondere Social Media) und im Terminkalender in der Werkstatt
+              an.
+            </li>
+          </ul>
+        </center>
+      </div>
+
+      <div class="row">
+        <center>
+          <div data-alert class="alert-box secondary round" style="max-width:660px">
+            <h3>
+              <i class='fa fa-info-circle fa-xs ht-info-color' aria-hidden="true"></i>&nbsp;Eigene Workshops anbieten
+            </h3>
+            <div>
+              Möchtest du deinen eigenen Workshop anbieten? <a href="/eigene-workshops/">Hier</a> erfährst du mehr.
+            </div>
+          </div>
+        </center>
+      </div>
+
+      <div class='spacing'></div>
+
+    </div>
+  </div>
 </div>
+
+<div class='two spacing'></div>

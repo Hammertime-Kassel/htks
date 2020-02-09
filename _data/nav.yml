@@ -16,7 +16,7 @@
       - name: Ausstattung
         path: ausstattung/
       - name: Preise
-        path: pricing/
+        path: preise/
       - name: AGB
         path: agb/
       - name: Werkstattordnung

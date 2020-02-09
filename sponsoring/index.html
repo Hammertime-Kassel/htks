@@ -93,15 +93,17 @@ perks:
 
       {% for perk in page.perks %}
 
-      <div class="mod modSectionHeader ">
+      <div class="mod modSectionHeader">
         <div class="special-title centered-text">
           <h3>{{perk.name}}</h3>
         </div>
       </div>
 
-      <div class="row centered-text">
-        <p>{{perk.perk}}</p>
-      </div>
+      <center> 
+        <div class="row centered-text" style="max-width:500px;">
+          <p>{{perk.perk}}</p>
+        </div>
+      </center>
 
       {% endfor %}
 

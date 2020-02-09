@@ -144,6 +144,10 @@ th.rotate > div {
   padding-bottom: 0;
 }
 
+.ht-info-color {
+  color: #5bc0de;
+}
+
 /*
  * END Hammertime Custom CSS
  */

@@ -35,14 +35,13 @@
   path:
   section_id: community
   children:
+      - name: Hammertime Meetup
+        path: 'meetup/'
       - name: Forum
         url: 'https://forum.hammertimekassel.de/'
         target: '_blank'
       - name: Projekte
         path: projekte/
-      - name: Hammertime Meetup
-        url: 'https://www.meetup.com/de-DE/Hammertime-Meetup/'
-        target: '_blank'
 - name: Raum
   path:
   section_id: space

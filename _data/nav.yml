@@ -30,7 +30,7 @@
       - name: Veranstaltungen
         path: events/
       - name: Workshops anbieten
-        path: eigene-workshops/
+        path: dein-workshop/
 - name: Community
   path:
   section_id: community

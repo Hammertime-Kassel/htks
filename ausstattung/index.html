@@ -106,7 +106,7 @@ section_id: werkstatt
               <div class='icon-text-simple'>
                 <i class='fa fa-{{status_icon}} {{status_color_class}}' data-tooltip aria-haspopup="true" class="has-tip" title="{{complete_status_text}}"></i>
 
-                {% capture profile_page_path %}/equipment/{{equipment_id}}.html{% endcapture %}
+                {% capture profile_page_path %}/ausstattung/{{equipment_id}}.html{% endcapture %}
 
                 <h3>{% unless equipment.info.disable_profile_page == true %}<a href="{{profile_page_path}}">{% endunless %}{{equipment.info.type}} {{equipment.info.producer}} {{equipment.info.model}}{% unless equipmentinfo.disable_profile_page == true %}</a>{% endunless %}</h3>
                 <p>{% if equipment.info.status == "planned" %}<b>Geplant, noch nicht verfügbar – </b>{% endif %}{{equipment.info.short_description}}</p>

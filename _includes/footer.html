@@ -1,63 +1,11 @@
 <div id='footer'>
+
   <div class='three spacing'></div>
+
   <div class='row'>
-    <div class='large-3 medium-3 columns'>
-      <h1>
-        <a href='/index.html'>
-          <img alt="" src="{{site.url}}/images/logo-grey.png" />
-        </a>
-      </h1>
-      <p>©2017 Hammertime. All rights reserved.</p>
-      <div class='spacing'></div>
-      <div class='spacing'></div>
-    </div>
-    <div class='large-3 medium-3 columns'>
-      <div class='spacing'></div>
-      <div class='links'>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/equipment/">Ausstattung</a></li>
-          <li><a href="/workshops.html">Workshops</a></li>
-          <li><a href="/support.html">Unterstützen</a></li>
-          <li><a href="https://forum.hammertimekassel.de">Community</a></li>
-          <li><a href="/imprint.html">Impressum</a></li>
-          <li><a href="/datenschutz.html">Datenschutz</a></li>
-          <li><a href="/agb.html">AGB</a></li>
-        </ul>
-      </div>
-      <div class='spacing'></div>
-    </div>
-    <div class='large-3 medium-3 columns'>
-      <div class='spacing'></div>
-      <div class='links'>
-        <h4 style="color:#eee;">Für was wir stehen</h4>
-        <ul>
-          <li><a href="/manifesto.html">Unser Manifest</a></li>
-          <li><a href="/repair-manifesto">Repair Manifest</a></li>
-          <li><a href="/fablab-charter.html">FabLab Charter</a></li>
-        </ul>
-      </div>
-      <div class='spacing'></div>
-    </div>
+    <div class='large-12 medium-12 columns'>
 
-    <!--
-    <div class='large-3 medium-3 columns'>
-      <div class='spacing'></div>
-      <div class='links'>
-        <h4>Recent posts</h4>
-        <ul>
-          {% for post in site.posts %}
-            <li><a href="{{post.url}}">{{post.title}}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class='spacing'></div>
-    </div>
-    -->
-
-    <div class='large-3 medium-3 columns'>
-      <div class='spacing'></div>
-      <ul class='socials'>
+      <ul class='socials centered-text'>
         <li>
           <a target="_blank" href='http://www.facebook.com/hammertimekassel'>
             <i class='fa fa-facebook'></i>
@@ -79,11 +27,27 @@
           </a>
         </li>
       </ul>
+
       <div class='spacing'></div>
+
+      <div class='links centered-text'>
+        <ul>
+          <li><a href="/kontakt/">Kontakt</a></li>
+          <li><a href="/impressum/">Impressum</a></li>
+          <li><a href="/datenschutz/">Datenschutz</a></li>
+          <li><a href="/agb/">AGB</a></li>
+        </ul>
+      </div>
+
+      <div class='spacing'></div>
+
+      <p class="centered-text" style="color:#eee;">Made with <i class="fa fa-heart" aria-hidden="true" style="color:#ad0000;"></i> in Kassel</p>
+      <p class="centered-text">©2020 Hammertime Kassel. All rights reserved.</p>
+
     </div>
-  </div>
-  <p class="centered-text" style="color:#eee;">Made with <i class="fa fa-heart" aria-hidden="true" style="color:#ad0000;"></i> in Kassel</p>
-  <div class='two spacing'></div>
+
+    <div class='spacing'></div>
+
 </div>
 <script src="{{ "/javascripts/jquery.countTo.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 <script src="{{ "/javascripts/jquery.appear.js" | prepend: site.baseurl }}" type="text/javascript"></script>

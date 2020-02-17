@@ -16,7 +16,7 @@
 6. Start the Docker container and Jekyll by running:
 
     ```shell
-    docker run --docker run --name htks_serve -it --rm --volume=${PWD}:/srv/jekyll --volume=jekyllbundlecache:/usr/local/bundle -p 4000:4000 jekyll/jekyll jekyll serve --watch
+    docker run --name htks_serve -it --rm --volume=${PWD}:/srv/jekyll --volume=jekyllbundlecache:/usr/local/bundle -p 4000:4000 jekyll/jekyll jekyll serve --watch --incremental
     ```
 7. Open http://localhost:4000 in your browser. The site will be regenerated if changes are made to the files within the repository. This may take a few seconds.
 
@@ -24,7 +24,7 @@
 
 ### Maintenance of Equipment
 
-The workshop's available or planned equipment is displayed on the [equipment page](http://hammertimekassel.de/equipment/) and its subordinated pages. The data for this sites is stored within the [\_data/areas](https://github.com/Hammertime-Kassel/htks/tree/master/_data/areas) folder.
+The workshop's available or planned equipment is displayed on the [equipment page](http://hammertimekassel.de/ausstattung/) and its subordinated pages. The data for this sites is stored within the [\_data/areas](https://github.com/Hammertime-Kassel/htks/tree/master/_data/areas) folder.
 
 #### Areas
 
@@ -86,7 +86,7 @@ images: # (optional) list of images of the equipment. images needs to be placed 
     title: ""
 ```
 
-After this, the equipment needs its own page. To do that, create a file called `<equipment_id>.html` within the `/equipment/` folder. Insert the `area_id` and `equipment_id` as follows:
+After this, the equipment needs its own page. To do that, create a file called `<equipment_id>.html` within the `/ausstattung/` folder. Insert the `area_id` and `equipment_id` as follows:
 
 ```yaml
 ---

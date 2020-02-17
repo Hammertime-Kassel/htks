@@ -1,0 +1,121 @@
+---
+layout: default
+title: Ausstattung
+long_title: Unsere Ausstattung
+tagline: Alles, was Du zum Werkeln brauchst
+data-small: /images/pages/IMG-20190925-WA0002_1600-lazyload.jpg
+data-original: /images/pages/IMG-20190925-WA0002_1600.jpg
+section_id: werkstatt
+---
+
+{% comment %}
+  TODO sort equipment alphabetically (for the target language)
+  TODO consider custom sorting for equipment
+{% endcomment %}
+
+{% assign area_data = site.data.areas %}
+{% assign area_list = site.data.areas.info.area_list | sort: 'name' %}
+
+<div class='full parallax lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
+      data-original="{{ page.data-original }}">
+  <div class='four spacing'></div>
+  <div class='row bgcolor-yellow-transparent'>
+    <div class='twelve columns shadow-text-light'>
+      {% include section-header.html title=page.long_title tagline=page.tagline color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class='four spacing'></div>
+  <div class='four spacing'></div>
+</div>
+
+<div class='full'>
+
+  {% for area in area_list %}
+
+    {% assign single_area_data = area_data[area.area_id] %}
+
+    <div class='row'>
+
+      <h2>{{area.name}}</h2>
+
+      <p class="subtitle">
+        {{single_area_data.info.short_description}}
+      </p>
+
+      {% if single_area_data.info.status == site.data.area_status.planned %}
+
+        <div class='medium-6 columns'>
+          <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+            <div class='icon-text-simple'>
+              <i class='fa fa-calendar'></i>
+              <h3>In Planung</h3>
+              <p>Dieser Teil der Werkstatt befindet sich noch in Planung. Gern kannst du uns dabei unterstützen!</p>
+            </div>
+          </div>
+        </div>
+
+      {% endif %}
+
+      <div class='row'>
+        {% for equipment_item in single_area_data.equipment %}
+
+          {% assign equipment_id = equipment_item[0] %}
+          {% assign equipment = equipment_item[1] %}
+
+          {% if equipment.info.status == site.data.equipment_status.okay %}
+            {% assign status_icon = "check" %}
+            {% assign status_color_class = "color-success-important" %}
+            {% assign status_caption = "Gerät funktioniert" %}
+            {% assign status_text = "Alles in Ordnung, du kannst das Gerät benutzen!" %}
+            {% assign status_class = "success" %}
+
+          {% elsif equipment.info.status == site.data.equipment_status.limited %}
+            {% assign status_icon = "exclamation-circle" %}
+            {% assign status_color_class = "color-warning-important" %}
+            {% assign status_caption = "Eingeschränkt nutzbar" %}
+            {% assign status_text = "Das Gerät ist eingeschränkt nutzbar. Bitte beachte die Hinweise oder kontaktiere uns." %}
+            {% assign status_class = "warning" %}
+
+          {% elsif equipment.info.status == site.data.equipment_status.broken %}
+            {% assign status_icon = "times-circle" %}
+            {% assign status_color_class = "color-alert-important" %}
+            {% assign status_caption = "Defekt" %}
+            {% assign status_text = "Tut uns Leid, das Gerät ist defekt und kann aktuell nicht benutzt werden." %}
+            {% assign status_class = "alert" %}
+
+          {% elsif equipment.info.status == site.data.equipment_status.repairing %}
+            {% assign status_icon = "wrench" %}
+            {% assign status_color_class = "color-alert-important" %}
+            {% assign status_caption = "In Reparatur" %}
+            {% assign status_text = "Tut uns Leid, das Gerät wird gerade repariert." %}
+            {% assign status_class = "alert" %}
+
+          {% elsif equipment.info.status == site.data.equipment_status.planned %}
+            {% assign status_icon = "calendar" %}
+            {% assign status_color_class = "" %}
+            {% assign status_caption = "Anschaffung geplant" %}
+            {% assign status_text = "Tut uns Leid, das Gerät ist noch nicht verfügbar." %}
+            {% assign status_class = "alert" %}
+
+          {% endif %}
+
+          {% capture complete_status_text %}{{status_text}}{% if equipment.info.additional_status_text != blank %}&nbsp;{{equipment.info.additional_status_text}}{% endif %}{% endcapture %}
+
+          <div class='medium-6 columns'>
+            <div class='fadein mod modIconText' data-delay='{{ 100 | times:forloop.index0 }}'>
+              <div class='icon-text-simple'>
+                <i class='fa fa-{{status_icon}} {{status_color_class}}' data-tooltip aria-haspopup="true" class="has-tip" title="{{complete_status_text}}"></i>
+
+                {% capture profile_page_path %}/ausstattung/{{equipment_id}}.html{% endcapture %}
+
+                <h3>{% unless equipment.info.disable_profile_page == true %}<a href="{{profile_page_path}}">{% endunless %}{{equipment.info.type}} {{equipment.info.producer}} {{equipment.info.model}}{% unless equipmentinfo.disable_profile_page == true %}</a>{% endunless %}</h3>
+                <p>{% if equipment.info.status == "planned" %}<b>Geplant, noch nicht verfügbar – </b>{% endif %}{{equipment.info.short_description}}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+
+</div>

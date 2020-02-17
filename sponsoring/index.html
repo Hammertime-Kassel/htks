@@ -1,0 +1,174 @@
+---
+layout: default
+title: Sponsor werden
+long_title: Sponsor werden
+tagline: Die Werkstatt durch Sponsoring unterstützen
+data-small: /images/pages/IMG_7806_1600-lazyload.jpg
+data-original: /images/pages/IMG_7806_1600.jpg
+section_id: support
+vorteile:
+  - text: |
+      Mit einem gemeinnützigen, auf Nachhaltigkeit bedachten und
+      innovativen Projekt werben Sie für Ihr Unternehmen.
+  - text: |
+      Als attraktiver Arbeitgeber ziehen Sie die Aufmerksamkeit von Absolventen
+      und Arbeitnehmern auf sich, die sich bereits im technischen, handwerklichen
+      und kreativen Umfeld bewegen.
+  - text: |
+      Sie steigern Ihre Mitarbeiterzufriedenheit noch weiter, indem Sie
+      Goodies zur Verfügung stellen (z.B. Freikarten für die Werkstatt).
+perks:
+  - name: Hauptsponsor
+    perk: |
+      Ihr Unternehmen wird für ein Jahr der Hauptsponsor von Hammertime. Sie
+      sind gut sichtbar, beispielsweise mit einem prominenten Logo hier auf
+      der Website, in unseren Werbematerialien (Flyer, Poster usw.) und vor Ort
+      in der Werkstatt. Dazu gibt es eine gewisse Anzahl an Social-Media-Beiträgen,
+      bei denen Ihr Unternehmen im Mittelpunkt steht.
+  - name: Sponsor
+    perk: |
+      Ihr Unternehmen wird einer der Sponsoren von Hammertime. Sie erhalten ein
+      Logo auf dieser Website, in unseren Werbematerialien (Flyer, Poster usw.)
+      und einen Social-Media-Beitrag.
+  - name: Goodie
+    perk: |
+      Gegen einen Beitrag zur Unterstützung erhält ihr Unternehmen monatlich
+      eine gewisse Anzahl von Tageskarten. Diese können z.B. den eigenen
+      Mitarbeitern als Goodie zur Verfügung gestellt werden.
+  - name: Individuell
+    perk: |
+      Wir überlegen uns gemeinsam ein individuelles Angebot, das zu Ihnen passt.
+
+
+---
+
+<div class='full lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
+      data-original="{{ page.data-original }}">
+  <div class='four spacing'></div>
+  <div class='row bgcolor-yellow-transparent'>
+    <div class='twelve columns shadow-text-light'>
+      {% include section-header.html title=page.long_title tagline=page.tagline color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class='four spacing'></div>
+  <div class='four spacing'></div>
+  <div class='four spacing'></div>
+</div>
+
+<div class='full'>
+  <div class='row'>
+    <div class='large-12 columns'>
+
+      <!-- modIconText, Price -->
+
+      <div class="row modCallToAction centered-text">
+        <p>
+          Für den Erhalt und Ausbau der Werkstatt suchen wir Sponsoren, die uns auf
+          einem Teil unseres Weges begleiten wollen. Hammertime zu unterstützen kann
+          für Sie gleich mehrere Vorteile haben:
+        </p>
+      </div>
+
+      <div class="row">
+        <center>
+
+          {% for vorteil in page.vorteile %}
+
+          <div class='mod modIconText' style="text-align:left;max-width:500px">
+            <div class='icon-text-simple'>
+              <i class='fa fa-check'></i>
+              <p>{{vorteil.text}}</p>
+            </div>
+          </div>
+
+          {% endfor %}
+
+        </center>
+      </div>
+
+      <div class='spacing'></div>
+
+      <div class="mod modSectionHeader ">
+        <div class="special-title centered-text">
+          <h2>Möglichkeiten für Sponsoring</h2>
+        </div>
+      </div>
+
+      {% for perk in page.perks %}
+
+      <div class="mod modSectionHeader">
+        <div class="special-title centered-text">
+          <h3>{{perk.name}}</h3>
+        </div>
+      </div>
+
+      <center>
+        <div class="row centered-text" style="max-width:500px;">
+          <p>{{perk.perk}}</p>
+        </div>
+      </center>
+
+      {% endfor %}
+
+      <div class="row modCallToAction centered-text">
+        <p>
+          Wenn das für Sie interessant klingt, sie vielleicht noch Fragen haben und
+          uns auch einmal unverbindlich vor Ort besuchen wollen, dann nehmen Sie Kontakt
+          zu uns auf:
+        </p>
+      </div>
+
+      <center>
+        <div style="padding:6px;">
+          <span>
+            <i class='fa fa-envelope fa-lg'></i>&nbsp;<b>E-Mail:</b>&nbsp;
+            <a href="mailto:hello@htks.de">hello@htks.de</a>
+          </span>
+          <span>&nbsp;</span>
+          <span>
+            <i class='fa fa-phone fa-lg'></i>&nbsp;<b>Telefon:</b>&nbsp;
+            <a href="tel:017634754338">0176 3475 4338</a>
+          </span>
+        </div>
+        <div style="padding:6px;">
+          <i class='fa fa-map-marker fa-lg'></i>&nbsp;<b>Adresse:</b><br>
+          <span>Hammertime Kassel gUG (haftungsbeschränkt)</span><br>
+          <span>Franz-Ulrich-Straße 16</span><br>
+          <span>34117 Kassel</span>
+        </div>
+        <div style="padding:6px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d623.3733417542592!2d9.49467712763005!3d51.320444679604805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bb3f3569895743%3A0xc6d39e3d0824d4ec!2sHammertime+Kassel!5e0!3m2!1sde!2sde!4v1503952643743" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </center>
+
+
+      <div class='two spacing'></div>
+
+
+      <div class="mod modSectionHeader ">
+        <div class="special-title centered-text">
+          <h2>Spenden</h2>
+        </div>
+      </div>
+
+      <div class="row modCallToAction centered-text">
+        <p>
+          Oder wollen Sie Ihre Steuerlast durch uneigennützige Spenden senken? Wir
+          verfolgen als Organisation gemeinnützige Zwecke, wodurch Unternehmensspenden
+          (im Gegensatz zu Sponsoring) für Sie steuerlich absetzbar sind.
+        </p>
+      </div>
+
+      <center>
+        <div>
+          <a class="button white" target="_blank" href='/spenden/'>Informationen zu Spenden</a>
+        </div>
+      </center>
+
+
+    </div>
+  </div>
+</div>
+
+<div class='spacing'></div>
+<div class='spacing'></div>

@@ -2,11 +2,16 @@
   <div class='row'>
     <div class='spacing'></div>
     <div class='large-12 columns shadow-text'>
-      {% include section-header.html title="Unsere Unterstützer" color="#fff" %}
+      {% include section-header.html title="Unsere Sponsoren" color="#fff" %}
       <div class='spacing'></div>
-      <p>
-        Unterstütze uns, werde Sponsor oder Partner!
-      </p>
+      <center>
+        <p>
+          Wir sind auf der Suche nach Sponsoren.
+        </p>
+        <div>
+          <a class="button white" href='/sponsoring/'>Informationen zu Sponsoring</a>
+        </div>
+      </center>
       <div class='two spacing'></div>
     </div>
   </div>
@@ -14,8 +19,14 @@
     <div class='large-12 columns'>
       <div class='mod modClients' data-slides_to_show='4'>
         <div class='clients'>
-          {% for client in site.data.clients %}
-            <div><a href="/contact.html"><img alt="" src="{{client.image}}" /></a></div>
+          {% for sponsor in site.data.sponsors %}
+            <div><a href="#"><img alt="" src="{{sponsor.image}}" /></a></div>
+            <div>
+              {{sponsor.name}}
+            </div>
+            <div>
+              {{sponsor.description}}
+            </div>
           {% endfor %}
         </div>
       </div>

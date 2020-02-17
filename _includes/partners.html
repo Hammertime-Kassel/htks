@@ -1,0 +1,32 @@
+<div class='full parallax' style='background-image: url(images/@stock/sponsors.jpg); color: #fff;'>
+  <div class='row'>
+    <div class='spacing'></div>
+    <div class='large-12 columns shadow-text'>
+      {% include section-header.html title="Unsere Partner und Kooperationen" color="#fff" %}
+      <div class='spacing'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <div class='mod modClients' data-slides_to_show='4'>
+        <div class='clients'>
+          {% for partner in site.data.partners %}
+          <div><a href="#"><img alt="" src="{{partner.image}}" /></a></div>
+          <div>
+            {{partner.name}}
+          </div>
+          <div>
+            {{partner.description}}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <center>
+    <div>
+      <a class="button white" href="/partner/">Informationen zu Kooperationen</a>
+    </div>
+  </center>
+  <div class='two spacing'></div>
+</div>

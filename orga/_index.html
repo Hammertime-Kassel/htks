@@ -1,0 +1,100 @@
+---
+layout: default
+title: Organisation
+long_title: Organisation
+tagline: Wie Hammertime organisiert ist
+data-small: /images/pages/IMG_9577_1600-lazyload.jpg
+data-original: /images/pages/IMG_9577_1600.jpg
+section_id: about
+---
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+
+    // INNER CIRCLE / CENTER
+
+    innerMap = new MoonMap('#innermap', {
+
+    	active: function(map){
+
+    		var phase = map.current() + 1;
+
+    		document.querySelector('#innermap .center-title').innerHTML = '<span style="font-size:13px">Phase ' + phase + '</span>';
+
+    	},
+    	moonSelector: '.moonSelector',
+      radius: 80
+    });
+
+    innerMap.startCarousel(1200);
+
+    // OUTER CIRCLE / PERIPHERY
+
+    outerMap = new MoonMap('#outermap', {
+
+    	active: function(map){
+
+    		var phase = map.current() + 1;
+
+    		document.querySelector('#outermap .center-title').innerHTML = '<span style="font-size:13px">Phase ' + phase + '</span>';
+
+    	},
+    	moonSelector: '.moonSelector',
+      radius: 160
+    });
+
+    outerMap.startCarousel(1200);
+
+  });
+</script>
+
+<div class='full lazy' style='background-image: url({{ page.data-small }}); color: #fff;'
+      data-original="{{ page.data-original }}">
+  <div class='four spacing'></div>
+  <div class='row bgcolor-yellow-transparent'>
+    <div class='twelve columns shadow-text-light'>
+      {% include section-header.html title=page.long_title tagline=page.tagline color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class='four spacing'></div>
+  <div class='four spacing'></div>
+</div>
+
+<div class='full'>
+  <div class='row'>
+    <div class='large-12 columns'>
+
+      <!-- INNER CIRCLE / CENTER -->
+
+      <div id="innermap" class="orbit-center">
+        <span class="center-title"></span>
+
+        <div id="outermap" class="orbit-center">
+          <span class="center-title"></span>
+        </div>
+        <span class="moonSelector">1</span>
+        <span class="moonSelector">2</span>
+        <span class="moonSelector">3</span>
+        <span class="moonSelector">4</span>
+        <span class="moonSelector">5</span>
+        <span class="moonSelector">6</span>
+        <span class="moonSelector">7</span>
+      </div>
+      <span class="moonSelector">1</span>
+      <span class="moonSelector">2</span>
+      <span class="moonSelector">3</span>
+      <span class="moonSelector">4</span>
+      <span class="moonSelector">5</span>
+      <span class="moonSelector">6</span>
+      <span class="moonSelector">7</span>
+
+      <!-- OUTER CIRCLE / PERIPHERY -->
+
+
+
+    </div>
+  </div>
+</div>
+
+<div class='spacing'></div>
+<div class='spacing'></div>

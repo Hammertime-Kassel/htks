@@ -1341,7 +1341,7 @@ form input.error, form textarea.error {
   color: #333;
   text-align: center;
   font-size: 1.25rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
 }
 #footer ul.socials a:hover i {
   -moz-transition: all 0.2s linear;

@@ -17,6 +17,8 @@
         path: ausstattung/
       - name: Preise
         path: preise/
+      - name: 'Neuigkeiten & Ankündigungen'
+        path: news/
       - name: AGB
         path: agb/
       - name: Werkstattordnung

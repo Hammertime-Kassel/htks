@@ -26,3 +26,6 @@ defaults:
 gems:
   - jekyll-sitemap
   - jekyll-redirect-from
+
+include:
+  - "_redirects"

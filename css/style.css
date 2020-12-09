@@ -3501,6 +3501,18 @@ body {
   display: block;
 }
 
+.modCallToAction .supporter-logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.modCallToAction .supporter-logo-list .supporter-logo {
+    margin: 20px;
+    align-self: center;
+}
+
 .modSectionHeader.big h2 {
   font-size: 4rem;
 }

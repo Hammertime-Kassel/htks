@@ -54,12 +54,12 @@
   path: support/
   section_id: support
   children:
+      - name: Unsere Unterstützer
+        path: unterstuetzer/
       - name: Mithelfen
         path: helfen/
       - name: Spenden
         path: spenden/
-      - name: Unsere Unterstützer
-        path: unterstuetzer/
       - name: Sponsor werden
         path: sponsoring/
       - name: Partner werden

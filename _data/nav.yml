@@ -68,5 +68,5 @@
   path: kontakt/
   section_id: contact
 - name: Shop
-  path: https://5rc35v2bpu6h.plentymarkets-cloud01.com/
+  url: https://5rc35v2bpu6h.plentymarkets-cloud01.com/
   section_id: shop

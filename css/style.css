@@ -1001,7 +1001,7 @@ ul.shortcode-list i {
 .button {
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #fff;
+  color: #111;
   background: #F9CE06;
   border: 2px solid #F9CE06;
 }

@@ -1,5 +1,5 @@
 type: "Tassenpresse"
 short_description: "Mit einer Tassenpresse lassen sich Keramiktassen und ähnliche Objekte bedrucken."
-status: "planned"
+status: "okay"
 disable_profile_page: true
 #additional_status_text: "Der Techniker ist informiert!"

@@ -10,8 +10,8 @@
   path:
   section_id: werkstatt
   children:
-      - name: Öffnungszeiten
-        path: oeffnungszeiten/
+      # - name: Öffnungszeiten
+      #   path: oeffnungszeiten/
       # TODO Ausstattung in mehrere Unterseiten je Werkstattbereich organisieren
       - name: Ausstattung
         path: ausstattung/
@@ -67,6 +67,6 @@
 - name: Kontakt
   path: kontakt/
   section_id: contact
-- name: Shop
-  url: https://shop.hammertimekassel.de/
-  section_id: shop
+# - name: Shop
+#   url: https://shop.hammertimekassel.de/
+#   section_id: shop
